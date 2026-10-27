@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
-
 @theme inline {
   --font-sans: var(--font-body);
   --font-heading: var(--font-display);
@@ -310,9 +308,6 @@
   }
   .nav-cta span {
     font-size: 18px;
-  }
-  .sun {
-    @apply hidden;
   }
   .mobile-toggle {
     @apply hidden;
@@ -924,35 +919,6 @@
   }
   body.modal-open {
     @apply overflow-hidden;
-  }
-  [data-theme="dark"] {
-    --bg: #121212;
-    --ink: #f2f2f2;
-    --muted-ink: #bcbcbc;
-    --line: #363636;
-    --header: rgba(18, 18, 18, 0.97);
-    --section: #1a1a1a;
-    --green: #20b85a;
-    --green-hover: #159c49;
-    color-scheme: dark;
-  }
-  [data-theme="dark"] .button-green,
-  [data-theme="dark"] .project-image > span,
-  [data-theme="dark"] .back-top {
-    @apply text-white;
-    background: #186636;
-  }
-  [data-theme="dark"] .button-green:hover {
-    background: #207d44;
-  }
-  [data-theme="dark"] .partner-billboard {
-    background: #186636;
-  }
-  [data-theme="dark"] .theme-toggle .moon {
-    @apply hidden;
-  }
-  [data-theme="dark"] .theme-toggle .sun {
-    @apply block;
   }
   @media (min-width: 1600px) {
     .hero {
@@ -1631,15 +1597,6 @@
   }
 
   /* Reserve directional icons for navigation controls. */
-  .brand-color-filters {
-    @apply absolute overflow-hidden pointer-events-none;
-    width: 0;
-    height: 0;
-  }
-  [data-theme="dark"] .brand img,
-  [data-theme="dark"] .footer-brand img {
-    filter: url("#logo-dark-contrast");
-  }
   .slide-arrow svg {
     width: 21px;
     height: 21px;
@@ -1655,12 +1612,6 @@
   .back-top svg {
     stroke-linecap: round;
     stroke-linejoin: round;
-  }
-
-  [data-theme="dark"] .nav-cta:hover,
-  [data-theme="dark"] .skip-link {
-    @apply text-white;
-    background: #186636;
   }
 
   .footer-brand img {

@@ -276,7 +276,7 @@ export function Dialogs({ active, onClose }: DialogProps) {
         <h2 id="privacy-title">Your privacy.</h2>
         <p>
           This local mockup does not submit forms or collect visitor
-          information. Your display preference is saved in this browser.
+          information.
         </p>
         <p className="demo-note">
           The final privacy policy will be added before launch.

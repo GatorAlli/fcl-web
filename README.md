@@ -29,4 +29,4 @@ npm start
 - `public/assets/` contains the original images, logos, fonts and font licenses.
 - `html-mockup/` remains the unchanged reference, including asset provenance in its README.
 
-The original carousel, menus, theme preference, service expansion, project filters, local search, dialogs, section scrolling and back-to-top behavior are preserved. Contact, careers, profile download and privacy content remain preview placeholders. No backend, form submissions or new functionality have been added.
+The original carousel, menus, service expansion, project filters, local search, dialogs, section scrolling and back-to-top behavior are preserved. Contact, careers, profile download and privacy content remain preview placeholders. No backend, form submissions or new functionality have been added.

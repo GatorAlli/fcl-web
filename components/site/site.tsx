@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type MouseEvent } from "react";
-import { BrandFilter } from "./brand-filter";
 import { Header } from "./header";
 import { Hero } from "./hero";
 import { Company } from "./company";
@@ -36,7 +35,6 @@ export function Site() {
 
   return (
     <div className="contents" onClick={handleAction}>
-      <BrandFilter />
       <a className="skip-link" href="#main">
         Skip to content
       </a>

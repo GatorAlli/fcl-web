@@ -40,8 +40,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-theme="light"
-      suppressHydrationWarning
       className={`${poppins.variable} ${manrope.variable} ${archivo.variable}`}
     >
       <body>{children}</body>

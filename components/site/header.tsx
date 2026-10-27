@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ThemeToggle } from "./theme-toggle";
 import Image from "next/image";
 
 export function Header() {
@@ -87,9 +86,6 @@ export function Header() {
               Reference Projects{" "}
               <span className="chevron" aria-hidden="true"></span>
             </button>
-            <a className="nav-link" href="#contact">
-              Contact
-            </a>
             <a className="nav-link" href="#about">
               About
             </a>
@@ -107,7 +103,6 @@ export function Header() {
                 <path d="m16 16 5 5" />
               </svg>
             </button>
-            <ThemeToggle />
             <button
               className="icon-button mobile-toggle"
               aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
@@ -238,7 +233,6 @@ export function Header() {
               Pharmaceuticals
             </a>
           </details>
-          <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </nav>
       </header>
