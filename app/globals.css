@@ -21,12 +21,21 @@
   --color-input: var(--line);
   --color-ring: #16b653;
   --color-destructive: #f80304;
-  --radius-lg: 0px;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 /* Preserve the mockup's dimensions, breakpoints, motion and print layout. */
 @layer components {
   :root {
+    --radius: 0.625rem;
+    --secondary: var(--section);
+    --foreground: var(--ink);
     --green: #186636;
     --green-hover: #124f29;
     --red: #f80304;
