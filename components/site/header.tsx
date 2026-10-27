@@ -1,9 +1,55 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { ThemeToggle } from "./theme-toggle";
 import Image from "next/image";
 
 export function Header() {
+  const [menu, setMenu] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  function close() {
+    setMenu(null);
+    setMobileOpen(false);
+  }
+  useEffect(() => {
+    function outside(event: MouseEvent) {
+      if (!headerRef.current?.contains(event.target as Node)) close();
+    }
+    function escape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      const toggle = headerRef.current?.querySelector<HTMLButtonElement>(
+        mobileOpen ? ".mobile-toggle" : `[aria-controls="${menu}"]`,
+      );
+      close();
+      toggle?.focus();
+    }
+    const breakpoint = window.matchMedia("(max-width: 900px)");
+    document.addEventListener("click", outside);
+    document.addEventListener("keydown", escape);
+    breakpoint.addEventListener("change", close);
+    return () => {
+      document.removeEventListener("click", outside);
+      document.removeEventListener("keydown", escape);
+      breakpoint.removeEventListener("change", close);
+    };
+  }, [menu, mobileOpen]);
   return (
     <>
-      <header className="site-header">
+      <header
+        ref={headerRef}
+        className={menu ? "site-header menu-is-open" : "site-header"}
+        onClick={(event) => {
+          if ((event.target as Element).closest("a, .search-toggle")) close();
+        }}
+        onBlur={(event) => {
+          if (
+            event.relatedTarget &&
+            !event.currentTarget.contains(event.relatedTarget)
+          )
+            setMenu(null);
+        }}
+      >
         <div className="nav-shell">
           <a
             href="#"
@@ -21,16 +67,22 @@ export function Header() {
           <nav className="desktop-nav" aria-label="Main navigation">
             <button
               className="nav-link dropdown-toggle"
-              aria-expanded="false"
+              aria-expanded={menu === "solutions-menu"}
               aria-controls="solutions-menu"
+              onClick={() =>
+                setMenu(menu === "solutions-menu" ? null : "solutions-menu")
+              }
             >
               Solutions &amp; Services{" "}
               <span className="chevron" aria-hidden="true"></span>
             </button>
             <button
               className="nav-link dropdown-toggle"
-              aria-expanded="false"
+              aria-expanded={menu === "projects-menu"}
               aria-controls="projects-menu"
+              onClick={() =>
+                setMenu(menu === "projects-menu" ? null : "projects-menu")
+              }
             >
               Reference Projects{" "}
               <span className="chevron" aria-hidden="true"></span>
@@ -55,31 +107,24 @@ export function Header() {
                 <path d="m16 16 5 5" />
               </svg>
             </button>
-            <button
-              className="icon-button theme-toggle"
-              aria-label="Switch to dark mode"
-              aria-pressed="false"
-            >
-              <svg className="moon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.6 14.6A9 9 0 0 1 9.4 3.4 9 9 0 1 0 20.6 14.6Z" />
-              </svg>
-              <svg className="sun" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
-              </svg>
-            </button>
+            <ThemeToggle />
             <button
               className="icon-button mobile-toggle"
-              aria-label="Open navigation"
+              aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
               aria-controls="mobile-nav"
-              aria-expanded="false"
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen(!mobileOpen)}
             >
               <span></span>
               <span></span>
             </button>
           </div>
         </div>
-        <div className="mega-menu" id="solutions-menu" hidden>
+        <div
+          className="mega-menu"
+          id="solutions-menu"
+          hidden={menu !== "solutions-menu"}
+        >
           <div className="menu-inner">
             <div className="menu-intro">
               <span className="eyebrow">SOLUTIONS &amp; SERVICES</span>
@@ -115,7 +160,11 @@ export function Header() {
             </div>
           </div>
         </div>
-        <div className="mega-menu" id="projects-menu" hidden>
+        <div
+          className="mega-menu"
+          id="projects-menu"
+          hidden={menu !== "projects-menu"}
+        >
           <div className="menu-inner">
             <div className="menu-intro">
               <span className="eyebrow">REFERENCE PROJECTS</span>
@@ -151,7 +200,7 @@ export function Header() {
           className="mobile-nav"
           id="mobile-nav"
           aria-label="Mobile navigation"
-          hidden
+          hidden={!mobileOpen}
         >
           <details>
             <summary>Solutions &amp; Services</summary>

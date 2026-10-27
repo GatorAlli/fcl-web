@@ -63,92 +63,98 @@ export function Company() {
           aria-label="Our technology partners. Animation pauses while focused."
         >
           <div className="partner-track">
-            <div className="partner-group">
-              <Image
-                src="/assets/partner-honeywell.png"
-                width="273"
-                height="74"
-                alt="Honeywell"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-siemens.png"
-                width="228"
-                height="62"
-                alt="Siemens"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-trane.png"
-                width="217"
-                height="83"
-                alt="Trane"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-control4.png"
-                width="247"
-                height="81"
-                alt="Control4"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-lutron.png"
-                width="270"
-                height="69"
-                alt="Lutron"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-fike.png"
-                width="173"
-                height="78"
-                alt="Fike"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-danfoss.png"
-                width="226"
-                height="78"
-                alt="Danfoss"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-rbh.png"
-                width="180"
-                height="111"
-                alt="RBH Access"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-belimo.png"
-                width="238"
-                height="74"
-                alt="Belimo"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-ss.png"
-                width="219"
-                height="106"
-                alt="S+S Regeltechnik"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-tecofi.png"
-                width="226"
-                height="76"
-                alt="Tecofi"
-                unoptimized
-              />
-              <Image
-                src="/assets/partner-parkhelp.png"
-                width="235"
-                height="69"
-                alt="ParkHelp"
-                unoptimized
-              />
-            </div>
+            {[false, true].map((duplicate) => (
+              <div
+                className="partner-group"
+                key={String(duplicate)}
+                aria-hidden={duplicate || undefined}
+              >
+                <Image
+                  src="/assets/partner-honeywell.png"
+                  width="273"
+                  height="74"
+                  alt={duplicate ? "" : "Honeywell"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-siemens.png"
+                  width="228"
+                  height="62"
+                  alt={duplicate ? "" : "Siemens"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-trane.png"
+                  width="217"
+                  height="83"
+                  alt={duplicate ? "" : "Trane"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-control4.png"
+                  width="247"
+                  height="81"
+                  alt={duplicate ? "" : "Control4"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-lutron.png"
+                  width="270"
+                  height="69"
+                  alt={duplicate ? "" : "Lutron"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-fike.png"
+                  width="173"
+                  height="78"
+                  alt={duplicate ? "" : "Fike"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-danfoss.png"
+                  width="226"
+                  height="78"
+                  alt={duplicate ? "" : "Danfoss"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-rbh.png"
+                  width="180"
+                  height="111"
+                  alt={duplicate ? "" : "RBH Access"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-belimo.png"
+                  width="238"
+                  height="74"
+                  alt={duplicate ? "" : "Belimo"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-ss.png"
+                  width="219"
+                  height="106"
+                  alt={duplicate ? "" : "S+S Regeltechnik"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-tecofi.png"
+                  width="226"
+                  height="76"
+                  alt={duplicate ? "" : "Tecofi"}
+                  unoptimized
+                />
+                <Image
+                  src="/assets/partner-parkhelp.png"
+                  width="235"
+                  height="69"
+                  alt={duplicate ? "" : "ParkHelp"}
+                  unoptimized
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

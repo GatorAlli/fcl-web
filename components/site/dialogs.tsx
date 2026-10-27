@@ -1,7 +1,117 @@
-export function Dialogs() {
+"use client";
+
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { services, projects } from "@/lib/site-content";
+
+type DialogProps = { active: string | null; onClose: () => void };
+
+function PreviewDialog({
+  id,
+  labelledBy,
+  active,
+  onClose,
+  children,
+}: DialogProps & { id: string; labelledBy: string; children: ReactNode }) {
+  const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const dialog = ref.current!;
+    if (active === id && !dialog.open) {
+      dialog.showModal();
+      if (id === "search-dialog")
+        dialog.querySelector<HTMLInputElement>("input")?.focus();
+    } else if (active !== id && dialog.open) dialog.close();
+  }, [active, id]);
+  return (
+    <dialog
+      ref={ref}
+      id={id}
+      aria-labelledby={labelledBy}
+      onClose={onClose}
+      onClick={(event) => {
+        const dialog = event.currentTarget;
+        if ((event.target as Element).closest(".close-dialog")) dialog.close();
+        else if (event.target === dialog) {
+          const box = dialog.getBoundingClientRect();
+          if (
+            event.clientX < box.left ||
+            event.clientX > box.right ||
+            event.clientY < box.top ||
+            event.clientY > box.bottom
+          )
+            dialog.close();
+        }
+      }}
+    >
+      {children}
+    </dialog>
+  );
+}
+
+const searchItems = [
+  ...services.map((service) => ({
+    title: service.title,
+    type: "Solution",
+    href: `#${service.id}`,
+    service: service.id,
+    category: undefined,
+    keywords: `${service.description} ${service.partners}`,
+  })),
+  ...projects.map((project, index) => ({
+    title: project.title,
+    type: "Project",
+    href: "#projects",
+    service: undefined,
+    category: project.category.split(" ")[0],
+    keywords: `${String(index + 1).padStart(2, "0")} ${project.label} ${project.system} ${project.description}`,
+  })),
+  {
+    title: "About Felix Controls Limited",
+    type: "Company",
+    href: "#about",
+    keywords: "engineering company profile",
+    service: undefined,
+    category: undefined,
+  },
+  {
+    title: "Contact our team",
+    type: "Contact",
+    href: "#contact",
+    keywords: "phone email address Dhaka",
+    service: undefined,
+    category: undefined,
+  },
+];
+
+export function Dialogs({ active, onClose }: DialogProps) {
+  const [query, setQuery] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
+  const matches = searchItems.filter((item) =>
+    `${item.title} ${item.keywords}`
+      .toLowerCase()
+      .includes(query.trim().toLowerCase()),
+  );
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", Boolean(active));
+    return () => document.body.classList.remove("modal-open");
+  }, [active]);
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText("info@felixbd.com");
+      setCopied(true);
+      setCopyError(false);
+    } catch {
+      setCopyError(true);
+    }
+  }
   return (
     <>
-      <dialog id="search-dialog" aria-labelledby="search-heading">
+      <PreviewDialog
+        id="search-dialog"
+        labelledBy="search-heading"
+        active={active}
+        onClose={onClose}
+      >
         <div className="dialog-header">
           <span className="eyebrow">FELIX CONTROLS LIMITED</span>
           <button
@@ -20,10 +130,34 @@ export function Dialogs() {
           type="search"
           placeholder="Search services and projects…"
           autoComplete="off"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
         />
-        <div className="search-results" aria-live="polite"></div>
-      </dialog>
-      <dialog id="contact-dialog" aria-labelledby="contact-title">
+        <div className="search-results" aria-live="polite">
+          {matches.length ? (
+            matches.map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                data-service={item.service}
+                data-project-filter={item.category}
+                onClick={onClose}
+              >
+                <span>{item.title}</span>
+                <small>{item.type}</small>
+              </a>
+            ))
+          ) : (
+            <p>No results found. Try “HVAC”, “lighting” or “metro”.</p>
+          )}
+        </div>
+      </PreviewDialog>
+      <PreviewDialog
+        id="contact-dialog"
+        labelledBy="contact-title"
+        active={active}
+        onClose={onClose}
+      >
         <div className="dialog-header">
           <span className="eyebrow">START A CONVERSATION</span>
           <button
@@ -45,16 +179,32 @@ export function Dialogs() {
         <div className="dialog-contact">
           <span>EMAIL</span>
           <strong>info@felixbd.com</strong>
-          <button className="text-link copy-email">Copy email</button>
+          <button className="text-link copy-email" onClick={copyEmail}>
+            {copied ? "Email copied ✓" : "Copy email"}
+          </button>
           <span>PHONE</span>
           <strong>+880 1713080002</strong>
         </div>
         <p className="demo-note">
           Website preview. Contact links will be connected in the final website.
         </p>
-        <p className="copy-status sr-only" role="status"></p>
-      </dialog>
-      <dialog id="careers-dialog" aria-labelledby="careers-title">
+        <p
+          className={copyError ? "copy-status" : "copy-status sr-only"}
+          role="status"
+        >
+          {copyError
+            ? "Please select and copy info@felixbd.com."
+            : copied
+              ? "Email address copied."
+              : ""}
+        </p>
+      </PreviewDialog>
+      <PreviewDialog
+        id="careers-dialog"
+        labelledBy="careers-title"
+        active={active}
+        onClose={onClose}
+      >
         <div className="dialog-header">
           <span className="eyebrow">CAREERS</span>
           <button
@@ -77,8 +227,13 @@ export function Dialogs() {
         <p className="demo-note">
           The careers page is a placeholder in this landing-page preview.
         </p>
-      </dialog>
-      <dialog id="profile-dialog" aria-labelledby="profile-title">
+      </PreviewDialog>
+      <PreviewDialog
+        id="profile-dialog"
+        labelledBy="profile-title"
+        active={active}
+        onClose={onClose}
+      >
         <div className="dialog-header">
           <span className="eyebrow">COMPANY PROFILE</span>
           <button
@@ -102,8 +257,13 @@ export function Dialogs() {
         <p className="demo-note">
           The company-profile download will be connected in the final website.
         </p>
-      </dialog>
-      <dialog id="privacy-dialog" aria-labelledby="privacy-title">
+      </PreviewDialog>
+      <PreviewDialog
+        id="privacy-dialog"
+        labelledBy="privacy-title"
+        active={active}
+        onClose={onClose}
+      >
         <div className="dialog-header">
           <span className="eyebrow">WEBSITE PREVIEW</span>
           <button
@@ -121,7 +281,7 @@ export function Dialogs() {
         <p className="demo-note">
           The final privacy policy will be added before launch.
         </p>
-      </dialog>
+      </PreviewDialog>
     </>
   );
 }

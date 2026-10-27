@@ -827,6 +827,7 @@
     background: var(--green-hover);
   }
   dialog {
+    margin: auto;
     @apply overflow-auto;
     border: 1px solid var(--line);
     padding: 32px;
