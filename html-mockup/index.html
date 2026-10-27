@@ -9,8 +9,8 @@
   <link rel="icon" href="assets/felix-logo-transparent.png">
   <link rel="preload" href="assets/archivo-black.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/hero-building.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=20261027-7">
-  <script src="script.js?v=20261027-7" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <svg class="brand-color-filters" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -39,13 +39,14 @@
         <a class="nav-link" href="#about">About</a>
       </nav>
       <div class="nav-actions">
+        <a href="#contact" class="nav-cta">Discuss your project</a>
         <button class="icon-button search-toggle" aria-label="Search website"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m16 16 5 5"/></svg></button>
         <button class="icon-button theme-toggle" aria-label="Switch to dark mode" aria-pressed="false"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 14.6A9 9 0 0 1 9.4 3.4 9 9 0 1 0 20.6 14.6Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
         <button class="icon-button mobile-toggle" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
     <div class="mega-menu" id="solutions-menu" hidden>
-      <div class="menu-inner"><div class="menu-intro"><h2>Integrated building systems.</h2><p>Engineering, integration and support for the complete building lifecycle.</p></div><div class="menu-links">
+      <div class="menu-inner"><div class="menu-intro"><span class="eyebrow">SOLUTIONS &amp; SERVICES</span><h2>Every system.<br>Working together.</h2><p>Engineering, integration and support for the complete building lifecycle.</p></div><div class="menu-links">
         <a href="#building-management" data-service="building-management">Building Management Systems</a>
         <a href="#hvac" data-service="hvac">HVAC &amp; Energy Controls</a>
         <a href="#fire-security" data-service="fire-security">Fire Safety &amp; Security</a>
@@ -55,7 +56,7 @@
       </div></div>
     </div>
     <div class="mega-menu" id="projects-menu" hidden>
-      <div class="menu-inner"><div class="menu-intro"><h2>Experience across sectors.</h2><p>Supporting the places where Bangladesh lives, works and moves.</p></div><div class="menu-links">
+      <div class="menu-inner"><div class="menu-intro"><span class="eyebrow">REFERENCE PROJECTS</span><h2>Built on experience.<br>Proven in practice.</h2><p>Supporting the places where Bangladesh lives, works and moves.</p></div><div class="menu-links">
         <a href="#projects" data-project-filter="industrial">Industrial</a>
         <a href="#projects" data-project-filter="commercial">Commercial</a>
         <a href="#projects" data-project-filter="transport">Transport</a>
@@ -84,59 +85,41 @@
 
     <section class="company-panel" id="about" aria-labelledby="about-heading">
       <div class="company-inner container">
-        <div class="company-copy"><h2 id="about-heading">We advise. We design.<br>We assess. <span class="heading-accent">We deliver.</span></h2><p>Better buildings begin with the right engineering. Since 2010, we have brought building management, automation, fire protection and security systems together for clients across Bangladesh.</p><p>From initial planning to commissioning and ongoing support, our engineers take responsibility for the complete system.</p><button class="text-link light-link" data-open="profile-dialog">View company profile</button></div>
+        <div class="company-copy"><span class="eyebrow">FELIX CONTROLS LIMITED</span><h2 id="about-heading">We advise. We design.<br>We assess. <span>We deliver.</span></h2><p>Better buildings begin with the right engineering. Since 2010, we have brought building management, automation, fire protection and security systems together for clients across Bangladesh.</p><p>From initial planning to commissioning and ongoing support, our engineers take responsibility for the complete system.</p><a href="#solutions" class="text-link light-link">Meet your engineering partner</a></div>
         <dl class="company-stats"><div><dt>15<span>+</span></dt><dd>Years of experience</dd></div><div><dt>400<span>+</span></dt><dd>Projects delivered</dd></div><div><dt>100<span>+</span></dt><dd>Customers served</dd></div><div><dt>2010</dt><dd>Established in Bangladesh</dd></div></dl>
       </div>
+      <div class="partner-caption container"><span class="eyebrow">GLOBAL TECHNOLOGY. LOCAL EXPERTISE.</span></div>
       <div class="partner-billboard" tabindex="0" aria-label="Our technology partners. Animation pauses while focused."><div class="partner-track"><div class="partner-group">
         <img src="assets/partner-honeywell.png" width="273" height="74" alt="Honeywell"><img src="assets/partner-siemens.png" width="228" height="62" alt="Siemens"><img src="assets/partner-trane.png" width="217" height="83" alt="Trane"><img src="assets/partner-control4.png" width="247" height="81" alt="Control4"><img src="assets/partner-lutron.png" width="270" height="69" alt="Lutron"><img src="assets/partner-fike.png" width="173" height="78" alt="Fike"><img src="assets/partner-danfoss.png" width="226" height="78" alt="Danfoss"><img src="assets/partner-rbh.png" width="180" height="111" alt="RBH Access"><img src="assets/partner-belimo.png" width="238" height="74" alt="Belimo"><img src="assets/partner-ss.png" width="219" height="106" alt="S+S Regeltechnik"><img src="assets/partner-tecofi.png" width="226" height="76" alt="Tecofi"><img src="assets/partner-parkhelp.png" width="235" height="69" alt="ParkHelp">
       </div></div></div>
     </section>
 
     <section class="solutions-section container section-space" id="solutions" aria-labelledby="solutions-heading">
-      <div class="section-heading"><div><h2 id="solutions-heading">Solutions &amp; services</h2></div><p>Specialist systems, thoughtfully integrated.<br>From a single control point to an entire facility.</p></div>
+      <div class="section-heading"><div><span class="eyebrow">SOLUTIONS &amp; SERVICES</span><h2 id="solutions-heading">The complete building.<br>Considered as one.</h2></div><p>Specialist systems, thoughtfully integrated.<br>From a single control point to an entire facility.</p></div>
       <div class="service-list">
-        <details id="building-management"><summary><span class="service-number">01</span><h3>Building Management Systems</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Integrated monitoring and control of building services, including HVAC, energy and equipment. We design, install and commission systems that give facilities teams a clear view of their building.</p><span>Honeywell · Siemens · Trane</span></div></details>
-        <details id="hvac"><summary><span class="service-number">02</span><h3>HVAC &amp; Energy Controls</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>HVAC control products, variable frequency drives, sensors, valves and actuators. Coordinated engineering for comfortable indoor conditions and efficient building operations.</p><span>Belimo · Danfoss · S+S Regeltechnik · Tecofi</span></div></details>
-        <details id="fire-security"><summary><span class="service-number">03</span><h3>Fire Safety &amp; Security</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Fire detection and protection, access control and integrated security management. Systems designed around the safety requirements and operational needs of your facility.</p><span>Fike · RBH Access</span></div></details>
-        <details id="automation"><summary><span class="service-number">04</span><h3>Home &amp; Lighting Automation</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Control lighting, entertainment and connected systems through an integrated interface. Residential and commercial lighting solutions tailored to the way each space is used.</p><span>Control4 · Lutron</span></div></details>
-        <details id="parking"><summary><span class="service-number">05</span><h3>Parking Guidance Systems</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Parking guidance and management systems that help drivers locate available spaces and help operators manage parking facilities.</p><span>ParkHelp</span></div></details>
-        <details id="pharmaceutical"><summary><span class="service-number">06</span><h3>Pharmaceutical Solutions</h3><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Building management, environmental monitoring and HVAC controls for pharmaceutical facilities. Our reference projects include Beximco, Square, Eskayef, DBL and Beacon Pharmaceuticals.</p><span>Integrated building &amp; environmental controls</span></div></details>
+        <details id="building-management"><summary><span class="service-number">01</span><h3>Building Management Systems</h3><span class="service-type">MONITOR · CONTROL · OPTIMIZE</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Integrated monitoring and control of building services, including HVAC, energy and equipment. We design, install and commission systems that give facilities teams a clear view of their building.</p><span>Honeywell · Siemens · Trane</span></div></details>
+        <details id="hvac"><summary><span class="service-number">02</span><h3>HVAC &amp; Energy Controls</h3><span class="service-type">COMFORT WITH EFFICIENCY</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>HVAC control products, variable frequency drives, sensors, valves and actuators. Coordinated engineering for comfortable indoor conditions and efficient building operations.</p><span>Belimo · Danfoss · S+S Regeltechnik · Tecofi</span></div></details>
+        <details id="fire-security"><summary><span class="service-number">03</span><h3>Fire Safety &amp; Security</h3><span class="service-type">PROTECT PEOPLE &amp; PROPERTY</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Fire detection and protection, access control and integrated security management. Systems designed around the safety requirements and operational needs of your facility.</p><span>Fike · RBH Access</span></div></details>
+        <details id="automation"><summary><span class="service-number">04</span><h3>Home &amp; Lighting Automation</h3><span class="service-type">SPACES THAT RESPOND</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Control lighting, entertainment and connected systems through an integrated interface. Residential and commercial lighting solutions tailored to the way each space is used.</p><span>Control4 · Lutron</span></div></details>
+        <details id="parking"><summary><span class="service-number">05</span><h3>Parking Guidance Systems</h3><span class="service-type">SMARTER ARRIVALS</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Parking guidance and management systems that help drivers locate available spaces and help operators manage parking facilities.</p><span>ParkHelp</span></div></details>
+        <details id="pharmaceutical"><summary><span class="service-number">06</span><h3>Pharmaceutical Solutions</h3><span class="service-type">CONTROL CRITICAL ENVIRONMENTS</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="service-description"><p>Building management, environmental monitoring and HVAC controls for pharmaceutical facilities. Our reference projects include Beximco, Square, Eskayef, DBL and Beacon Pharmaceuticals.</p><span>Integrated building &amp; environmental controls</span></div></details>
       </div>
     </section>
 
     <section class="projects-section section-space" id="projects" aria-labelledby="projects-heading"><div class="container">
-      <div class="section-heading"><div><h2 id="projects-heading">Selected projects</h2></div><p>From metro stations to pharmaceutical facilities,<br>our work supports Bangladesh’s built environment.</p></div>
+      <div class="section-heading"><div><span class="eyebrow">REFERENCE PROJECTS</span><h2 id="projects-heading">Engineering you can see.<br>Experience you can trust.</h2></div><p>From metro stations to pharmaceutical facilities,<br>our work supports Bangladesh’s built environment.</p></div>
       <div class="project-filters" role="group" aria-label="Filter reference projects"><button class="is-active" data-filter="all" aria-pressed="true">All projects</button><button data-filter="industrial" aria-pressed="false">Industrial</button><button data-filter="commercial" aria-pressed="false">Commercial</button><button data-filter="transport" aria-pressed="false">Transport</button><button data-filter="pharmaceuticals" aria-pressed="false">Pharmaceuticals</button></div>
       <div class="project-grid" aria-live="polite">
-        <article class="project" data-category="transport"><div class="project-image"><img src="assets/project-mrt.jpg" width="462" height="336" alt="Dhaka MRT Line 6 train at a metro station" loading="lazy"><span>01</span></div><div class="project-meta">TRANSPORT</div><h3>Dhaka Metro Rail</h3><p>Station BMS, MRT Line 6 CP 05</p></article>
-        <article class="project" data-category="pharmaceuticals industrial"><div class="project-image"><img src="assets/project-beximco.jpg" width="462" height="336" alt="Beximco Pharmaceuticals facility" loading="lazy"><span>02</span></div><div class="project-meta">PHARMACEUTICALS</div><h3>Beximco Pharmaceuticals PLC</h3><p>Pharmaceutical facility</p></article>
-        <article class="project" data-category="commercial"><div class="project-image"><img src="assets/project-edgewater.jpg" width="462" height="336" alt="Bay’s Edgewater commercial building" loading="lazy"><span>03</span></div><div class="project-meta">COMMERCIAL</div><h3>Bay’s Edgewater</h3><p>Commercial development</p></article>
+        <article class="project" data-category="transport"><div class="project-image"><img src="assets/project-mrt.jpg" width="462" height="336" alt="Dhaka MRT Line 6 train at a metro station" loading="lazy"><span>01</span></div><div class="project-meta">TRANSPORT <span>BUILDING MANAGEMENT</span></div><h3>Dhaka Metro Rail</h3><p>Station BMS, MRT Line 6 CP 05</p></article>
+        <article class="project" data-category="pharmaceuticals industrial"><div class="project-image"><img src="assets/project-beximco.jpg" width="462" height="336" alt="Beximco Pharmaceuticals facility" loading="lazy"><span>02</span></div><div class="project-meta">PHARMACEUTICALS <span>INDUSTRIAL</span></div><h3>Beximco Pharmaceuticals PLC</h3><p>Pharmaceutical facility</p></article>
+        <article class="project" data-category="commercial"><div class="project-image"><img src="assets/project-edgewater.jpg" width="462" height="336" alt="Bay’s Edgewater commercial building" loading="lazy"><span>03</span></div><div class="project-meta">COMMERCIAL <span>BUILDING SYSTEMS</span></div><h3>Bay’s Edgewater</h3><p>Commercial development</p></article>
       </div>
+      <p class="project-note">Selected references from our company profile. <button class="text-link" data-open="profile-dialog">View company profile</button></p>
     </div></section>
 
-    <section class="contact-section container section-space" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-main">
-        <h2 id="contact-heading">Your next project.<br>Our engineering expertise.</h2>
-        <p class="contact-intro">Bring us your building plans, system requirements or an existing facility that needs better control.</p>
-        <button class="button button-green" data-open="contact-dialog">Discuss your project</button>
-      </div>
-      <div class="contact-details">
-        <div class="contact-office">
-          <h3>Visit our office</h3>
-          <address>113/B, Tejgaon Industrial Area<br>Dhaka 1208, Bangladesh</address>
-        </div>
-        <div class="contact-enquiries">
-          <h3>Project enquiries</h3>
-          <p>info@felixbd.com<br>+880 1713080002</p>
-        </div>
-        <div class="contact-careers">
-          <div><h3>Careers</h3><p>Engineering, integration and project delivery.</p></div>
-          <button class="text-link" data-open="careers-dialog">Explore careers</button>
-        </div>
-      </div>
-    </section>
+    <section class="contact-section container section-space" id="contact" aria-labelledby="contact-heading"><div><span class="eyebrow">LET’S BUILD SOMETHING THAT WORKS.</span><h2 id="contact-heading">Your next project.<br>Our engineering expertise.</h2><button class="button button-green" data-open="contact-dialog">Talk to our team</button></div><div class="contact-details"><span class="eyebrow">FIND US IN DHAKA</span><address>Felix Controls Limited<br>113/B, Tejgaon Industrial Area<br>Dhaka 1208, Bangladesh</address><p>info@felixbd.com<br>+880 1713080002</p><button class="text-link" data-open="careers-dialog">Build your career with Felix</button></div></section>
   </main>
-  <footer class="site-footer container"><a href="#" class="footer-brand" aria-label="Felix Controls Limited, home"><img src="assets/felix-logo-transparent.png" width="270" height="250" alt="Felix"></a><p>© <span id="year">2026</span> Felix Controls Limited. All rights reserved.</p><button class="text-link" data-open="privacy-dialog">Privacy</button></footer>
+  <footer class="site-footer container"><a href="#" class="footer-brand" aria-label="Felix Controls Limited, home"><img src="assets/felix-logo-transparent.png" width="270" height="250" alt="Felix"></a><p>© <span id="year">2026</span> Felix Controls Limited. All rights reserved.</p><button class="text-link" data-open="privacy-dialog">Privacy</button><span class="footer-location">DHAKA, BANGLADESH</span></footer>
   <button class="back-top icon-button" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 15 7-7 7 7"/></svg></button>
 
   <dialog id="search-dialog" aria-labelledby="search-heading"><div class="dialog-header"><span class="eyebrow">FELIX CONTROLS LIMITED</span><button class="icon-button close-dialog" aria-label="Close search">×</button></div><h2 id="search-heading">What are you looking for?</h2><label class="sr-only" for="site-search">Search services and projects</label><input id="site-search" type="search" placeholder="Search services and projects…" autocomplete="off"><div class="search-results" aria-live="polite"></div></dialog>
