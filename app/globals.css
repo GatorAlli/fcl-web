@@ -562,13 +562,11 @@
     color: #bdbdbd;
   }
   .partner-billboard {
-    @apply overflow-hidden;
-    background: var(--green);
+    @apply overflow-hidden bg-background;
     padding: 28px 0;
   }
   .partner-track {
     @apply flex w-max;
-    background: #186636;
     animation: billboard 48s linear infinite;
     will-change: transform;
   }
@@ -581,8 +579,6 @@
     @apply object-contain;
     width: 125px;
     height: 39px;
-    filter: grayscale(1) brightness(0.65) invert(1) contrast(10);
-    mix-blend-mode: screen;
   }
   .partner-group img[alt="Fike"] {
     width: 85px;
