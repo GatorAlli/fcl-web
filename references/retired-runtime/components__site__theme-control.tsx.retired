@@ -1,0 +1,44 @@
+"use client";
+import { useEffect, useState } from "react";
+
+export function ThemeControl() {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    let saved = false;
+    try {
+      saved = localStorage.getItem("felix-theme") === "dark";
+    } catch {}
+    document.documentElement.dataset.theme = saved ? "dark" : "light";
+    // The initial server render remains light; the saved preference is restored on mount.
+    const frame = requestAnimationFrame(() => setDark(saved));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  function toggle() {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.dataset.theme = next ? "dark" : "light";
+    try {
+      localStorage.setItem("felix-theme", next ? "dark" : "light");
+    } catch {}
+  }
+  return (
+    <button
+      type="button"
+      className="studio-icon theme-control"
+      onClick={toggle}
+      aria-label={dark ? "Use light theme" : "Use dark theme"}
+      aria-pressed={dark}
+    >
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        {dark ? (
+          <>
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+          </>
+        ) : (
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" />
+        )}
+      </svg>
+    </button>
+  );
+}

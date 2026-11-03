@@ -1,0 +1,428 @@
+/* Fixed carbon palette: a visual direction, with no theme switch or preference. */
+:root {
+  color-scheme: dark;
+  --page-bg: #0c0c0c;
+  --page-surface: #171717;
+  --page-ink: #f6f6f3;
+  --page-muted: #dedfda;
+  --link-ink: #96d3ad;
+  --nav-glass: #0c0c0c;
+  --ink: var(--page-ink);
+  --muted-ink: var(--page-muted);
+  --bg: var(--page-bg);
+  --section: var(--page-surface);
+  --line: #525a54;
+}
+html,
+body,
+.studio-page {
+  background: var(--page-bg);
+  color: var(--page-ink);
+}
+.studio-header::before {
+  background: #0c0c0c;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.studio-brand img {
+  filter: grayscale(1) brightness(0) invert(1);
+}
+.studio-primary {
+  --icon-cutout: #0c0c0c;
+}
+.studio-primary > :is(a, button),
+.studio-tools .studio-icon,
+.studio-menu-toggle {
+  color: var(--page-ink);
+}
+.studio-primary > button:is(.current, [aria-expanded="true"]),
+.studio-primary > a[aria-current="page"]:not(.nav-contact) {
+  color: var(--link-ink);
+}
+.studio-primary > a.nav-contact,
+.studio-primary > a.nav-contact[aria-current="page"],
+.studio-primary > a.nav-contact:hover {
+  color: #080808;
+}
+.studio-page :is(h1, h2, h3, h4, p, li, dt, dd, address, label, small, legend) {
+  color: var(--page-ink);
+}
+.studio-page
+  :is(
+    .fcl-intro-lead,
+    .solution-standfirst,
+    .solution-specification p,
+    .solution-specification li,
+    .project-reference-description,
+    .reference-project p,
+    .module-body > p
+  ) {
+  color: var(--page-muted);
+}
+.studio-page :is(.fcl-link, .section-action, .application-links a) {
+  color: var(--link-ink);
+}
+.studio-page a:hover {
+  color: #b8e6c9;
+}
+.studio-page :is(.button, .fcl-button):hover {
+  color: #fff;
+}
+.studio-page > main:not(.studio-home),
+.home-content-layer {
+  background: var(--page-bg);
+}
+.page-intro-band,
+.about-principles,
+.clients-reference-band {
+  background: var(--page-surface);
+}
+.studio-page
+  :is(
+    .about-hero,
+    .clients-masthead,
+    .solution-detail-intro,
+    .solution-specification,
+    .about-story,
+    .about-markets,
+    .solution-index,
+    .sector-index,
+    .project-reference-article,
+    .profile-browser,
+    .profile-browser-toolbar,
+    .contact-layout,
+    .careers-layout
+  ) {
+  background: var(--page-bg);
+}
+.studio-menu,
+.studio-search {
+  background: var(--page-bg);
+  color: var(--page-ink);
+}
+.studio-menu :is(h2, h3, p, a, button),
+.studio-search :is(h2, h3, p, a, button, label) {
+  color: var(--page-ink);
+}
+.studio-menu a:hover,
+.studio-search a:hover {
+  color: var(--link-ink);
+}
+.studio-search::backdrop {
+  background: rgba(0, 0, 0, 0.82);
+}
+.studio-page
+  :is(
+    .project-search,
+    .search-field,
+    .enquiry-form input,
+    .enquiry-form textarea
+  ),
+.studio-search .search-field,
+.brand-select-trigger.is-light,
+.brand-select-popup.is-light {
+  background: #191d1a;
+  color: var(--page-ink);
+  border-color: #747f77;
+}
+.studio-page :is(.project-search input, .search-field input),
+.studio-search input {
+  background: transparent;
+  color: var(--page-ink);
+}
+.studio-page input::placeholder,
+.studio-page textarea::placeholder,
+.studio-search input::placeholder {
+  color: #c2c9c4;
+}
+.studio-page .enquiry-form :is(.field-error, .form-error) {
+  color: #ff9e9e;
+}
+.studio-page .product-gallery figure {
+  background: #fff;
+  color: #171717;
+  padding: 12px;
+}
+.studio-page .product-gallery figcaption {
+  color: #171717;
+}
+.studio-page .partner-logo-well,
+.client-logo-board > div {
+  background: #fff;
+}
+.profile-browser-toolbar button,
+.profile-thumbnails button {
+  color: var(--page-ink);
+}
+.project-reference-page .project-next a {
+  color: var(--page-ink);
+}
+.studio-page .fcl-label {
+  color: var(--page-muted);
+}
+.studio-home .selected-work-row .fcl-label {
+  color: var(--link-ink);
+}
+.global-footer .footer-directory .footer-primary-phone {
+  color: #d32f2f;
+}
+::selection {
+  background: #186636;
+  color: #fff;
+}
+.page-intro-band .fcl-page-intro {
+  padding-block: 40px;
+  min-height: 0;
+}
+.page-intro-band .fcl-intro-copy {
+  min-height: 0;
+  padding-block: 0;
+}
+.page-intro-band .fcl-intro-copy h1 {
+  margin-top: 0;
+}
+.page-intro-band .fcl-intro-lead {
+  margin-top: 20px;
+}
+.page-intro-band .fcl-page-intro > .fcl-photo {
+  display: block;
+  min-height: 0;
+  aspect-ratio: 16/10;
+}
+@media (max-width: 1024px) {
+  .page-intro-band .fcl-page-intro {
+    gap: 24px;
+  }
+  .page-intro-band .fcl-page-intro > .fcl-photo {
+    width: 100%;
+    aspect-ratio: 16/9;
+    min-height: 0;
+  }
+}
+/* Keep the owner-selected white navigation above the carbon page canvas. */
+.studio-header::before {
+  background: #fff;
+}
+.studio-header .studio-brand img {
+  filter: none;
+}
+.studio-primary {
+  --icon-cutout: #fff;
+}
+.studio-primary > :is(a, button),
+.studio-header .studio-tools .studio-icon,
+.studio-header .studio-menu-toggle {
+  color: #171717;
+}
+.studio-primary > button:is(.current, [aria-expanded="true"]),
+.studio-primary > a[aria-current="page"]:not(.nav-contact) {
+  color: #186636;
+}
+.studio-primary > a.nav-contact,
+.studio-primary > a.nav-contact:hover,
+.studio-primary > a.nav-contact[aria-current="page"] {
+  color: #080808;
+  text-decoration: none;
+  border-bottom: 0;
+}
+.studio-primary > a.nav-contact::after,
+.studio-primary > a.nav-contact .nav-label::before,
+.studio-primary > a.nav-contact .nav-label::after {
+  display: none;
+}
+:root {
+  --scroll-thumb: #677a6d;
+  --scroll-track: #0c0c0c;
+  --scroll-hover: #8fae9a;
+  --scroll-active: #96d3ad;
+}
+.studio-page .fcl-return-nav a {
+  color: var(--page-ink);
+}
+.studio-page {
+  --icon-cutout: #0c0c0c;
+}
+/* Full-width chapters replace the rejected empty title-sidebars. */
+.studio-page .editorial-module {
+  display: block;
+}
+.studio-page .editorial-module > .module-title,
+.studio-page .editorial-module .module-heading > .module-title,
+.studio-home .partner-caption h2 {
+  font: 700 clamp(38px, 4.7vw, 80px) / 1.08 var(--font-display);
+  letter-spacing: -0.04em;
+  color: #f6f6f3;
+  max-width: none;
+  padding: 0;
+}
+.studio-page .editorial-module > .module-title {
+  margin: 0 0 36px;
+}
+.studio-page .editorial-module .module-heading {
+  margin: 0 0 36px;
+}
+.studio-page .editorial-module > .module-body {
+  width: 100%;
+  min-width: 0;
+}
+.studio-page .module-body > p {
+  margin-bottom: 28px;
+}
+.studio-home .company-module .module-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: start;
+}
+.studio-home .company-module .company-context-image {
+  margin: 0;
+  aspect-ratio: 16/10;
+}
+.studio-home .expertise-section .module-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 48px;
+  align-items: start;
+}
+.studio-home .expertise-section .module-body > p {
+  grid-column: 1/-1;
+  margin: 0;
+}
+.studio-home .expertise-image {
+  margin: 0;
+}
+.studio-home .expertise-image .fcl-photo {
+  aspect-ratio: 4/3;
+}
+.studio-home .expertise-index {
+  gap: 32px;
+}
+.studio-home .expertise-index h3 {
+  font-size: clamp(22px, 2vw, 30px);
+}
+.studio-home .market-feature {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+.studio-home .market-feature > .fcl-photo {
+  aspect-ratio: 16/10;
+  min-height: 0;
+}
+.studio-home .market-feature-copy {
+  padding: 32px;
+}
+.studio-home .selected-work-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 48px;
+}
+.studio-home .selected-work-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 24px;
+  max-width: none;
+  align-items: start;
+}
+.studio-home .selected-work-row .fcl-photo {
+  width: 100%;
+  max-width: 315px;
+  margin: 0;
+  aspect-ratio: 16/10;
+}
+.studio-home .delivery-section .module-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+.studio-home .delivery-image {
+  aspect-ratio: 4/3;
+  min-height: 0;
+}
+.studio-home .delivery-content > p {
+  font-size: 20px;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+.studio-home .delivery-content .delivery-steps {
+  gap: 28px;
+}
+.studio-page .product-gallery-section {
+  display: block;
+}
+.studio-page .product-gallery-section > h2 {
+  padding: 0;
+  margin: 0 0 28px;
+}
+.studio-page .scroll-sheet {
+  position: sticky;
+  top: min(72px, calc(100svh - var(--layer-height, 100svh)));
+  z-index: var(--layer-index, 2);
+  background: var(--layer-background, var(--page-bg));
+  box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.24);
+}
+.studio-page .scroll-sheet-interactive {
+  position: relative;
+  top: auto;
+}
+@media (max-width: 1024px) {
+  .studio-home .company-module .module-body,
+  .studio-home .expertise-section .module-body,
+  .studio-home .market-feature,
+  .studio-home .selected-work-list,
+  .studio-home .selected-work-row,
+  .studio-home .delivery-section .module-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .studio-home .expertise-section .module-body > p {
+    grid-column: auto;
+  }
+  .studio-home .selected-work-row .fcl-photo {
+    max-width: 315px;
+  }
+}
+@media (max-width: 650px) {
+  .studio-page .editorial-module > .module-title,
+  .studio-page .editorial-module .module-heading > .module-title,
+  .studio-home .partner-caption h2 {
+    font-size: 36px;
+  }
+  .studio-home .expertise-index {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-page .scroll-sheet {
+    position: relative;
+    top: auto;
+    box-shadow: none;
+  }
+}
+@media print {
+  .studio-page .scroll-sheet {
+    position: relative;
+    top: auto;
+    box-shadow: none;
+  }
+}
+.studio-page .scroll-sheet {
+  display: flow-root;
+}
+.studio-page .editorial-module .module-title {
+  color: #f6f6f3 !important;
+}
+.studio-header .studio-menu-toggle i {
+  background: #171717;
+}
+.solution-article .solution-detail-intro > .solution-meta-row {
+  flex-direction: row;
+}
+.solution-meta-row .fcl-return-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin: 0;
+  flex: 0 0 auto;
+}
+.film-layer {
+  background: transparent;
+}

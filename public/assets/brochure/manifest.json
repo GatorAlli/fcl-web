@@ -1,0 +1,1872 @@
+[
+  {
+    "file": "sector-commercial.webp",
+    "pdfPage": 3,
+    "crop": [
+      83,
+      389,
+      425,
+      605
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-district-cooling.webp",
+    "pdfPage": 3,
+    "crop": [
+      447,
+      389,
+      789,
+      605
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-retail.webp",
+    "pdfPage": 3,
+    "crop": [
+      815,
+      389,
+      1157,
+      605
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-healthcare.webp",
+    "pdfPage": 3,
+    "crop": [
+      83,
+      659,
+      425,
+      875
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-life-sciences.webp",
+    "pdfPage": 3,
+    "crop": [
+      447,
+      659,
+      789,
+      875
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-industry.webp",
+    "pdfPage": 3,
+    "crop": [
+      815,
+      659,
+      1157,
+      875
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-data-centers.webp",
+    "pdfPage": 3,
+    "crop": [
+      83,
+      937,
+      425,
+      1153
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-lodging.webp",
+    "pdfPage": 3,
+    "crop": [
+      447,
+      937,
+      789,
+      1153
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sector-residential.webp",
+    "pdfPage": 3,
+    "crop": [
+      815,
+      937,
+      1157,
+      1153
+    ],
+    "width": 342,
+    "height": 216,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "engineering-team.webp",
+    "pdfPage": 4,
+    "crop": [
+      0,
+      1230,
+      1252,
+      1770
+    ],
+    "width": 1252,
+    "height": 540,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "engineering-design.webp",
+    "pdfPage": 4,
+    "crop": [
+      88,
+      212,
+      265,
+      380
+    ],
+    "width": 177,
+    "height": 168,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "control-room.webp",
+    "pdfPage": 4,
+    "crop": [
+      88,
+      414,
+      270,
+      580
+    ],
+    "width": 182,
+    "height": 166,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "building-management.webp",
+    "pdfPage": 8,
+    "crop": [
+      0,
+      213,
+      1252,
+      650
+    ],
+    "width": 1252,
+    "height": 437,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "bms-controllers.webp",
+    "pdfPage": 8,
+    "crop": [
+      0,
+      650,
+      1252,
+      890
+    ],
+    "width": 1252,
+    "height": 240,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "scada.webp",
+    "pdfPage": 9,
+    "crop": [
+      0,
+      640,
+      1252,
+      1310
+    ],
+    "width": 1252,
+    "height": 670,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "home-automation.webp",
+    "pdfPage": 10,
+    "crop": [
+      144,
+      1050,
+      1252,
+      1635
+    ],
+    "width": 1726,
+    "height": 911,
+    "processing": "AI restoration of extracted lifestyle photo; preserve source scene. Generated dimensions 1726x911. Original crop is retained in analysis."
+  },
+  {
+    "file": "home-products.webp",
+    "pdfPage": 10,
+    "crop": [
+      470,
+      252,
+      1180,
+      540
+    ],
+    "width": 710,
+    "height": 288,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "lighting-control.webp",
+    "pdfPage": 11,
+    "crop": [
+      0,
+      898,
+      1200,
+      1244
+    ],
+    "width": 1200,
+    "height": 346,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "lighting-products.webp",
+    "pdfPage": 11,
+    "crop": [
+      80,
+      1490,
+      700,
+      1635
+    ],
+    "width": 620,
+    "height": 145,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "fire-detection.webp",
+    "pdfPage": 12,
+    "crop": [
+      680,
+      400,
+      1252,
+      835
+    ],
+    "width": 572,
+    "height": 435,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "fire-equipment.webp",
+    "pdfPage": 12,
+    "crop": [
+      95,
+      1450,
+      335,
+      1685
+    ],
+    "width": 240,
+    "height": 235,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "security.webp",
+    "pdfPage": 13,
+    "crop": [
+      88,
+      584,
+      1208,
+      1330
+    ],
+    "width": 1120,
+    "height": 746,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "variable-frequency-drives.webp",
+    "pdfPage": 14,
+    "crop": [
+      68,
+      580,
+      1180,
+      1215
+    ],
+    "width": 1112,
+    "height": 635,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "hvac-controls.webp",
+    "pdfPage": 15,
+    "crop": [
+      70,
+      375,
+      1190,
+      1030
+    ],
+    "width": 1120,
+    "height": 655,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "sensors.webp",
+    "pdfPage": 16,
+    "crop": [
+      95,
+      245,
+      1252,
+      970
+    ],
+    "width": 1157,
+    "height": 725,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "manual-valves.webp",
+    "pdfPage": 17,
+    "crop": [
+      130,
+      1117,
+      907,
+      1455
+    ],
+    "width": 777,
+    "height": 338,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "parking.webp",
+    "pdfPage": 18,
+    "crop": [
+      148,
+      395,
+      1252,
+      840
+    ],
+    "width": 1104,
+    "height": 445,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-mrt-line-6.webp",
+    "pdfPage": 19,
+    "crop": [
+      86,
+      288,
+      401,
+      442
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-beximco.webp",
+    "pdfPage": 19,
+    "crop": [
+      462,
+      288,
+      777,
+      442
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-square.webp",
+    "pdfPage": 19,
+    "crop": [
+      838,
+      288,
+      1153,
+      442
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-eskayef.webp",
+    "pdfPage": 19,
+    "crop": [
+      86,
+      590,
+      401,
+      744
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-dbl.webp",
+    "pdfPage": 19,
+    "crop": [
+      462,
+      590,
+      777,
+      744
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-beacon.webp",
+    "pdfPage": 19,
+    "crop": [
+      838,
+      590,
+      1153,
+      744
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-essential-drugs.webp",
+    "pdfPage": 19,
+    "crop": [
+      86,
+      892,
+      401,
+      1046
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-evercare.webp",
+    "pdfPage": 19,
+    "crop": [
+      462,
+      892,
+      777,
+      1046
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-ship-hospital.webp",
+    "pdfPage": 19,
+    "crop": [
+      838,
+      892,
+      1153,
+      1046
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-liberation-war-museum.webp",
+    "pdfPage": 19,
+    "crop": [
+      86,
+      1193,
+      401,
+      1347
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-bays-edgewater.webp",
+    "pdfPage": 19,
+    "crop": [
+      462,
+      1193,
+      777,
+      1347
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-eastern-bank.webp",
+    "pdfPage": 19,
+    "crop": [
+      838,
+      1193,
+      1153,
+      1347
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-shahjalal-bank.webp",
+    "pdfPage": 19,
+    "crop": [
+      86,
+      1495,
+      401,
+      1649
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-shanta-forum.webp",
+    "pdfPage": 19,
+    "crop": [
+      462,
+      1495,
+      777,
+      1649
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "project-shanta-pinnacle.webp",
+    "pdfPage": 19,
+    "crop": [
+      838,
+      1495,
+      1153,
+      1649
+    ],
+    "width": 315,
+    "height": 154,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-honeywell.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      366,
+      250,
+      421
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-siemens.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      478,
+      250,
+      533
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-trane.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      590,
+      250,
+      645
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-control4.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      702,
+      250,
+      757
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-lutron.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      814,
+      250,
+      869
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-fike.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      936,
+      250,
+      991
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-danfoss.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1047,
+      250,
+      1102
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-rbh.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1160,
+      250,
+      1215
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-belimo.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1270,
+      250,
+      1325
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-ss.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1382,
+      250,
+      1437
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-tecofi.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1495,
+      250,
+      1550
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "partner-parkhelp.webp",
+    "pdfPage": 5,
+    "crop": [
+      90,
+      1608,
+      250,
+      1663
+    ],
+    "width": 160,
+    "height": 55,
+    "processing": "Native-resolution extraction; WebP quality 94. No invented details."
+  },
+  {
+    "file": "client-01.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      205,
+      188,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-02.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      205,
+      327,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-03.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      205,
+      466,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-04.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      205,
+      606,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-05.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      205,
+      746,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-06.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      205,
+      885,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-07.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      205,
+      1025,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-08.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      205,
+      1165,
+      250
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-09.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      281,
+      188,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-10.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      281,
+      327,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-11.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      281,
+      466,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-12.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      281,
+      606,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-13.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      281,
+      746,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-14.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      281,
+      885,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-15.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      281,
+      1025,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-16.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      281,
+      1165,
+      326
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-17.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      357,
+      188,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-18.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      357,
+      327,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-19.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      357,
+      466,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-20.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      357,
+      606,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-21.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      357,
+      746,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-22.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      357,
+      885,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-23.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      357,
+      1025,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-24.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      357,
+      1165,
+      402
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-25.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      433,
+      188,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-26.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      433,
+      327,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-27.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      433,
+      466,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-28.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      433,
+      606,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-29.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      433,
+      746,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-30.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      433,
+      885,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-31.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      433,
+      1025,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-32.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      433,
+      1165,
+      478
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-33.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      509,
+      188,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-34.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      509,
+      327,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-35.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      509,
+      466,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-36.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      509,
+      606,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-37.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      509,
+      746,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-38.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      509,
+      885,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-39.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      509,
+      1025,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-40.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      509,
+      1165,
+      554
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-41.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      585,
+      188,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-42.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      585,
+      327,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-43.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      585,
+      466,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-44.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      585,
+      606,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-45.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      585,
+      746,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-46.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      585,
+      885,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-47.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      585,
+      1025,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-48.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      585,
+      1165,
+      630
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-49.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      661,
+      188,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-50.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      661,
+      327,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-51.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      661,
+      466,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-52.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      661,
+      606,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-53.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      661,
+      746,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-54.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      661,
+      885,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-55.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      661,
+      1025,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-56.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      661,
+      1165,
+      706
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-57.webp",
+    "pdfPage": 6,
+    "crop": [
+      98,
+      737,
+      188,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-58.webp",
+    "pdfPage": 6,
+    "crop": [
+      237,
+      737,
+      327,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-59.webp",
+    "pdfPage": 6,
+    "crop": [
+      376,
+      737,
+      466,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-60.webp",
+    "pdfPage": 6,
+    "crop": [
+      516,
+      737,
+      606,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-61.webp",
+    "pdfPage": 6,
+    "crop": [
+      656,
+      737,
+      746,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-62.webp",
+    "pdfPage": 6,
+    "crop": [
+      795,
+      737,
+      885,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-63.webp",
+    "pdfPage": 6,
+    "crop": [
+      935,
+      737,
+      1025,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "client-64.webp",
+    "pdfPage": 6,
+    "crop": [
+      1075,
+      737,
+      1165,
+      782
+    ],
+    "width": 90,
+    "height": 45,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "bms-dashboard.webp",
+    "pdfPage": 8,
+    "crop": [
+      0,
+      1265,
+      740,
+      1685
+    ],
+    "width": 740,
+    "height": 420,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "bms-thermostats.webp",
+    "pdfPage": 8,
+    "crop": [
+      875,
+      1265,
+      1230,
+      1685
+    ],
+    "width": 355,
+    "height": 420,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "scada-controllers.webp",
+    "pdfPage": 9,
+    "crop": [
+      30,
+      1385,
+      1190,
+      1685
+    ],
+    "width": 1160,
+    "height": 300,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "home-keypads.webp",
+    "pdfPage": 10,
+    "crop": [
+      640,
+      870,
+      1248,
+      1025
+    ],
+    "width": 608,
+    "height": 155,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "lighting-panel.webp",
+    "pdfPage": 11,
+    "crop": [
+      925,
+      780,
+      1195,
+      915
+    ],
+    "width": 270,
+    "height": 135,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "lighting-mobile.webp",
+    "pdfPage": 11,
+    "crop": [
+      710,
+      1390,
+      1180,
+      1682
+    ],
+    "width": 470,
+    "height": 292,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "fire-sprinkler.webp",
+    "pdfPage": 12,
+    "crop": [
+      499,
+      1451,
+      737,
+      1685
+    ],
+    "width": 238,
+    "height": 234,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "fire-suppression.webp",
+    "pdfPage": 12,
+    "crop": [
+      962,
+      1451,
+      1196,
+      1685
+    ],
+    "width": 234,
+    "height": 234,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "security-interfaces.webp",
+    "pdfPage": 13,
+    "crop": [
+      360,
+      1340,
+      1250,
+      1678
+    ],
+    "width": 890,
+    "height": 338,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "drive-range.webp",
+    "pdfPage": 14,
+    "crop": [
+      80,
+      1265,
+      1180,
+      1682
+    ],
+    "width": 1100,
+    "height": 417,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "hvac-actuators.webp",
+    "pdfPage": 15,
+    "crop": [
+      75,
+      380,
+      1192,
+      640
+    ],
+    "width": 1117,
+    "height": 260,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "hvac-control-interfaces.webp",
+    "pdfPage": 15,
+    "crop": [
+      885,
+      1070,
+      1180,
+      1255
+    ],
+    "width": 295,
+    "height": 185,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "sensor-interfaces.webp",
+    "pdfPage": 16,
+    "crop": [
+      90,
+      1240,
+      1200,
+      1690
+    ],
+    "width": 1110,
+    "height": 450,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "parking-dashboard.webp",
+    "pdfPage": 18,
+    "crop": [
+      0,
+      1200,
+      590,
+      1685
+    ],
+    "width": 590,
+    "height": 485,
+    "processing": "Native-resolution PDF extraction."
+  },
+  {
+    "file": "profile-page-01.webp",
+    "pdfPage": 1,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-02.webp",
+    "pdfPage": 2,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-03.webp",
+    "pdfPage": 3,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-04.webp",
+    "pdfPage": 4,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-05.webp",
+    "pdfPage": 5,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-06.webp",
+    "pdfPage": 6,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-07.webp",
+    "pdfPage": 7,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-08.webp",
+    "pdfPage": 8,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-09.webp",
+    "pdfPage": 9,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-10.webp",
+    "pdfPage": 10,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-11.webp",
+    "pdfPage": 11,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-12.webp",
+    "pdfPage": 12,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-13.webp",
+    "pdfPage": 13,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-14.webp",
+    "pdfPage": 14,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-15.webp",
+    "pdfPage": 15,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-16.webp",
+    "pdfPage": 16,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-17.webp",
+    "pdfPage": 17,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-18.webp",
+    "pdfPage": 18,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-19.webp",
+    "pdfPage": 19,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "profile-page-20.webp",
+    "pdfPage": 20,
+    "width": 1252,
+    "height": 1777,
+    "processing": "Whole original page retained for resource viewer."
+  },
+  {
+    "file": "hero-architecture.webp",
+    "pdfPage": 3,
+    "processing": "AI restoration of 342x216 architectural source crop; generated 1536x1024. Illustrative architecture, not a project claim.",
+    "width": 1536,
+    "height": 1024
+  },
+  {
+    "file": "scada-restored.webp",
+    "pdfPage": 9,
+    "width": 1714,
+    "height": 918,
+    "processing": "AI restoration of the source SCADA illustration for hero use; original scada.webp retained for technical reference."
+  }
+]

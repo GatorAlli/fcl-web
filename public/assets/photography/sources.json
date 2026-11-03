@@ -1,0 +1,146 @@
+[
+  {
+    "name": "architecture",
+    "page": "https://unsplash.com/de/@fusebrussels",
+    "author": "Nick Wessaert",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "industry",
+    "page": "https://unsplash.com/photos/5hPe-Tr2wog",
+    "author": "Homa Appliances",
+    "width": 3600,
+    "height": 2401,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "living",
+    "page": "https://unsplash.com/photos/pyJgggne0W4",
+    "author": "Lotus Design N Print",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "laboratory",
+    "page": "https://unsplash.com/photos/8yS04veb1TQ",
+    "author": "ThisisEngineering",
+    "width": 3600,
+    "height": 2401,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "controls",
+    "page": "https://unsplash.com/photos/KDkU44ikiko",
+    "author": "Raymond Sime",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "data-center",
+    "page": "https://unsplash.com/photos/M5tzZtFCOfs",
+    "author": "Taylor Vick",
+    "width": 3600,
+    "height": 2020,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "retail",
+    "page": "https://unsplash.com/photos/3RPL1KeMfmg",
+    "author": "Brett Jordan",
+    "width": 3600,
+    "height": 2700,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "parking",
+    "page": "https://unsplash.com/photos/IrDBnq_cWlo",
+    "author": "Darren Hibbs",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "healthcare",
+    "page": "https://unsplash.com/photos/Pk-KuizxQv8",
+    "author": "Tasha Kostyuk",
+    "width": 3600,
+    "height": 2700,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "lodging",
+    "page": "https://unsplash.com/photos/xQbmc2FnK3Y",
+    "author": "Antonio Araujo",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "design",
+    "page": "https://unsplash.com/photos/architectural-blueprints-spread-out-on-a-surface-fNxmdlYHRm8",
+    "author": "Marina Zvada",
+    "width": 2796,
+    "height": 3728,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "pipework",
+    "page": "https://unsplash.com/photos/industrial-metal-pipes-and-valves-41X6FwTwPh4",
+    "author": "Ricardo Gomez Angel",
+    "width": 3600,
+    "height": 2098,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "security-camera",
+    "page": "https://unsplash.com/photos/white-surveillance-camera-RrhxsjoL7Po",
+    "imageUrl": "https://images.unsplash.com/photo-1529874164499-5e59cb720b17?w=3600&q=95&fm=jpg&fit=max",
+    "author": "Pawel Czerwinski",
+    "width": 3600,
+    "height": 2400,
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "deliveredWidth": 1800,
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  }
+]

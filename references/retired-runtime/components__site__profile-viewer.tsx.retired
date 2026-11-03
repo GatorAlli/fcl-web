@@ -1,0 +1,77 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import { asset, brochure, profilePages } from "@/lib/company-profile";
+export function ProfileViewer() {
+  const [page, setPage] = useState(1);
+  const current = profilePages[page - 1];
+  return (
+    <section className="fcl-container profile-browser">
+      <div className="profile-browser-toolbar">
+        <label htmlFor="profile-page">
+          Browse the profile
+          <select
+            id="profile-page"
+            value={page}
+            onChange={(e) => setPage(Number(e.target.value))}
+          >
+            {profilePages.map((p, i) => (
+              <option key={p.title} value={i + 1}>
+                {String(i + 1).padStart(2, "0")} , {p.title}
+              </option>
+            ))}
+          </select>
+        </label>
+        <div className="profile-controls">
+          <button
+            aria-label="Previous profile page"
+            disabled={page === 1}
+            onClick={() => setPage((p) => p - 1)}
+          >
+            ←
+          </button>
+          <span>{page} / 20</span>
+          <button
+            aria-label="Next profile page"
+            disabled={page === 20}
+            onClick={() => setPage((p) => p + 1)}
+          >
+            →
+          </button>
+        </div>
+        <a className="fcl-link" href={brochure} download>
+          Download PDF
+        </a>
+      </div>
+      <div className="profile-reader">
+        <aside>
+          <span className="fcl-label">COMPANY PROFILE , PAGE {page}</span>
+          <h2>{current.title}</h2>
+          <p aria-live="polite">{current.summary}</p>
+          <a
+            className="fcl-link"
+            href={asset(`profile-page-${String(page).padStart(2, "0")}`)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open full-size page
+          </a>
+        </aside>
+        <figure>
+          <Image
+            key={page}
+            src={asset(`profile-page-${String(page).padStart(2, "0")}`)}
+            width={1252}
+            height={1777}
+            alt={`Company profile page ${page}: ${current.title}. ${current.summary}`}
+            sizes="(max-width: 650px) 100vw, 800px"
+          />
+          <figcaption>
+            Original supplied brochure page. Historical statements are retained
+            as published.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,56 @@
+"use client";
+import { useEffect, useRef } from "react";
+
+export function ScrollEffects() {
+  const button = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      if (button.current) button.current.hidden = window.scrollY < 800;
+      frame = 0;
+    };
+    const scroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", scroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", scroll);
+    };
+  }, []);
+  return (
+    <button
+      ref={button}
+      type="button"
+      className="back-to-top"
+      hidden
+      aria-label="Back to top"
+      onClick={() => {
+        const reduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        window.scrollTo({ top: 0, behavior: reduced ? "instant" : "smooth" });
+        document
+          .querySelector<HTMLAnchorElement>(".studio-brand")
+          ?.focus({ preventScroll: true });
+      }}
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="m5 15 7-7 7 7"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  );
+}

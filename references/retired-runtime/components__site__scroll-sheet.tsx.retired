@@ -1,0 +1,84 @@
+"use client";
+import {
+  Children,
+  isValidElement,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
+import { usePathname } from "next/navigation";
+
+export function ScrollSheet({
+  children,
+  index = 0,
+}: {
+  children: ReactNode;
+  index?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number>();
+  const [interactive, setInteractive] = useState(false);
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    const resize = new ResizeObserver(([entry]) => {
+      setHeight(
+        Math.ceil(
+          entry.borderBoxSize[0]?.blockSize ??
+            element.getBoundingClientRect().height,
+        ),
+      );
+    });
+    resize.observe(element);
+    const frame = requestAnimationFrame(() =>
+      setInteractive(
+        Boolean(element.querySelector("form, textarea, .profile-browser")),
+      ),
+    );
+    return () => {
+      resize.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, []);
+  return (
+    <div
+      ref={ref}
+      className={`scroll-sheet${interactive ? " scroll-sheet-interactive" : ""}`}
+      style={
+        {
+          "--layer-index": index + 2,
+          "--layer-background": index % 2 ? "#181818" : "#0c0c0c",
+          "--layer-height": height ? `${height}px` : undefined,
+        } as CSSProperties
+      }
+    >
+      {children}
+    </div>
+  );
+}
+
+export function PageCanvas({
+  children,
+  ...props
+}: {
+  children: ReactNode;
+  id?: string;
+  className?: string;
+}) {
+  const pathname = usePathname();
+  return (
+    <main {...props}>
+      {Children.toArray(children).map((child, index) =>
+        isValidElement(child) ? (
+          <ScrollSheet key={`${pathname}-${index}`} index={index}>
+            {child}
+          </ScrollSheet>
+        ) : (
+          child
+        ),
+      )}
+    </main>
+  );
+}

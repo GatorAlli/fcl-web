@@ -1,0 +1,359 @@
+/* Reference projects: coordinated navigation, five-sector carousel and photo grid. */
+.project-index-page {
+  padding-top: var(--reference-menu-height, 0px);
+  transition: padding-top 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-index-page .project-gallery {
+  padding-block: 0 48px;
+}
+.project-showcase {
+  width: 100%;
+  min-width: 0;
+}
+.project-sector-carousel {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.project-index-page .project-sector-carousel {
+  position: sticky;
+  top: calc(72px + var(--reference-menu-height, 0px));
+  z-index: 3;
+  padding-block: 8px;
+  background: var(--page-bg);
+  transition: top 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-sector-arrow {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: transparent;
+  color: var(--page-ink);
+  cursor: pointer;
+  transition:
+    background 180ms,
+    color 180ms;
+}
+.project-sector-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+.project-sector-arrow:hover {
+  background: var(--page-surface);
+  color: var(--link-ink);
+}
+.project-sector-arrow:active {
+  background: #29382e;
+}
+.project-sector-window {
+  position: relative;
+  height: 112px;
+  overflow: hidden;
+  min-width: 0;
+  container-type: inline-size;
+  perspective: 900px;
+}
+.project-sector-name {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: 260px;
+  max-width: 100%;
+  min-height: 52px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--page-ink);
+  font: 700 clamp(26px, 2.05vw, 30px) / 1.2 var(--font-display);
+  text-align: center;
+  cursor: pointer;
+  transform: translate3d(
+      calc(-50% + var(--sector-offset) * 20cqw),
+      calc(-50% + var(--sector-depth) * 6px),
+      0
+    )
+    scale(var(--sector-scale)) rotateY(var(--sector-tilt));
+  opacity: calc(1 - var(--sector-depth) * 0.15);
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 300ms,
+    color 180ms;
+}
+.project-sector-window.is-all .project-sector-name {
+  width: 20cqw;
+  font-size: clamp(18px, 1.8vw, 26px);
+}
+.project-sector-name[aria-pressed="true"] {
+  color: var(--link-ink);
+}
+.project-sector-name:hover {
+  color: var(--link-ink);
+  opacity: 1;
+}
+.project-sector-name:focus-visible {
+  outline: 2px solid var(--link-ink);
+  outline-offset: -4px;
+}
+.project-all-label {
+  display: none;
+}
+.project-sector-panel {
+  min-height: 280px;
+}
+.project-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 32px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.project-photo-grid > li {
+  min-width: 0;
+}
+.project-photo-card {
+  display: block;
+  max-width: 315px;
+  width: 100%;
+  margin-inline: auto;
+  color: var(--page-ink);
+  text-decoration: none;
+}
+.project-photo-frame {
+  width: 100%;
+  aspect-ratio: 315/154;
+  overflow: hidden;
+  background: var(--page-surface);
+}
+.project-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-photo-card:hover img {
+  transform: scale(1.035);
+}
+.project-photo-card:focus-visible {
+  outline: 2px solid var(--link-ink);
+  outline-offset: -2px;
+}
+.project-photo-caption {
+  padding-top: 18px;
+}
+.studio-page .project-photo-caption :is(h2, h3) {
+  font: 700 clamp(21px, 1.8vw, 28px) / 1.2 var(--font-display);
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
+  max-width: none;
+}
+.studio-page .project-photo-caption p {
+  color: var(--page-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+.project-photo-card:hover :is(h2, h3) {
+  color: var(--link-ink);
+}
+
+/* Both navbar arrows use the same centre-out link and rotating chevron states. */
+.studio-primary .nav-dropdown-arrow {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  flex: 0 0 20px;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reference-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  background: var(--page-bg);
+  color: var(--page-ink);
+  transition: grid-template-rows 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reference-menu.is-open {
+  grid-template-rows: 1fr;
+}
+.reference-menu-clip {
+  min-height: 0;
+  overflow: hidden;
+}
+.reference-menu-content {
+  padding: 24px var(--fcl-gutter);
+}
+.project-menu-directory {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px 48px;
+  max-width: 1060px;
+  width: 100%;
+  margin-inline: auto;
+}
+:is(.studio-menu, .reference-menu) .project-menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  min-height: 56px;
+  background: #ff0000;
+  color: #080808;
+  font: 700 26px/1.2 var(--font-display);
+  text-decoration: none;
+  transition:
+    background 180ms,
+    color 180ms;
+}
+:is(.studio-menu, .reference-menu) .project-menu-heading:hover,
+body:has(.project-index-page [data-project-category="all"])
+  .reference-menu
+  .project-menu-heading:first-child {
+  background: #186636;
+  color: #fff;
+}
+.project-menu-sectors {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 48px;
+}
+:is(.studio-menu, .reference-menu) .project-menu-sectors a {
+  padding: 12px 16px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font: 400 20px/1.4 var(--font-reading);
+  border: 0;
+  color: var(--page-ink);
+  text-decoration: none;
+  transition:
+    background 180ms,
+    color 180ms;
+}
+.project-menu-sectors svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--link-ink);
+  stroke-width: 1.5;
+}
+:is(.studio-menu, .reference-menu) .project-menu-sectors a:hover {
+  background: #1e2a22;
+  color: var(--link-ink);
+}
+.project-menu-directory a:focus-visible {
+  outline: 2px solid var(--link-ink);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1025px) {
+  .project-photo-grid.has-few-projects {
+    grid-template-columns: repeat(auto-fit, minmax(0, 315px));
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .project-sector-name {
+    transform: translate3d(
+        calc(-50% + var(--sector-offset) * 33.333cqw),
+        calc(-50% + var(--sector-depth) * 6px),
+        0
+      )
+      scale(var(--sector-scale)) rotateY(var(--sector-tilt));
+  }
+  .project-sector-name.is-outer {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .project-sector-window.is-all .project-sector-name {
+    width: 33.333cqw;
+    font-size: 22px;
+  }
+  .project-photo-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .project-menu-directory {
+    gap: 16px 24px;
+  }
+  .project-menu-sectors {
+    column-gap: 24px;
+  }
+  .reference-menu-content {
+    padding-block: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .project-sector-carousel {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+  .project-sector-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .project-sector-window {
+    height: 88px;
+  }
+  .project-sector-name {
+    width: 100%;
+    font-size: 22px;
+    transform: translate3d(
+        calc(-50% + var(--sector-offset) * 100cqw),
+        calc(-50% + var(--sector-depth) * 6px),
+        0
+      )
+      scale(var(--sector-scale)) rotateY(var(--sector-tilt));
+  }
+  .project-sector-window.is-all .project-sector-name {
+    visibility: hidden;
+  }
+  .project-all-label {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    color: var(--link-ink);
+    font: 700 24px/1.2 var(--font-display);
+  }
+  .project-menu-directory,
+  .project-menu-sectors {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  :is(.studio-menu, .reference-menu) .project-menu-heading {
+    min-height: 48px;
+    font-size: 24px;
+  }
+  :is(.studio-menu, .reference-menu) .project-menu-sectors a {
+    min-height: 44px;
+    padding-block: 10px;
+    font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-index-page,
+  .project-index-page .project-sector-carousel,
+  .reference-menu,
+  .studio-primary .nav-dropdown-arrow,
+  .project-sector-name,
+  .project-photo-frame img {
+    transition: none;
+  }
+  .project-photo-grid {
+    animation: none;
+  }
+}
+@media print {
+  .project-sector-carousel {
+    display: none;
+  }
+  .project-index-page {
+    padding-top: 0;
+  }
+}

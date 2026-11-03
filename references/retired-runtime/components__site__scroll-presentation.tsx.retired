@@ -1,0 +1,102 @@
+"use client";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+export function ScrollPresentation() {
+  const pathname = usePathname();
+  useEffect(() => {
+    const motion = matchMedia("(prefers-reduced-motion: reduce)");
+    let seen = new WeakSet<Element>();
+    const animations = new Set<Animation>();
+    const reveal = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting || motion.matches) continue;
+          const words = [
+            ...entry.target.querySelectorAll<HTMLElement>("[data-motion-word]"),
+          ];
+          const pieces = words.length ? words : [entry.target];
+          pieces.forEach((piece, index) => {
+            const animation = piece.animate(
+              [
+                {
+                  opacity: 0.1,
+                  transform: `translateY(${words.length ? "100%" : "20px"})`,
+                },
+                { opacity: 1, transform: "translateY(0)" },
+              ],
+              {
+                duration: 620,
+                delay: Math.min(index * 40, 200),
+                easing: "cubic-bezier(.22,1,.36,1)",
+                fill: "both",
+              },
+            );
+            animations.add(animation);
+            animation.onfinish = () => {
+              animation.cancel();
+              animations.delete(animation);
+            };
+          });
+          reveal.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -5% 0px" },
+    );
+    function register() {
+      if (motion.matches) return;
+      document
+        .querySelectorAll(
+          "#main h1, #main h2, #main .fcl-intro-lead, #main .solution-standfirst, #main .module-body > p",
+        )
+        .forEach((heading) => {
+          if (heading.closest(".hero, .project-showcase") || seen.has(heading))
+            return;
+          seen.add(heading);
+          reveal.observe(heading);
+        });
+    }
+    function changed() {
+      reveal.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      animations.clear();
+      seen = new WeakSet();
+      register();
+    }
+    function keepFocusVisible(event: FocusEvent) {
+      const target = event.target;
+      if (!(target instanceof HTMLElement) || !target.matches(":focus-visible"))
+        return;
+      const sheet = target.closest<HTMLElement>(
+        "#main .scroll-sheet:not(.scroll-sheet-interactive)",
+      );
+      if (!sheet) return;
+      const rect = target.getBoundingClientRect();
+      const hit = document.elementFromPoint(
+        Math.max(1, Math.min(innerWidth - 1, rect.left + rect.width / 2)),
+        Math.max(73, Math.min(innerHeight - 1, rect.top + rect.height / 2)),
+      );
+      if (hit && !target.contains(hit)) {
+        const previous = sheet.style.position;
+        sheet.style.position = "relative";
+        const top = sheet.getBoundingClientRect().top + scrollY - 88;
+        sheet.style.position = previous;
+        window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+      }
+    }
+    const frame = requestAnimationFrame(register);
+    const mutations = new MutationObserver(register);
+    mutations.observe(document.body, { childList: true, subtree: true });
+    motion.addEventListener("change", changed);
+    document.addEventListener("focusin", keepFocusVisible);
+    return () => {
+      cancelAnimationFrame(frame);
+      mutations.disconnect();
+      reveal.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      motion.removeEventListener("change", changed);
+      document.removeEventListener("focusin", keepFocusVisible);
+    };
+  }, [pathname]);
+  return null;
+}

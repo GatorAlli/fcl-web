@@ -1,0 +1,188 @@
+.studio-page:has(.about-data-page),
+.studio-page > main.about-data-page {
+  background: var(--paper);
+  color: var(--ink);
+}
+.about-data-page {
+  padding-block: 64px 72px;
+}
+.about-opening {
+  padding-bottom: 64px;
+}
+.studio-page .about-opening .section-label {
+  font: 400 16px/1.5 var(--font-data);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 20px;
+}
+.studio-page .about-opening h1 {
+  max-width: none;
+  margin: 0;
+  font: 700 clamp(36px, 4.8vw, 72px) / 1.12 var(--font-display);
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.about-data-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.6fr) minmax(0, 2fr);
+  gap: 48px;
+  border-top: 1px solid var(--rule);
+  padding-block: 40px;
+  align-items: start;
+}
+.studio-page .about-data-row h2 {
+  margin: 0;
+  max-width: 12ch;
+  font: 700 clamp(24px, 2.2vw, 34px) / 1.2 var(--font-display);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.studio-page .about-data-row p {
+  max-width: 65ch;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.about-data-row .prose {
+  display: grid;
+  gap: 24px;
+}
+.about-team-statement h3 {
+  max-width: 24ch;
+  margin: 0;
+  font: 700 clamp(30px, 3.4vw, 48px) / 1.16 var(--font-display);
+  letter-spacing: -0.035em;
+  color: var(--green);
+}
+.company-data-sheet {
+  margin: 0;
+  background: var(--surface);
+  padding: 0 24px;
+  border-block: 2px solid var(--navy);
+}
+.company-data-sheet > div {
+  display: grid;
+  grid-template-columns: minmax(138px, 0.7fr) minmax(0, 2fr);
+  column-gap: 24px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.company-data-sheet > div:last-child {
+  border-bottom: 0;
+}
+.studio-page .company-data-sheet dt {
+  margin: 0;
+  color: var(--navy);
+  font: 400 15px/1.6 var(--font-data);
+}
+.studio-page .company-data-sheet dd {
+  margin: 0;
+  color: var(--ink);
+  font: 400 17px/1.65 var(--font-reading);
+}
+.resource-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.studio-page .resource-facts li {
+  color: var(--ink);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 20px;
+}
+.resource-facts li:first-child {
+  padding-top: 0;
+}
+.resource-facts li:last-child {
+  border-bottom: 0;
+}
+.profile-statement figure {
+  margin: 0;
+}
+.profile-statement blockquote {
+  margin: 0 0 20px;
+  font: 700 clamp(28px, 3vw, 42px) / 1.2 var(--font-display);
+  letter-spacing: -0.025em;
+  color: var(--green);
+}
+.profile-statement figcaption {
+  color: var(--muted);
+  font: 400 14px/1.6 var(--font-data);
+}
+.confirmation-note {
+  display: block;
+  margin-top: 8px;
+  color: var(--navy);
+  font-weight: 400;
+}
+.about-data-page .fcl-button {
+  background: var(--green);
+  color: var(--surface);
+  border: 1px solid var(--green);
+  padding: 14px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 16px/1.5 var(--font-reading);
+  text-decoration: none;
+  border-radius: 2px;
+}
+.about-data-page .fcl-button:hover {
+  background: var(--green-deep);
+  color: var(--surface);
+}
+.home-company .company-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  gap: 64px;
+  align-items: start;
+}
+.company-founding p {
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+@media (max-width: 1024px) {
+  .about-data-page {
+    padding-block: 40px;
+  }
+  .about-opening {
+    padding-bottom: 40px;
+  }
+  .about-data-row,
+  .home-company .company-opening {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .about-data-row h2 {
+    max-width: none;
+  }
+  .home-company .company-opening {
+    gap: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .about-opening h1 {
+    font-size: 36px;
+  }
+  .company-data-sheet {
+    padding-inline: 16px;
+  }
+  .company-data-sheet > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding-block: 18px;
+  }
+  .company-data-sheet dt {
+    font-size: 14px;
+  }
+  .company-data-sheet dd {
+    font-size: 16px;
+  }
+  .about-data-row {
+    padding-block: 32px;
+  }
+}

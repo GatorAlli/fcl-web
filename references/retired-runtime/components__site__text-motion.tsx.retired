@@ -1,0 +1,115 @@
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+export function RevealWords({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(" ").map((word, index) => (
+        <span key={`${word}-${index}`}>
+          <span className="motion-word-mask">
+            <span className="motion-word" data-motion-word>
+              {word}
+            </span>
+          </span>{" "}
+        </span>
+      ))}
+    </>
+  );
+}
+
+export function TextMotion() {
+  const pathname = usePathname();
+  useEffect(() => {
+    const motion = matchMedia("(prefers-reduced-motion: reduce)");
+    const watched = new WeakSet<Element>();
+    const seen = new WeakSet<Element>();
+    const running = new Map<Element, Animation[]>();
+    const selector =
+      ".fcl-intro-copy h1, .solution-detail-intro h1, .editorial-heading h2, .home-section-heading h2, .fcl-section-top h2, .company-copy h2, .about-hero h1, .about-story h2, .about-principles h2, .about-markets h2, .clients-masthead h1";
+    function cancelAll() {
+      running.forEach((list) =>
+        list.forEach((animation) => animation.cancel()),
+      );
+      running.clear();
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (motion.matches) return;
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !seen.has(entry.target)) return;
+          running.get(entry.target)?.forEach((animation) => animation.cancel());
+          const words = [
+            ...entry.target.querySelectorAll<HTMLElement>("[data-motion-word]"),
+          ];
+          const pieces = words.length ? words : [entry.target];
+          const visible = entry.isIntersecting;
+          if (visible) seen.add(entry.target);
+          running.set(
+            entry.target,
+            pieces.map((piece, index) =>
+              piece.animate(
+                visible
+                  ? [
+                      {
+                        opacity: 0,
+                        transform: `translateY(${words.length ? "105%" : "18px"})`,
+                      },
+                      {
+                        opacity: 1,
+                        transform: "translateY(0)",
+                      },
+                    ]
+                  : [
+                      { opacity: 1, transform: "translateY(0)" },
+                      { opacity: 0, transform: "translateY(-12px)" },
+                    ],
+                {
+                  duration: visible ? 520 : 180,
+                  delay:
+                    visible && words.length ? Math.min(index * 45, 180) : 0,
+                  easing: "cubic-bezier(.22,1,.36,1)",
+                  fill: "both",
+                },
+              ),
+            ),
+          );
+        });
+      },
+      { rootMargin: "-24px 0px -24px 0px", threshold: 0 },
+    );
+    function register() {
+      if (motion.matches) return;
+      document.querySelectorAll(selector).forEach((element) => {
+        if (!watched.has(element)) {
+          watched.add(element);
+          element.classList.add("text-motion-heading");
+          observer.observe(element);
+        }
+      });
+    }
+    function changed() {
+      if (motion.matches) {
+        cancelAll();
+        observer.disconnect();
+      }
+    }
+    register();
+    const mutations = new MutationObserver(register);
+    mutations.observe(document.querySelector("main") ?? document.body, {
+      childList: true,
+      subtree: true,
+    });
+    motion.addEventListener("change", changed);
+    window.addEventListener("beforeprint", cancelAll);
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+      cancelAll();
+      motion.removeEventListener("change", changed);
+      window.removeEventListener("beforeprint", cancelAll);
+    };
+  }, [pathname]);
+  return null;
+}

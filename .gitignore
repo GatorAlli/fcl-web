@@ -15,6 +15,7 @@
 
 # next.js
 /.next/
+/.next-*/
 /out/
 
 # production
@@ -39,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design evidence and original source archives (preserved on disk)
+/references/analysis/
+/references/felix-brochure/
+/references/retired-media/
+/premium-audit.json

@@ -1,0 +1,68 @@
+// Each used film has one explicit page assignment.
+export const filmPages = {
+  "/": "architecture",
+  "/about": "industry",
+  "/services": "interior-engineers",
+  "/solutions/building-management": "building-office",
+  "/solutions/scada": "real-automation",
+  "/solutions/home-automation": "home",
+  "/solutions/lighting-control": "lighting-control",
+  "/solutions/fire-detection": "technical-fire",
+  "/solutions/security": "technical-security",
+  "/solutions/hvac-controls": "technical-thermostat",
+  "/solutions/variable-frequency-drives": "technical-controls",
+  "/solutions/sensors": "laboratory",
+  "/solutions/parking": "parking",
+  "/sectors/commercial": "building-campus",
+  "/sectors/retail": "building-retail",
+  "/sectors/industry": "building-warehouse",
+  "/sectors/data-centers": "technical-data-center",
+  "/sectors": "building-night",
+  "/solutions": "building-logistics",
+  "/sectors/residential": "additional-living",
+  "/sectors/life-sciences": "additional-lab",
+  "/sectors/lodging": "additional-hotel",
+  "/contact": "additional-office",
+  "/clients": "additional-interior",
+} as const;
+export type FilmName =
+  | "industry"
+  | "architecture"
+  | "laboratory"
+  | "home"
+  | "power"
+  | "parking"
+  | "real-automation"
+  | "lighting-control"
+  | "ventilation"
+  | "building-office"
+  | "building-retail"
+  | "building-logistics"
+  | "building-night"
+  | "building-parking"
+  | "building-industrial"
+  | "building-warehouse"
+  | "building-campus"
+  | "technical-controls"
+  | "technical-data-center"
+  | "technical-fire"
+  | "technical-security"
+  | "technical-service"
+  | "technical-thermostat"
+  | "interior-engineers"
+  | "additional-living"
+  | "additional-lab"
+  | "additional-interior"
+  | "additional-office"
+  | "additional-hotel";
+export function filmForPage(path: string): FilmName | undefined {
+  return filmPages[path as keyof typeof filmPages];
+}
+export const filmForSolution = (slug: string) =>
+  filmForPage(`/solutions/${slug}`);
+export const sectorFilms = Object.fromEntries(
+  Object.entries(filmPages)
+    .filter(([path]) => path.startsWith("/sectors/"))
+    .map(([path, film]) => [path.split("/").pop()!, film]),
+) as Record<string, FilmName>;
+export const filmSource = (name: FilmName) => `/assets/films/${name}.mp4`;
