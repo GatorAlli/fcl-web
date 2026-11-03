@@ -53,7 +53,7 @@ edit("components/site/page-parts.tsx", photo_component)
 
 def layout(text):
     text = re.sub(r'^import "\./[^"\n]+\.css";\n', '', text, flags=re.M)
-    text = 'import "./tokens.css";\nimport "./site.css";\nimport "./about-data.css";\n' + text
+    text = 'import "./globals.css";\n' + text
     return text.replace('themeColor: "#186636"', 'themeColor: "#155430"')
 edit("app/layout.tsx", layout)
 

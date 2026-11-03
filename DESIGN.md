@@ -61,7 +61,7 @@ Creative North Star: the owner's earlier black Felix design, informed by MILIVOJ
 
 The owner explicitly cancelled the intervening light-theme brief on 3 November 2026 and requested the previous design language, retaining the current About structure. The black canvas, white navbar, original coloured logo, red Contact action and photography are restored. The old stacking-card effect is removed rather than applied to every section. The owner subsequently requested animated partner logos, centered Home navigation, a centered animated hero and clearly alternating homepage colour chapters.
 
-Runtime token ownership is Model B: `app/tokens.css` owns the current fixed palette. `app/site.css` owns shared layout and primitives, `app/about-data.css` owns the company-record layout, and `app/restored-studio.css` owns the restored visual treatment and explicitly scoped white-navigation overrides. All are imported once by `app/layout.tsx`. Contact-specific architecture and field proportions are owned by `app/contact/contact.css`, imported by that route. Old CSS is preserved outside runtime in `references/retired-runtime/`.
+The root layout imports `app/globals.css`, which contains the fixed palette, Tailwind utilities, shared components, and page-specific styles. Old styles are archived in `references/retired-runtime/`.
 
 ## Colors
 

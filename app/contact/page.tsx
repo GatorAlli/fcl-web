@@ -1,4 +1,3 @@
-import "./contact.css";
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import { Suspense } from "react";

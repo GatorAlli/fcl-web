@@ -1,7 +1,4 @@
-import "./tokens.css";
-import "./site.css";
-import "./about-data.css";
-import "./restored-studio.css";
+import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { StudioShell } from "@/components/site/studio-shell";

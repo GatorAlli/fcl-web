@@ -57,7 +57,7 @@ npx tsc --noEmit
 - `components/site/studio-shell.tsx` owns the shared navigation, footer and site search.
 - `components/site/` contains shared page parts, the project gallery, enquiry form, product gallery and profile viewer.
 - `lib/company-profile.ts` contains the shared solution, sector, project, partner, client and profile-page content.
-- `app/tokens.css` owns the fixed brand palette. `app/site.css` owns shared layout, `app/about-data.css` owns the About record, and `app/restored-studio.css` owns the restored black/white/red presentation. `app/contact/contact.css` owns the continuous 48/52 Contact composition, shared heading anchor and compact form proportions. Retired styles and components are preserved under `references/retired-runtime/`, outside the active build.
+- `app/globals.css` is the sole application stylesheet. It contains the Tailwind theme, shared layout, and page-specific styles. Retired styles and components are archived under `references/retired-runtime/`.
 - `public/assets/` contains the original images, logos, fonts and font licenses.
 - `public/assets/brochure/` contains extracted images, three restored illustrative hero photos, the client logo board, product details and all 20 original profile pages. `manifest.json` records provenance and processing.
 - `public/assets/photography/` contains the optimized contextual photographs. `sources.json` records source pages, photographers and license; these are illustrative and are never passed off as named Felix project installations.
