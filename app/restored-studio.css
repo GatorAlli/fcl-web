@@ -34,11 +34,11 @@ a:hover {
 }
 .studio-primary > .nav-contact,
 .studio-primary > .nav-contact[aria-current="page"] {
-  color: #080808;
+  color: var(--surface);
   background: var(--red);
 }
 .studio-primary > .nav-contact:hover {
-  background: #e60000;
+  background: var(--green-deep);
 }
 .studio-primary .direction-icon {
   transition: transform 180ms ease-out;
@@ -59,7 +59,7 @@ a:hover {
 .studio-header
   .studio-primary
   > a.nav-contact:is(:hover, :focus-visible, :active) {
-  color: #080808;
+  color: var(--surface);
 }
 .studio-menu,
 .reference-menu {
@@ -67,7 +67,7 @@ a:hover {
   --ink: #f6f6f3;
   --rule: #444b46;
   --green-wash: #243a2b;
-  --link-ink: #96d3ad;
+  --link-ink: var(--green);
   background: var(--paper);
   color: var(--ink);
 }
@@ -82,14 +82,14 @@ a:hover {
 .project-menu-heading {
   border: 0;
   background: var(--red);
-  color: #080808;
+  color: var(--surface);
 }
 .reference-menu .project-menu-heading {
-  color: #080808;
+  color: var(--surface);
 }
 .reference-menu .project-menu-heading:hover {
-  background: #e60000;
-  color: #080808;
+  background: var(--green-deep);
+  color: var(--surface);
 }
 body:has(.project-index-page [data-project-category="all"])
   .reference-menu
@@ -402,11 +402,9 @@ textarea,
 .footer-directory {
   border-top: 1px solid var(--rule);
 }
-.footer-primary-phone {
-  color: #ef6868;
-}
+.footer-primary-phone,
 .global-footer .footer-primary-phone {
-  color: #ef6868;
+  color: var(--surface);
 }
 .footer-data-label {
   color: var(--muted);
@@ -626,7 +624,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 .mobile-primary-links .mobile-contact {
   background: var(--red);
-  color: #080808;
+  color: var(--surface);
   padding-inline: 16px;
 }
 .hero-copy {
@@ -717,8 +715,8 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   --ink: #0c0c0c;
   --muted: #414a43;
   --rule: #a6afa7;
-  --navy: #155430;
-  --link-ink: #155430;
+  --navy: var(--green);
+  --link-ink: var(--green);
   --green-wash: #edf4ee;
   background: var(--paper);
   color: var(--ink);
@@ -779,11 +777,11 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   background: var(--panel);
 }
 .delivery-band {
-  --ink: #080808;
-  --muted: #080808;
-  --link-ink: #080808;
-  --rule: #a40b13;
-  background: #ed1a25;
+  --ink: #ffffff;
+  --muted: #ffffff;
+  --link-ink: #ffffff;
+  --rule: #ffffff;
+  background: var(--green);
   color: var(--ink);
 }
 .delivery-band .module-title {

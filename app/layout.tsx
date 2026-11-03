@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   icons: { icon: "/assets/felix-logo-web.png" },
 };
 
-export const viewport: Viewport = { themeColor: "#155430" };
+export const viewport: Viewport = { themeColor: "#186636" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

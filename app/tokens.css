@@ -8,10 +8,10 @@
   --green: #186636;
   --green-deep: #12502b;
   --green-wash: #243a2b;
-  --navy: #96d3ad;
+  --navy: var(--green);
   --navy-wash: #1a2a21;
-  --red: #ff0000;
-  --red-text: #ffa0a5;
+  --red: var(--green);
+  --red-text: var(--green);
   --band: #0c0c0c;
-  --link-ink: #96d3ad;
+  --link-ink: var(--green);
 }
