@@ -144,3 +144,11 @@ Implemented the approved contact-page architecture on 3 November 2026:
 - All eleven solution details: matching technology-column top/bottom anchors, consistent 16px caption spacing, nonzero image frames and no horizontal overflow. The six named solution pages were also checked at 360px with a single-column layout. Information rows contain no images.
 
 - Combined release checks: production build and TypeScript passed; ESLint passed; strict UI audit and design lint had zero findings/errors. Crawler checked 46 pages, 150 assets and 176 internal destinations without errors; PDF 200. Lighthouse accessibility was 100/100 for the centered project selector and the restructured security solution page.
+
+## Distinct technology-reference imagery
+
+- Replaced nine shared or generic supporting images with distinct online-source imagery: Honeywell building operations; Lutron wall controls; Fike fire suppression; RBH keypad reader; Danfoss drive cabinet; Belimo HVAC actuators; S+S environmental sensors; industrial valve installation; ParkHelp parking guidance.
+- SCADA retains its unique Siemens control-cabinet photograph; Home automation retains the original Control4 touchscreen photograph. All eleven supporting files and their SHA-256 hashes are unique.
+- Original company product illustrations remain unchanged. Source URLs, publishers, native dimensions and processing are retained in `public/assets/photography/sources.json`. Rejected candidates remain private; no watermark removal or AI generation was used.
+- RBH product photography uses contain framing so the complete reader remains visible. Other photographs keep the established aligned context-image frames.
+- Verification: production build, TypeScript and ESLint passed; strict UI audit and design lint had zero findings. Crawler checked 46 pages, 159 public assets and 185 internal destinations with zero errors; PDF 200. Browser checks found eleven unique context sources, no same-page hero reuse, no horizontal overflow and matching desktop image anchors on every solution. The complete RBH reader and stacked layout were checked at 360px.

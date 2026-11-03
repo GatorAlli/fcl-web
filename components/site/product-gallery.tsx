@@ -63,7 +63,10 @@ export function ProductGallery({ slug }: { slug: string }) {
           })}
         </div>
         {context && (
-          <figure className="technology-context">
+          <figure
+            className="technology-context"
+            data-fit={context.fit ?? "cover"}
+          >
             <Photo name={context.image} alt={context.caption} />
             <figcaption>
               <AnimatedCopy>{context.caption}</AnimatedCopy>
@@ -73,7 +76,7 @@ export function ProductGallery({ slug }: { slug: string }) {
       </div>
       <p className="product-gallery-note">
         <AnimatedCopy>
-          Product artwork is from the Felix company profile. Setting photographs
+          Product artwork is from the Felix company profile. Supporting images
           are illustrative.
         </AnimatedCopy>
       </p>

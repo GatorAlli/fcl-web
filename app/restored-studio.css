@@ -1130,6 +1130,19 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .technology-context img[src*="control4-touchscreen"] {
   object-position: 70% center;
 }
+.technology-context img[src*="technology-parking"] {
+  object-position: center top;
+}
+.technology-context img[src*="technology-fire"] {
+  object-position: 25% center;
+}
+.technology-context[data-fit="contain"] .fcl-photo {
+  background: var(--surface);
+}
+.technology-context[data-fit="contain"] .fcl-photo img {
+  object-fit: contain;
+  padding: 24px;
+}
 .product-gallery-note {
   margin: 24px 0 0;
   font-size: 15px;

@@ -1,11 +1,11 @@
 /** Illustrative settings complement, and never replace, the supplied product artwork. */
 export const technologyContext: Record<
   string,
-  { image: string; caption: string }
+  { image: string; caption: string; fit?: "cover" | "contain" }
 > = {
   "building-management": {
-    image: "controls",
-    caption: "Building automation hardware in a control cabinet.",
+    image: "technology-bms",
+    caption: "Building-management operators monitoring control-room displays.",
   },
   scada: {
     image: "controls",
@@ -16,35 +16,36 @@ export const technologyContext: Record<
     caption: "A Control4 touchscreen in use.",
   },
   "lighting-control": {
-    image: "living",
-    caption: "Lighting and daylight in a residential setting.",
+    image: "technology-lighting",
+    caption: "A Lutron wall keypad beside automated window shades.",
   },
   "fire-detection": {
-    image: "data-center",
-    caption: "A data-center environment where early detection matters.",
+    image: "technology-fire",
+    caption: "Fike suppression cylinders beside an automated storage system.",
   },
   security: {
-    image: "architecture",
-    caption: "A commercial building environment for integrated security.",
+    image: "technology-security",
+    caption: "An RBH access-control keypad reader.",
+    fit: "contain",
   },
   "variable-frequency-drives": {
-    image: "industry",
-    caption: "Automated manufacturing equipment and motor-driven systems.",
+    image: "technology-drives",
+    caption: "Danfoss variable-frequency drives inside a control cabinet.",
   },
   "hvac-controls": {
-    image: "controls",
-    caption: "Building-services control hardware.",
+    image: "technology-hvac",
+    caption: "Belimo actuators installed on building-services pipework.",
   },
   sensors: {
-    image: "data-center",
-    caption: "An environment that depends on continuous monitoring.",
+    image: "technology-sensors",
+    caption: "S+S humidity and temperature sensing in a pool environment.",
   },
   "manual-valves": {
-    image: "industry",
-    caption: "Industrial equipment and process infrastructure.",
+    image: "technology-valves",
+    caption: "Installation of valves in an industrial piping network.",
   },
   parking: {
-    image: "retail",
-    caption: "A retail destination served by visitor parking.",
+    image: "technology-parking",
+    caption: "Parking guidance sensors and availability lights in a garage.",
   },
 };

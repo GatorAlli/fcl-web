@@ -9,6 +9,42 @@ export const solutionGroups = [
 // Context photography is illustrative. Documentary products, logos and named
 // project references resolve to verified photographs of the named sites.
 const photography: Record<string, { file: string; alt: string }> = {
+  "technology-bms": {
+    file: "technology-bms",
+    alt: "Building-management operators monitoring control-room displays",
+  },
+  "technology-lighting": {
+    file: "technology-lighting",
+    alt: "A Lutron wall keypad beside automated window shades",
+  },
+  "technology-fire": {
+    file: "technology-fire",
+    alt: "Fike suppression cylinders beside an automated storage system",
+  },
+  "technology-security": {
+    file: "technology-security",
+    alt: "An RBH access-control keypad reader",
+  },
+  "technology-drives": {
+    file: "technology-drives",
+    alt: "Danfoss drives inside a control cabinet",
+  },
+  "technology-hvac": {
+    file: "technology-hvac",
+    alt: "Belimo actuators on building-services pipework",
+  },
+  "technology-sensors": {
+    file: "technology-sensors",
+    alt: "S+S humidity and temperature sensors in a pool environment",
+  },
+  "technology-valves": {
+    file: "technology-valves",
+    alt: "Installation of industrial pipeline valves",
+  },
+  "technology-parking": {
+    file: "technology-parking",
+    alt: "Parking guidance sensors and availability lights",
+  },
   "control4-touchscreen": {
     file: "control4-touchscreen",
     alt: "A person operating a wall-mounted Control4 touchscreen",
