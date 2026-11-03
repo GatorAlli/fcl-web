@@ -85,7 +85,7 @@ No video is active in this release. Rejected and retired footage is preserved lo
 | /assets/projects/shanta-pinnacle.webp       | https://cms.shantaholdings.com/media/images/Pinnacle_Completed_Temp_7.2e16d0ba.fill-2560x1440-c0.jpg                                            | https://shantaholdings.com/projects/pinnacle/                                              |
 | /assets/projects/square.webp                | https://www.squarepharma.com.bd/images/photo-gallery/1.jpg                                                                                      | https://www.squarepharma.com.bd/facilities-photo-gallery.php                               |
 
-Museum attribution: Wasiul Bahar, CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/. Resized and converted to WebP; attribution appears on the gallery card and project detail page. Company and architect photographs retain their source credits; no watermark was removed.
+Museum attribution: Wasiul Bahar, CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/. Resized and converted to WebP; attribution appears on the project detail page. Company and architect photographs retain their source credits; no watermark was removed.
 
 ## Remaining confirmation and source needs
 
@@ -119,3 +119,8 @@ Implemented the approved contact-page architecture on 3 November 2026:
 - Crawler: 46 pages, 149 public assets, 175 internal destinations; zero errors; PDF download 200.
 - Black Contact Lighthouse accessibility: 100/100. ESLint passed; design-document lint and strict premium audit have zero errors/warnings.
 - Browser verification: black enquiry surface, fields and popup; 48px fields at 360px; no horizontal overflow; desktop headline tops both at 136px; all six pharma images load at their recorded native dimensions.
+
+## Final gallery spacing
+
+- Added 8–16px more separation between category controls and project images, shared across all project categories and Home.
+- Removed the museum gallery credit line; the original source and CC BY-SA attribution remain on its detail page.

@@ -87,18 +87,6 @@ export function ProjectShowcase({
                 </div>
               </Link>
             </AnimatedCopy>
-            {projectPhotography[project.image]?.licenseUrl && (
-              <p className="project-photo-credit">
-                <a href={projectPhotography[project.image].source}>
-                  {projectPhotography[project.image].credit}
-                </a>
-                {" / "}
-                <a href={projectPhotography[project.image].licenseUrl}>
-                  {projectPhotography[project.image].license}
-                </a>
-                {"; resized to WebP"}
-              </p>
-            )}
           </li>
         ))}
       </ul>

@@ -363,15 +363,6 @@ textarea,
   font-size: 16px;
   margin: 0;
 }
-.project-photo-credit {
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--muted);
-}
-.project-photo-credit a {
-  color: var(--link-ink);
-}
 .project-sector-name {
   color: #bfc5bf;
   border: 0;
@@ -896,6 +887,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr) 44px;
   gap: 16px;
+  margin-bottom: clamp(40px, 4vw, 48px);
 }
 .project-sector-window {
   display: grid;
