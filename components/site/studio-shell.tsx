@@ -448,107 +448,105 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
       >
         {children}
       </div>
-      {(pathname === "/" || pathname === "/contact") && (
-        <footer className="global-footer">
-          {pathname === "/" && (
-            <section
-              className="home-contact-feature"
-              aria-labelledby="home-contact-heading"
-            >
-              <div className="fcl-container">
-                <div className="contact-feature-heading">
-                  <div>
-                    <h2 id="home-contact-heading">
-                      <AnimatedCopy>Talk to our engineers</AnimatedCopy>
-                    </h2>
-                    <p>
-                      <AnimatedCopy>
-                        Planning a new building, upgrading a system or looking
-                        for technical support? Tell us what you need.
-                      </AnimatedCopy>
-                    </p>
-                  </div>
-                  <Link href="/contact" className="contact-feature-action">
-                    Discuss
-                    <br />
-                    your project
-                    <DirectionIcon />
-                  </Link>
+      <footer className="global-footer">
+        {pathname === "/" && (
+          <section
+            className="home-contact-feature"
+            aria-labelledby="home-contact-heading"
+          >
+            <div className="fcl-container">
+              <div className="contact-feature-heading">
+                <div>
+                  <h2 id="home-contact-heading">
+                    <AnimatedCopy>Talk to our engineers</AnimatedCopy>
+                  </h2>
+                  <p>
+                    <AnimatedCopy>
+                      Planning a new building, upgrading a system or looking
+                      for technical support? Tell us what you need.
+                    </AnimatedCopy>
+                  </p>
                 </div>
-              </div>
-            </section>
-          )}
-          <div className="fcl-container footer-directory">
-            <div>
-              <Link
-                href="/"
-                className="footer-logo"
-                aria-label="Felix Controls Limited, home"
-              >
-                <Image
-                  src="/assets/felix-logo-web.png"
-                  width={270}
-                  height={250}
-                  alt="Felix Controls Limited"
-                  unoptimized
-                />
-              </Link>
-              <span className="fcl-label">Felix Controls Limited</span>
-              <Link href="/about">About Felix</Link>
-              <Link href="/partners">Partners</Link>
-              <Link href="/clients">Clients</Link>
-              <Link href="/careers">Careers</Link>
-            </div>
-            <div>
-              <span className="fcl-label">Navigation</span>
-              <Link href="/solutions">Solutions</Link>
-              <Link href="/sectors">Sectors</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/projects">Reference projects</Link>
-              <Link href="/resources">Browse company profile</Link>
-              <a href={brochure} download>
-                Download company profile
-              </a>
-            </div>
-            <div>
-              <span className="fcl-label">Sectors</span>
-              {sectors
-                .filter((item) =>
-                  [
-                    "commercial",
-                    "healthcare",
-                    "industry",
-                    "residential",
-                    "life-sciences",
-                  ].includes(item.slug),
-                )
-                .map((item) => (
-                  <Link key={item.slug} href={`/sectors/${item.slug}`}>
-                    {item.title}
-                  </Link>
-                ))}
-              <Link href="/sectors">All sectors</Link>
-            </div>
-            <div className="footer-business-details">
-              <span className="fcl-label">Contact</span>
-              <span className="footer-data-label">Email</span>
-              <a href="mailto:info@felixbd.com">info@felixbd.com</a>
-              <span className="footer-data-label">Contact number</span>
-              <a className="footer-primary-phone" href="tel:+8801713080002">
-                +880 1713080002
-              </a>
-              <span className="footer-data-label">Address</span>
-              <address>
-                <AnimatedCopy>
-                  113/B, Tejgaon Industrial Area
+                <Link href="/contact" className="contact-feature-action">
+                  Discuss
                   <br />
-                  Dhaka 1208, Bangladesh
-                </AnimatedCopy>
-              </address>
+                  your project
+                  <DirectionIcon />
+                </Link>
+              </div>
             </div>
+          </section>
+        )}
+        <div className="fcl-container footer-directory">
+          <div>
+            <Link
+              href="/"
+              className="footer-logo"
+              aria-label="Felix Controls Limited, home"
+            >
+              <Image
+                src="/assets/felix-logo-web.png"
+                width={270}
+                height={250}
+                alt="Felix Controls Limited"
+                unoptimized
+              />
+            </Link>
+            <span className="fcl-label">Felix Controls Limited</span>
+            <Link href="/about">About Felix</Link>
+            <Link href="/partners">Partners</Link>
+            <Link href="/clients">Clients</Link>
+            <Link href="/careers">Careers</Link>
           </div>
-        </footer>
-      )}
+          <div>
+            <span className="fcl-label">Navigation</span>
+            <Link href="/solutions">Solutions</Link>
+            <Link href="/sectors">Sectors</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/projects">Reference projects</Link>
+            <Link href="/resources">Browse company profile</Link>
+            <a href={brochure} download>
+              Download company profile
+            </a>
+          </div>
+          <div>
+            <span className="fcl-label">Sectors</span>
+            {sectors
+              .filter((item) =>
+                [
+                  "commercial",
+                  "healthcare",
+                  "industry",
+                  "residential",
+                  "life-sciences",
+                ].includes(item.slug),
+              )
+              .map((item) => (
+                <Link key={item.slug} href={`/sectors/${item.slug}`}>
+                  {item.title}
+                </Link>
+              ))}
+            <Link href="/sectors">All sectors</Link>
+          </div>
+          <div className="footer-business-details">
+            <span className="fcl-label">Contact</span>
+            <span className="footer-data-label">Email</span>
+            <a href="mailto:info@felixbd.com">info@felixbd.com</a>
+            <span className="footer-data-label">Contact number</span>
+            <a className="footer-primary-phone" href="tel:+8801713080002">
+              +880 1713080002
+            </a>
+            <span className="footer-data-label">Address</span>
+            <address>
+              <AnimatedCopy>
+                113/B, Tejgaon Industrial Area
+                <br />
+                Dhaka 1208, Bangladesh
+              </AnimatedCopy>
+            </address>
+          </div>
+        </div>
+      </footer>
       <dialog
         className="studio-search"
         ref={dialog}
