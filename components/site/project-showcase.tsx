@@ -32,6 +32,7 @@ export function ProjectShowcase({
     null,
   );
   const selected = options.findIndex(([value]) => value === category);
+  const centerIndex = selected < 0 ? Math.floor(options.length / 2) : selected;
   const valid = selected < 0 ? "all" : options[selected][0];
   const label = selected < 0 ? "All projects" : options[selected][1];
   const matches = referenceProjects.filter(
@@ -100,7 +101,7 @@ export function ProjectShowcase({
           className="project-sector-arrow"
           aria-label="Previous project sector"
           aria-controls={id}
-          onClick={() => select((selected < 0 ? 0 : selected) - 1)}
+          onClick={() => select(centerIndex - 1)}
         >
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="m14 5-7 7 7 7" stroke="currentColor" strokeWidth="1.5" />
@@ -112,9 +113,8 @@ export function ProjectShowcase({
           aria-label="Project sectors"
           onKeyDown={(event) => {
             let next: number;
-            if (event.key === "ArrowRight") next = selected + 1;
-            else if (event.key === "ArrowLeft")
-              next = (selected < 0 ? 0 : selected) - 1;
+            if (event.key === "ArrowRight") next = centerIndex + 1;
+            else if (event.key === "ArrowLeft") next = centerIndex - 1;
             else if (event.key === "Home") next = 0;
             else if (event.key === "End") next = options.length - 1;
             else return;
@@ -122,41 +122,47 @@ export function ProjectShowcase({
             select(next, true);
           }}
         >
-          {options.map(([value, name], index) => (
-            <button
-              type="button"
-              key={value}
-              ref={(node) => {
-                buttons.current[index] = node;
-              }}
-              className="project-sector-name"
-              style={
-                {
-                  "--sector-opacity":
-                    selected < 0
-                      ? 1
-                      : ([1, 0.65, 0.4][
-                          Math.min(
-                            Math.abs(index - selected),
-                            options.length - Math.abs(index - selected),
-                          )
-                        ] ?? 0.4),
-                } as CSSProperties
-              }
-              aria-pressed={selected === index}
-              aria-controls={id}
-              onClick={() => select(index)}
-            >
-              {name}
-            </button>
-          ))}
+          {options.map(([value, name], index) => {
+            const half = Math.floor(options.length / 2);
+            const offset =
+              ((index - centerIndex + options.length + half) % options.length) -
+              half;
+            const distance = Math.abs(offset);
+            return (
+              <button
+                type="button"
+                key={value}
+                ref={(node) => {
+                  buttons.current[index] = node;
+                }}
+                className="project-sector-name"
+                data-distance={distance}
+                tabIndex={index === centerIndex ? 0 : -1}
+                style={
+                  {
+                    "--sector-offset": offset,
+                    "--sector-scale": [1, 0.8, 0.6][distance],
+                    "--sector-y": `${distance * 6}px`,
+                    "--sector-angle": `${offset === 0 ? 0 : offset > 0 ? -16 : 16}deg`,
+                    "--sector-opacity": [1, 0.65, 0.4][distance],
+                    zIndex: 10 - distance,
+                  } as CSSProperties
+                }
+                aria-pressed={selected === index}
+                aria-controls={id}
+                onClick={() => select(index)}
+              >
+                {name}
+              </button>
+            );
+          })}
         </div>
         <button
           type="button"
           className="project-sector-arrow"
           aria-label="Next project sector"
           aria-controls={id}
-          onClick={() => select(selected + 1)}
+          onClick={() => select(centerIndex + 1)}
         >
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="m10 5 7 7-7 7" stroke="currentColor" strokeWidth="1.5" />

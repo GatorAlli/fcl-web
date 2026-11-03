@@ -142,5 +142,17 @@
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
     "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+  },
+  {
+    "name": "control4-touchscreen",
+    "page": "https://www.control4.com/blog/buying-an-existing-control4-smart-home",
+    "source": "https://cdn.prod.website-files.com/67f03f77de69426b9d8fdba4/680bc02d4c14a663655075a2_3ed77a95ef6133b.jpeg",
+    "author": "Control4",
+    "width": 2611,
+    "height": 1740,
+    "deliveredWidth": 1600,
+    "deliveredHeight": 1066,
+    "processing": "Original Control4 promotional photograph resized and converted to WebP without generated detail. Source retained privately.",
+    "sha256": "1b7286c0aba4f5723f45391b6ffdf567c90898d9d7948167ce440cac57431d8c"
   }
 ]

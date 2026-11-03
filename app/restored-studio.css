@@ -880,37 +880,46 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .project-gallery {
   background: var(--paper);
 }
-.project-sector-name {
-  font-size: clamp(18px, 1.9vw, 30px);
-}
 .project-sector-carousel {
   display: grid;
+  align-items: center;
   grid-template-columns: 44px minmax(0, 1fr) 44px;
   gap: 16px;
   margin-bottom: clamp(40px, 4vw, 48px);
 }
 .project-sector-window {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
+  --sector-step: 20cqw;
+  display: block;
+  position: relative;
+  container-type: inline-size;
+  perspective: 800px;
+  height: 104px;
+  overflow: clip;
 }
 .project-sector-name {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260px;
+  height: 64px;
+  min-height: 64px;
+  font-size: 28px;
   text-align: center;
-  padding-inline: 0;
-  opacity: var(--sector-opacity, 1);
+  white-space: nowrap;
+  padding: 0;
+  opacity: max(0.55, var(--sector-opacity, 1));
   color: var(--ink);
+  transform: translate(-50%, -50%)
+    translateX(calc(var(--sector-offset) * var(--sector-step)))
+    translateY(var(--sector-y)) scale(var(--sector-scale))
+    rotateY(var(--sector-angle));
   transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 300ms,
     color 180ms;
 }
 .project-sector-name:is(:hover, :focus-visible) {
   opacity: 1;
-}
-@media (max-width: 1279px) {
-  .project-sector-name {
-    opacity: max(0.55, var(--sector-opacity, 1));
-  }
 }
 .project-sector-name[aria-pressed="true"] {
   background: transparent;
@@ -949,9 +958,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
   .project-sector-name {
     font-size: 21px;
-  }
-  .project-sector-window {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1002,48 +1008,156 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   font-size: clamp(38px, 5.3vw, 84px);
 }
 .solution-specification {
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  column-gap: 80px;
-  row-gap: 40px;
+  display: block;
+  padding-block: 48px;
 }
-.solution-overview {
-  grid-row: span 2;
+.solution-specification > div {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+  gap: 40px;
+  margin-bottom: 40px;
 }
-.solution-capabilities,
-.solution-applications {
-  grid-column: 2;
+.solution-specification > div:last-child {
+  margin-bottom: 0;
+}
+.solution-specification h2,
+.product-gallery-heading h2 {
+  color: var(--link-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.solution-specification :is(p, li) {
+  font-size: 19px;
+  line-height: 1.65;
+}
+.solution-specification ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.solution-specification li {
+  margin: 0;
+  padding: 0;
+}
+.product-gallery-section {
+  padding-block: 40px 56px;
+}
+.product-gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.product-gallery-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 40px;
+  align-items: stretch;
 }
 .product-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
 }
 .product-gallery figure {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
   padding: 0;
+  margin: 0;
+  min-width: 0;
 }
-.product-gallery figure:first-child {
-  grid-column: 1/-1;
-}
-.product-gallery img {
+.product-image-well {
+  flex: none;
   width: 100%;
-  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  height: 240px;
+  padding: 20px;
+  background: var(--surface);
 }
-.product-gallery figcaption {
+.product-image-well[data-panorama="true"] {
+  min-height: 180px;
+  height: 180px;
+}
+.product-gallery[data-item-count="1"] .product-image-well {
+  min-height: 320px;
+  height: 320px;
+}
+.product-image-well img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.product-gallery figcaption,
+.technology-context figcaption {
   margin-top: 16px;
+  font-size: 17px;
+  line-height: 1.5;
+  min-height: 3em;
+  max-width: 60ch;
+}
+.technology-context {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-width: 0;
+  margin: 0;
+}
+.technology-context .fcl-photo {
+  position: relative;
+  min-height: 320px;
+  height: 100%;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+.technology-context .fcl-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.technology-context img[src*="control4-touchscreen"] {
+  object-position: 70% center;
+}
+.product-gallery-note {
+  margin: 24px 0 0;
+  font-size: 15px;
 }
 @media (max-width: 1024px) {
-  .solution-specification,
-  .product-gallery {
+  .solution-specification > div,
+  .product-gallery-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
+    gap: 24px;
   }
-  .solution-overview {
-    grid-row: auto;
+  .solution-specification h2 {
+    margin: 0;
   }
-  .solution-capabilities,
-  .solution-applications {
-    grid-column: auto;
+  .product-gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .technology-context .fcl-photo {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16/10;
+  }
+  .technology-context figcaption {
+    min-height: 0;
+  }
+  .product-gallery[data-item-count="1"] .product-image-well {
+    min-height: 240px;
+    height: 240px;
   }
   .solution-hero-media .context-photo {
     aspect-ratio: 16/10;
@@ -1164,24 +1278,23 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 @media (max-width: 650px) {
   .project-sector-carousel {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
     gap: 0;
   }
   .project-sector-arrow {
-    display: none;
+    display: grid;
   }
   .project-sector-window {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px 16px;
+    --sector-step: 75cqw;
+    display: block;
+    height: 94px;
   }
   .project-sector-name {
-    flex: 0 0 auto;
-    width: auto;
-    min-height: 44px;
-    padding: 8px 0;
-    font-size: 18px;
+    width: 100cqw;
+    font-size: 21px;
+  }
+  .project-sector-name[data-distance="2"] {
+    visibility: hidden;
   }
   .project-index-intro .project-index-description p {
     font-size: 18px;

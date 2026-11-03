@@ -124,3 +124,23 @@ Implemented the approved contact-page architecture on 3 November 2026:
 
 - Added 8–16px more separation between category controls and project images, shared across all project categories and Home.
 - Removed the museum gallery credit line; the original source and CC BY-SA attribution remain on its detail page.
+
+## Reference-matched category motion
+
+- Supersedes the earlier fixed-label preference at the owner’s explicit request.
+- Selected categories now center using the reference’s 420ms cubic-bezier(.22,1,.36,1), 1/.8/.6 scale, 6px depth steps, ±16deg tilt and 800px perspective. Opacity retains a readable .55 minimum.
+- Five names remain in a stable DOM order, with circular visual offsets, direct click selection, URL state, keyboard arrows/Home/End and a roving tab stop.
+- Mobile retains arrow controls and makes room for long category names. Reduced motion uses instantaneous positions. Project photographs retain their 200ms crossfade and the final 40–48px gallery spacing.
+
+## Solution-page alignment and technology references
+
+- Applied a shared text-only label/content grid to System overview, Capabilities and Applications on all eleven solution details. Green headings distinguish these blocks. No images were added to the information rows.
+- Technology references now align native-scale company product illustrations and their captions beside a relevant illustrative photograph. Both columns share their top and bottom anchors; small product art is contained without cropping or invented detail. At 1024px the columns stack.
+- Added an original Control4 touchscreen photograph from its published smart-home guide, optimized to WebP. Its exact URL, dimensions and processing are in `public/assets/photography/sources.json`. Existing licensed contextual photographs support the other solution pages.
+
+## Combined motion and solution verification
+
+- Browser geometry: selected category center error 0px on desktop and 360px mobile; one roving tab stop; rapid arrows, wraparound, Home/End, dropdown selection and URL state passed.
+- All eleven solution details: matching technology-column top/bottom anchors, consistent 16px caption spacing, nonzero image frames and no horizontal overflow. The six named solution pages were also checked at 360px with a single-column layout. Information rows contain no images.
+
+- Combined release checks: production build and TypeScript passed; ESLint passed; strict UI audit and design lint had zero findings/errors. Crawler checked 46 pages, 150 assets and 176 internal destinations without errors; PDF 200. Lighthouse accessibility was 100/100 for the centered project selector and the restructured security solution page.

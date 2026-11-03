@@ -9,6 +9,10 @@ export const solutionGroups = [
 // Context photography is illustrative. Documentary products, logos and named
 // project references resolve to verified photographs of the named sites.
 const photography: Record<string, { file: string; alt: string }> = {
+  "control4-touchscreen": {
+    file: "control4-touchscreen",
+    alt: "A person operating a wall-mounted Control4 touchscreen",
+  },
   architecture: {
     file: "architecture",
     alt: "Glass office buildings surrounding a courtyard",
