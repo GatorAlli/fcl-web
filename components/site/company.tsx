@@ -18,13 +18,26 @@ export function Company() {
           <p>
             <AnimatedCopy>{foundingStatement}</AnimatedCopy>
           </p>
-          <dl className="my-8! grid grid-cols-1 gap-6 min-[480px]:grid-cols-3">
+          <Link href="/about" className="fcl-button is-secondary">
+            Read more about Felix
+          </Link>
+        </div>
+        <div className="@container min-w-0">
+          <blockquote className="m-0 text-[clamp(14px,6.5cqw,48px)] font-bold leading-[1.25] tracking-tight text-white">
+            <AnimatedCopy>
+              <span className="block whitespace-nowrap">We advise, we design,</span>{" "}
+              <span className="block whitespace-nowrap">
+                we assess and we <span className="text-brand">deliver.</span>
+              </span>
+            </AnimatedCopy>
+          </blockquote>
+          <dl className="mt-8! mb-0! grid grid-cols-1 gap-6 min-[480px]:grid-cols-3">
             {[
               { value: 400, label: "Projects" },
               { value: 100, label: "Customers" },
               { value: 15, label: "Years" },
             ].map(({ value, label }) => (
-              <div key={label} className="flex flex-col border-t border-white pt-5 text-white">
+              <div key={label} className="flex min-w-0 flex-col items-center border border-white p-4 text-center text-white">
                 <dt className="mt-3 text-xs font-bold uppercase tracking-[0.14em]">
                   {label}
                 </dt>
@@ -35,21 +48,6 @@ export function Company() {
               </div>
             ))}
           </dl>
-          <Link href="/about" className="fcl-button is-secondary">
-            Read more about Felix
-          </Link>
-        </div>
-        <div className="flex min-w-0 items-center p-6 sm:p-10 lg:p-12">
-          <blockquote className="m-0 text-[clamp(36px,4vw,64px)] font-bold leading-[1.15] tracking-tight text-white">
-            <AnimatedCopy>
-              <span className="block">We advise,</span>{" "}
-              <span className="block">we design,</span>{" "}
-              <span className="block">we assess</span>{" "}
-              <span className="block">
-                and we <span className="text-brand">deliver</span>
-              </span>
-            </AnimatedCopy>
-          </blockquote>
         </div>
       </div>
     </section>

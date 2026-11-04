@@ -2060,7 +2060,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   display: initial;
 }
 .home-company .company-opening {
-  @apply grid-cols-[minmax(0,_1.05fr)_minmax(0,_1fr)] items-center gap-[48px];
+  @apply grid-cols-[minmax(0,_1.05fr)_minmax(0,_1fr)] items-start gap-[48px];
 }
 .home-company .company-founding p {
   font-size: clamp(18px, 1.5vw, 22px);
