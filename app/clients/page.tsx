@@ -2,8 +2,8 @@ import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { brochure, asset, clients } from "@/lib/company-profile";
+import { CompanyLogo } from "@/components/site/company-logo";
+import { brochure, clients } from "@/lib/company-profile";
 import { DisplayText } from "@/components/site/display-text";
 import { Photo } from "@/components/site/page-parts";
 export const metadata: Metadata = {
@@ -43,12 +43,11 @@ export default function Clients() {
         >
           {Array.from({ length: 64 }, (_, i) => (
             <div key={i}>
-              <Image
-                src={asset(`client-${String(i + 1).padStart(2, "0")}`)}
-                width={90}
-                height={45}
+              <CompanyLogo
+                name={`client-${String(i + 1).padStart(2, "0")}`}
+                width={150}
+                height={78}
                 alt={clients[i] ?? "Client reference from Company Profile"}
-                unoptimized
               />
             </div>
           ))}

@@ -1,0 +1,918 @@
+{
+  "client-01": {
+    "file": "/assets/logos/client-01.svg",
+    "width": 902,
+    "height": 998,
+    "bounds": [
+      0,
+      0,
+      902,
+      998
+    ],
+    "source": "https://en.wikipedia.org/wiki/Unilever",
+    "download": "https://upload.wikimedia.org/wikipedia/en/e/e4/Unilever.svg"
+  },
+  "client-02": {
+    "file": "/assets/logos/client-02.svg",
+    "width": 393,
+    "height": 95,
+    "bounds": [
+      0,
+      0,
+      393,
+      95
+    ],
+    "source": "https://en.wikipedia.org/wiki/UNICEF",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_UNICEF.svg"
+  },
+  "client-03": {
+    "file": "/assets/logos/client-03.svg",
+    "width": 1134,
+    "height": 388,
+    "bounds": [
+      0,
+      1,
+      1134,
+      387
+    ],
+    "source": "https://en.wikipedia.org/wiki/British_American_Tobacco",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Bat_logo20.svg"
+  },
+  "client-04": {
+    "file": "/assets/logos/client-04.svg",
+    "width": 933,
+    "height": 965,
+    "bounds": [
+      0,
+      0,
+      933,
+      965
+    ],
+    "source": "https://en.wikipedia.org/wiki/Nestl%C3%A9",
+    "download": "https://upload.wikimedia.org/wikipedia/en/d/d8/Nestl%C3%A9.svg"
+  },
+  "client-05": {
+    "file": "/assets/logos/client-05.svg",
+    "width": 909,
+    "height": 924,
+    "bounds": [
+      0,
+      0,
+      909,
+      924
+    ],
+    "source": "https://en.wikipedia.org/wiki/Huawei",
+    "download": "https://upload.wikimedia.org/wikipedia/en/0/04/Huawei_Standard_logo.svg"
+  },
+  "client-06": {
+    "file": "/assets/brochure/client-06.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      25,
+      2,
+      41,
+      41
+    ]
+  },
+  "client-07": {
+    "file": "/assets/brochure/client-07.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      9,
+      0,
+      73,
+      36
+    ]
+  },
+  "client-08": {
+    "file": "/assets/logos/client-08.svg",
+    "width": 12598,
+    "height": 3082,
+    "bounds": [
+      25,
+      25,
+      12548,
+      3032
+    ],
+    "source": "https://en.wikipedia.org/wiki/Radisson_Hotels",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/7/74/Radisson_Hotels_logo.svg"
+  },
+  "client-09": {
+    "file": "/assets/brochure/client-09.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      8,
+      2,
+      74,
+      41
+    ]
+  },
+  "client-10": {
+    "file": "/assets/logos/client-10.svg",
+    "width": 720,
+    "height": 450,
+    "bounds": [
+      0,
+      0,
+      720,
+      450
+    ],
+    "source": "https://en.wikipedia.org/wiki/IDLC_Finance_PLC",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/9/95/Logo_of_IDLC_Finance_PLC.svg"
+  },
+  "client-11": {
+    "file": "/assets/brochure/client-11.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      30,
+      1,
+      31,
+      38
+    ]
+  },
+  "client-12": {
+    "file": "/assets/logos/client-12.svg",
+    "width": 864,
+    "height": 864,
+    "bounds": [
+      6,
+      6,
+      852,
+      852
+    ],
+    "source": "https://en.wikipedia.org/wiki/Bangladesh_Bank",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/63/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6_%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%82%E0%A6%95%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%95.svg"
+  },
+  "client-13": {
+    "file": "/assets/logos/client-13.png",
+    "width": 264,
+    "height": 48,
+    "bounds": [
+      2,
+      0,
+      254,
+      48
+    ],
+    "source": "https://www.ebl.com.bd/",
+    "download": "https://www.ebl.com.bd/images/eastern-bank-plc.png"
+  },
+  "client-14": {
+    "file": "/assets/logos/client-14.svg",
+    "width": 600,
+    "height": 201,
+    "bounds": [
+      2,
+      0,
+      597,
+      201
+    ],
+    "source": "https://en.wikipedia.org/wiki/IFIC_Bank",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_of_IFIC_Bank.svg"
+  },
+  "client-15": {
+    "file": "/assets/logos/client-15.png",
+    "width": 316,
+    "height": 316,
+    "bounds": [
+      49,
+      73,
+      218,
+      170
+    ],
+    "source": "https://en.wikipedia.org/wiki/Al-Arafah_Islami_Bank",
+    "download": "https://upload.wikimedia.org/wikipedia/en/a/ae/Logo_of_Al-Arafah_Islami_Bank_PLC.png"
+  },
+  "client-16": {
+    "file": "/assets/logos/client-16.jpg",
+    "width": 2148,
+    "height": 542,
+    "bounds": [
+      144,
+      147,
+      1861,
+      249
+    ],
+    "source": "https://en.wikipedia.org/wiki/Shahjalal_Islami_Bank",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/0/05/SJIBPLC_Logo_blue-01.jpg"
+  },
+  "client-17": {
+    "file": "/assets/logos/client-17.svg",
+    "width": 450,
+    "height": 231,
+    "bounds": [
+      1,
+      1,
+      448,
+      229
+    ],
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_of_Beximco_Pharma.svg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/3/30/Logo_of_Beximco_Pharma.svg"
+  },
+  "client-18": {
+    "file": "/assets/logos/client-18.png",
+    "width": 2000,
+    "height": 659,
+    "bounds": [
+      10,
+      42,
+      1978,
+      594
+    ],
+    "source": "https://www.niprojmipharma.com/",
+    "download": "https://www.niprojmipharma.com/assets/img/logo.png"
+  },
+  "client-19": {
+    "file": "/assets/logos/client-19.png",
+    "width": 316,
+    "height": 316,
+    "bounds": [
+      4,
+      6,
+      304,
+      304
+    ],
+    "source": "https://en.wikipedia.org/wiki/Orion_Pharma_%28Bangladesh%29",
+    "download": "https://upload.wikimedia.org/wikipedia/en/5/5b/Orion_Pharma.png"
+  },
+  "client-20": {
+    "file": "/assets/logos/client-20.webp",
+    "width": 277,
+    "height": 75,
+    "bounds": [
+      0,
+      0,
+      276,
+      75
+    ],
+    "source": "https://www.popular-pharma.com/",
+    "download": "https://cdn.prod.website-files.com/62e8cb12cc7ec8985eb4d90e/63567c991b8450020dcea775_logo.webp"
+  },
+  "client-21": {
+    "file": "/assets/logos/client-21.png",
+    "width": 307,
+    "height": 91,
+    "bounds": [
+      0,
+      0,
+      307,
+      91
+    ],
+    "source": "https://en.wikipedia.org/wiki/Square_Pharmaceuticals",
+    "download": "https://upload.wikimedia.org/wikipedia/en/b/bb/Square_pharma80.png"
+  },
+  "client-22": {
+    "file": "/assets/logos/client-22.svg",
+    "width": 600,
+    "height": 201,
+    "bounds": [
+      0,
+      0,
+      600,
+      201
+    ],
+    "source": "https://en.wikipedia.org/wiki/Eskayef_Pharmaceuticals",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/3/37/Logo_of_SK%2BF.svg"
+  },
+  "client-23": {
+    "file": "/assets/brochure/client-23.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      8,
+      13,
+      75,
+      19
+    ]
+  },
+  "client-24": {
+    "file": "/assets/logos/client-24.png",
+    "width": 250,
+    "height": 60,
+    "bounds": [
+      0,
+      11,
+      250,
+      28
+    ],
+    "source": "https://www.aristopharma.com/",
+    "download": "https://www.aristopharma.com/upload/logo/1705807569.png"
+  },
+  "client-25": {
+    "file": "/assets/brochure/client-25.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      4,
+      8,
+      82,
+      29
+    ]
+  },
+  "client-26": {
+    "file": "/assets/brochure/client-26.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      13,
+      9,
+      65,
+      27
+    ]
+  },
+  "client-27": {
+    "file": "/assets/brochure/client-27.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      30,
+      3,
+      32,
+      39
+    ]
+  },
+  "client-28": {
+    "file": "/assets/logos/client-28.svg",
+    "width": 300,
+    "height": 102,
+    "bounds": [
+      18,
+      0,
+      264,
+      99
+    ],
+    "source": "https://www.beaconpharma.com.bd/",
+    "download": "https://beaconpharma.com.bd/frontend/assets/images/mobile-logo.svg"
+  },
+  "client-29": {
+    "file": "/assets/logos/client-29.png",
+    "width": 275,
+    "height": 208,
+    "bounds": [
+      0,
+      0,
+      275,
+      208
+    ],
+    "source": "https://en.wikipedia.org/wiki/Social_Marketing_Company",
+    "download": "https://upload.wikimedia.org/wikipedia/en/f/fc/SMC_BD_logo.png"
+  },
+  "client-30": {
+    "file": "/assets/logos/client-30.jpg",
+    "width": 400,
+    "height": 220,
+    "bounds": [
+      0,
+      0,
+      400,
+      220
+    ],
+    "source": "https://en.wikipedia.org/wiki/Incepta_Pharmaceuticals",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Incepta_780647819.jpg"
+  },
+  "client-31": {
+    "file": "/assets/brochure/client-31.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      10,
+      12,
+      71,
+      23
+    ]
+  },
+  "client-32": {
+    "file": "/assets/brochure/client-32.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      21,
+      0,
+      48,
+      45
+    ]
+  },
+  "client-33": {
+    "file": "/assets/brochure/client-33.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      26,
+      4,
+      38,
+      38
+    ]
+  },
+  "client-34": {
+    "file": "/assets/logos/client-34.svg",
+    "width": 829,
+    "height": 201,
+    "bounds": [
+      0,
+      0,
+      829,
+      201
+    ],
+    "source": "https://en.wikipedia.org/wiki/ACI_Limited",
+    "download": "https://upload.wikimedia.org/wikipedia/en/b/bd/ACI_logo.svg"
+  },
+  "client-35": {
+    "file": "/assets/brochure/client-35.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      3,
+      12,
+      86,
+      22
+    ]
+  },
+  "client-36": {
+    "file": "/assets/brochure/client-36.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      28,
+      1,
+      36,
+      43
+    ]
+  },
+  "client-37": {
+    "file": "/assets/brochure/client-37.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      24,
+      2,
+      43,
+      41
+    ]
+  },
+  "client-38": {
+    "file": "/assets/brochure/client-38.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      1,
+      9,
+      89,
+      28
+    ]
+  },
+  "client-39": {
+    "file": "/assets/brochure/client-39.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      5,
+      6,
+      81,
+      32
+    ]
+  },
+  "client-40": {
+    "file": "/assets/brochure/client-40.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      5,
+      10,
+      80,
+      26
+    ]
+  },
+  "client-41": {
+    "file": "/assets/brochure/client-41.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      26,
+      2,
+      38,
+      42
+    ]
+  },
+  "client-42": {
+    "file": "/assets/brochure/client-42.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      3,
+      9,
+      85,
+      27
+    ]
+  },
+  "client-43": {
+    "file": "/assets/logos/client-43.png",
+    "width": 550,
+    "height": 110,
+    "bounds": [
+      6,
+      0,
+      541,
+      106
+    ],
+    "source": "https://www.ewubd.edu/",
+    "download": "https://www.ewubd.edu/themes/east-west-university/assets/default/images/logo.png"
+  },
+  "client-44": {
+    "file": "/assets/brochure/client-44.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      22,
+      3,
+      47,
+      39
+    ]
+  },
+  "client-45": {
+    "file": "/assets/brochure/client-45.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      22,
+      5,
+      46,
+      35
+    ]
+  },
+  "client-46": {
+    "file": "/assets/brochure/client-46.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      18,
+      5,
+      56,
+      37
+    ]
+  },
+  "client-47": {
+    "file": "/assets/brochure/client-47.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      8,
+      9,
+      75,
+      28
+    ]
+  },
+  "client-48": {
+    "file": "/assets/brochure/client-48.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      20,
+      3,
+      49,
+      38
+    ]
+  },
+  "client-49": {
+    "file": "/assets/brochure/client-49.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      0,
+      2,
+      90,
+      42
+    ]
+  },
+  "client-50": {
+    "file": "/assets/brochure/client-50.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      1,
+      4,
+      89,
+      37
+    ]
+  },
+  "client-51": {
+    "file": "/assets/logos/client-51.svg",
+    "width": 2683,
+    "height": 450,
+    "bounds": [
+      0,
+      0,
+      2683,
+      450
+    ],
+    "source": "https://www.jamunabankbd.com/",
+    "download": "https://jamunabankbd.com/wp-content/uploads/2023/12/jpl-logo-1.svg"
+  },
+  "client-52": {
+    "file": "/assets/logos/client-52.svg",
+    "width": 561,
+    "height": 750,
+    "bounds": [
+      1,
+      0,
+      559,
+      750
+    ],
+    "source": "https://en.wikipedia.org/wiki/Akij_Group",
+    "download": "https://upload.wikimedia.org/wikipedia/en/a/a7/Akij_Group_logo.svg"
+  },
+  "client-53": {
+    "file": "/assets/brochure/client-53.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      26,
+      0,
+      38,
+      45
+    ]
+  },
+  "client-54": {
+    "file": "/assets/logos/client-54.svg",
+    "width": 1800,
+    "height": 302,
+    "bounds": [
+      1,
+      0,
+      1799,
+      302
+    ],
+    "source": "https://en.wikipedia.org/wiki/Bashundhara_Group",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Bashundhara_Group.svg"
+  },
+  "client-55": {
+    "file": "/assets/brochure/client-55.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      4,
+      3,
+      83,
+      40
+    ]
+  },
+  "client-56": {
+    "file": "/assets/logos/client-56.png",
+    "width": 334,
+    "height": 65,
+    "bounds": [
+      0,
+      0,
+      334,
+      65
+    ],
+    "source": "https://doreen.com/",
+    "download": "https://doreen.com/wp-content/themes/twentytwentyone/assets/img/footer-logo.png"
+  },
+  "client-57": {
+    "file": "/assets/brochure/client-57.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      2,
+      13,
+      86,
+      20
+    ]
+  },
+  "client-58": {
+    "file": "/assets/logos/client-58.svg",
+    "width": 570,
+    "height": 138,
+    "bounds": [
+      0,
+      0,
+      570,
+      136
+    ],
+    "source": "https://shantaholdings.com/",
+    "download": "https://shantaholdings.com/#inline-logo"
+  },
+  "client-59": {
+    "file": "/assets/brochure/client-59.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      12,
+      6,
+      69,
+      34
+    ]
+  },
+  "client-60": {
+    "file": "/assets/brochure/client-60.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      16,
+      4,
+      59,
+      38
+    ]
+  },
+  "client-61": {
+    "file": "/assets/logos/client-61.svg",
+    "width": 2025,
+    "height": 866,
+    "bounds": [
+      0,
+      0,
+      2025,
+      866
+    ],
+    "source": "https://en.wikipedia.org/wiki/Concord_Group",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Concord_Group_logo.svg"
+  },
+  "client-62": {
+    "file": "/assets/brochure/client-62.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      10,
+      9,
+      72,
+      28
+    ]
+  },
+  "client-63": {
+    "file": "/assets/brochure/client-63.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      12,
+      2,
+      68,
+      42
+    ]
+  },
+  "client-64": {
+    "file": "/assets/brochure/client-64.webp",
+    "width": 90,
+    "height": 45,
+    "bounds": [
+      3,
+      11,
+      85,
+      24
+    ]
+  },
+  "partner-belimo": {
+    "file": "/assets/logos/partner-belimo.svg",
+    "width": 309,
+    "height": 119,
+    "bounds": [
+      1,
+      0,
+      308,
+      119
+    ],
+    "source": "https://en.wikipedia.org/wiki/Belimo",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Belimo-Logo.svg"
+  },
+  "partner-control4": {
+    "file": "/assets/logos/partner-control4.webp",
+    "width": 625,
+    "height": 138,
+    "bounds": [
+      0,
+      0,
+      625,
+      138
+    ],
+    "source": "https://www.control4.com/",
+    "download": "https://cdn.prod.website-files.com/629926620ba03720384bebb3/67bf3475d24224fcbb657223_C4_Logo_FC.webp"
+  },
+  "partner-danfoss": {
+    "file": "/assets/logos/partner-danfoss.svg",
+    "width": 2400,
+    "height": 1005,
+    "bounds": [
+      78,
+      62,
+      2243,
+      880
+    ],
+    "source": "https://en.wikipedia.org/wiki/Danfoss",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Danfoss-Logo.svg"
+  },
+  "partner-fike": {
+    "file": "/assets/logos/partner-fike.svg",
+    "width": 705,
+    "height": 285,
+    "bounds": [
+      2,
+      0,
+      703,
+      285
+    ],
+    "source": "https://www.fike.com/",
+    "download": "https://www.fike.com/static/images/fike-logo.0d795bd575bf.svg"
+  },
+  "partner-honeywell": {
+    "file": "/assets/logos/partner-honeywell.svg",
+    "width": 2034,
+    "height": 360,
+    "bounds": [
+      0,
+      0,
+      2034,
+      360
+    ],
+    "source": "https://en.wikipedia.org/wiki/Honeywell",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Honeywell_logo.svg"
+  },
+  "partner-lutron": {
+    "file": "/assets/logos/partner-lutron.png",
+    "width": 900,
+    "height": 500,
+    "bounds": [
+      23,
+      189,
+      853,
+      121
+    ],
+    "source": "https://ajhurst.com/suppliers/lutron",
+    "download": "https://ajhurst.com/assets/uploads/categories/lutron.png"
+  },
+  "partner-parkhelp": {
+    "file": "/assets/brochure/partner-parkhelp.webp",
+    "width": 160,
+    "height": 55,
+    "bounds": [
+      14,
+      0,
+      146,
+      45
+    ]
+  },
+  "partner-rbh": {
+    "file": "/assets/logos/partner-rbh.png",
+    "width": 1449,
+    "height": 2048,
+    "bounds": [
+      366,
+      503,
+      717,
+      1042
+    ],
+    "source": "https://www.thesecurityevent.co.uk/exhibitors/rbh-security-group-ltd",
+    "download": "https://cdn.asp.events/CLIENT_Nineteen_F7A1E73F_5056_B725_6BE81DEAAC036B43/sites/The-Security-Event-2026/media/libraries/news/9B3F544E-9296-6D74-B6D9988C42CA1A56-image.png"
+  },
+  "partner-siemens": {
+    "file": "/assets/logos/partner-siemens.svg",
+    "width": 3000,
+    "height": 477,
+    "bounds": [
+      0,
+      0,
+      3000,
+      475
+    ],
+    "source": "https://en.wikipedia.org/wiki/Siemens",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg"
+  },
+  "partner-ss": {
+    "file": "/assets/logos/partner-ss.svg",
+    "width": 1786,
+    "height": 633,
+    "bounds": [
+      0,
+      0,
+      1786,
+      633
+    ],
+    "source": "https://www.spluss.de/",
+    "download": "https://www.spluss.de/cdn/shop/files/SplusS__logo-add-on__rgb_color_light_2025-12_53343df7-495c-47db-8bc9-c79bbf85c1ff.svg?format=webp&v=1766145830&width=230"
+  },
+  "partner-tecofi": {
+    "file": "/assets/brochure/partner-tecofi.webp",
+    "width": 160,
+    "height": 55,
+    "bounds": [
+      28,
+      0,
+      132,
+      48
+    ]
+  },
+  "partner-trane": {
+    "file": "/assets/logos/partner-trane.png",
+    "width": 2385,
+    "height": 795,
+    "bounds": [
+      0,
+      0,
+      2385,
+      795
+    ],
+    "source": "https://www.trane.com/",
+    "download": "https://www.trane.com/content/dam/Trane/Commercial/TraneLogo_red.png"
+  }
+}

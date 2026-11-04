@@ -2,8 +2,8 @@ import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { partners, asset } from "@/lib/company-profile";
+import { CompanyLogo } from "@/components/site/company-logo";
+import { partners } from "@/lib/company-profile";
 import { Breadcrumbs, PageIntro } from "@/components/site/page-parts";
 export const metadata: Metadata = {
   title: "Technology Partners | Felix Controls Limited",
@@ -23,12 +23,11 @@ export default function Partners() {
         {partners.map((p) => (
           <article key={p.logo}>
             <div className="partner-logo-well">
-              <Image
-                src={asset("partner-" + p.logo)}
-                width={270}
-                height={100}
+              <CompanyLogo
+                name={"partner-" + p.logo}
+                width={220}
+                height={114}
                 alt={p.name}
-                unoptimized
               />
             </div>
             <div>

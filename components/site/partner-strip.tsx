@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import { asset, clients, partners } from "@/lib/company-profile";
+import { CompanyLogo } from "./company-logo";
+import { clients, partners } from "@/lib/company-profile";
 
-type Logo = { name: string; src: string };
+type Logo = { name: string; id: string };
 
 function LogoStrip({
   logos,
@@ -24,14 +24,13 @@ function LogoStrip({
             key={copy}
             aria-hidden={copy === 1 ? true : undefined}
           >
-            {logos.map(({ name, src }) => (
-              <Image
-                key={src}
-                src={src}
+            {logos.map(({ name, id }) => (
+              <CompanyLogo
+                key={id}
+                name={id}
                 alt={copy ? "" : name}
-                width={135}
-                height={70}
-                unoptimized
+                width={150}
+                height={78}
               />
             ))}
           </div>
@@ -55,7 +54,7 @@ export function PartnerStrip() {
       label="partner"
       logos={partners.map(({ name, logo }) => ({
         name,
-        src: asset(`partner-${logo}`),
+        id: `partner-${logo}`,
       }))}
     />
   );
@@ -68,7 +67,7 @@ export function ClientStrip() {
       slow
       logos={Array.from({ length: 64 }, (_, index) => ({
         name: clients[index] ?? "Client reference from Company Profile",
-        src: asset(`client-${String(index + 1).padStart(2, "0")}`),
+        id: `client-${String(index + 1).padStart(2, "0")}`,
       }))}
     />
   );
