@@ -1353,7 +1353,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .studio-page .company-data-sheet dt {
   margin: 0;
   color: var(--navy);
-  font: 400 15px/1.6 var(--font-data);
+  font: 400 15px/1.6 var(--font-reading);
 }
 .studio-page .company-data-sheet dd {
   margin: 0;
