@@ -1055,25 +1055,29 @@ button.fcl-link {
 .global-footer a:hover {
   text-decoration: underline;
 }
-.footer-directory .fcl-label {
-  font-family: var(--font-data);
-  @apply mb-[8px];
+.footer-directory {
+  font-family: var(--font-reading), Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
-.footer-logo {
-  @apply block mb-[12px];
+.footer-directory :is(a, address, .footer-data-label, .footer-heading) {
+  font-family: inherit;
 }
-.footer-logo img {
-  @apply w-[88px] h-[82px] object-contain;
-  filter: brightness(0) invert(1);
+.footer-directory .footer-heading {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+  @apply text-surface;
+}
+.footer-directory :is(a, address, .footer-data-label) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 .footer-data-label {
-  font: 400 14px/1.5 var(--font-data);
-  color: var(--rule);
-  @apply mt-[8px];
-}
-.footer-primary-phone {
-  font-weight: 700;
-  font-size: 22px;
+  @apply mt-[8px] text-surface;
 }
 .footer-bottom {
   border-top: 1px solid var(--rule);
@@ -2547,14 +2551,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 .brand-select-trigger[data-popup-open] .brand-select-icon svg {
   transform: rotate(180deg);
-}
-.footer-logo {
-  @apply [background:var(--surface)];
-  padding: 10px 14px;
-}
-.footer-logo img {
-  filter: none;
-  @apply w-[88px] h-[82px];
 }
 @media (max-width: 650px) {
   .studio-home .fcl-section {

@@ -480,27 +480,14 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
         )}
         <div className="fcl-container footer-directory">
           <div>
-            <Link
-              href="/"
-              className="footer-logo"
-              aria-label="Felix Controls Limited, home"
-            >
-              <Image
-                src="/assets/felix-logo-web.png"
-                width={270}
-                height={250}
-                alt="Felix Controls Limited"
-                unoptimized
-              />
-            </Link>
-            <span className="fcl-label">Felix Controls Limited</span>
+            <h2 className="footer-heading">Felix Controls Limited</h2>
             <Link href="/about">About Felix</Link>
             <Link href="/partners">Partners</Link>
             <Link href="/clients">Clients</Link>
             <Link href="/careers">Careers</Link>
           </div>
           <div>
-            <span className="fcl-label">Navigation</span>
+            <h2 className="footer-heading">Navigation</h2>
             <Link href="/solutions">Solutions</Link>
             <Link href="/sectors">Sectors</Link>
             <Link href="/services">Services</Link>
@@ -511,7 +498,7 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
             </a>
           </div>
           <div>
-            <span className="fcl-label">Sectors</span>
+            <h2 className="footer-heading">Sectors</h2>
             {sectors
               .filter((item) =>
                 [
@@ -530,7 +517,7 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
             <Link href="/sectors">All sectors</Link>
           </div>
           <div className="footer-business-details">
-            <span className="fcl-label">Contact</span>
+            <h2 className="footer-heading">Contact</h2>
             <span className="footer-data-label">Email</span>
             <a href="mailto:info@felixbd.com">info@felixbd.com</a>
             <span className="footer-data-label">Contact number</span>
