@@ -22,14 +22,8 @@ export function HomeSectors() {
       className="home-markets"
       action={{ href: "/sectors", label: "All sectors" }}
     >
-      <p>
-        <AnimatedCopy>
-          Building services shaped around the operations of each site, from new
-          construction to renovation and system upgrades.
-        </AnimatedCopy>
-      </p>
       <div className="market-feature">
-        <Photo name={sector.image} alt={sector.title} />
+        <Photo href={`/sectors/${sector.slug}`} name={sector.image} alt={sector.title} />
         <div className="market-feature-copy">
           <BrandSelect
             id="home-sector-select"

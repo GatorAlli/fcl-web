@@ -13,12 +13,14 @@ export default function Careers() {
         title="Careers at Felix."
         text="Work across building systems, industrial automation and engineering services."
         image="engineering-team"
+        imageHref="/services"
         tone="charcoal"
       />
       <section className="careers-layout fcl-container fcl-section">
         <div>
           <Photo
             name="engineering-design"
+            href="/services"
             alt="Architectural drawings and technical plans"
           />
         </div>

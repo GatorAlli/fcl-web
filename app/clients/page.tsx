@@ -18,12 +18,6 @@ export default function Clients() {
             <DisplayText text="Our clients" />
           </h1>
           <div className="clients-intro-row">
-            <p>
-              <AnimatedCopy>
-                From industry and healthcare to banking, hospitality and
-                commercial buildings.
-              </AnimatedCopy>
-            </p>
             <Link href="/projects" className="section-action">
               Reference projects
             </Link>
@@ -31,6 +25,7 @@ export default function Clients() {
         </div>
         <Photo
           name="control-room"
+          href="/projects"
           alt="Electrical controls in an industrial environment"
           priority
           className="clients-masthead-film"

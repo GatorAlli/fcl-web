@@ -1,5 +1,5 @@
-export const foundingStatement =
-  "Founded in December 2010 by a group of engineers with a decade of experience in building management, fire detection and protection, and security systems in Bangladesh.";
+import { profileAbout, profilePurpose, profileResources } from "./profile-content";
+export const foundingStatement = profileAbout[1];
 export const companyData = [
   ["Company", "Felix Controls Limited"],
   ["Founded", "December 2010"],
@@ -17,25 +17,5 @@ export const companyData = [
   ],
   ["Service", "24/7 service support arrangement"],
 ] as const;
-export const companyPurpose = [
-  [
-    "Mission",
-    "Provide quality and innovative solutions to valued customers, maintain stringent ethical standards in business, and ensure benefit to shareholders and society.",
-  ],
-  [
-    "Vision",
-    "Establish Felix as a leading solution integrator in Bangladesh through excellent performance, products, services and efficient use of resources.",
-  ],
-  [
-    "Objective",
-    "Conduct transparent business operations based on market mechanism, within legal and social frameworks, to attain the mission.",
-  ],
-] as const;
-export const companyResources = [
-  "Trained and experienced technical team",
-  "24/7 service support arrangement",
-  "Dedicated service support team",
-  "Dedicated transportation facility",
-  "Tools and equipment",
-  "Available spare parts",
-] as const;
+export const companyPurpose = profilePurpose;
+export const companyResources = profileResources;

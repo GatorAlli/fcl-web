@@ -1,10 +1,10 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import type { Metadata } from "next";
 import { PageCanvas } from "@/components/site/page-canvas";
-import { CompanyDataSheet } from "@/components/site/company-data-sheet";
+import { ProfileProse } from "@/components/site/profile-prose";
+import { profileAbout, profileReasons } from "@/lib/profile-content";
 import { DisplayText } from "@/components/site/display-text";
 import {
-  foundingStatement,
   companyPurpose,
   companyResources,
 } from "@/lib/company-data";
@@ -14,20 +14,17 @@ export const metadata: Metadata = {
 };
 export default function About() {
   return (
-    <PageCanvas id="main" className="fcl-container about-data-page">
+    <PageCanvas id="main" className="fcl-container about-data-page profile-article">
       <header className="about-opening">
         <p className="section-label">
           <AnimatedCopy>About Felix</AnimatedCopy>
         </p>
         <h1>
-          <DisplayText text={foundingStatement} />
+          <DisplayText text="Who we are ?" />
         </h1>
       </header>
-      <section className="about-data-row company-record">
-        <h2>
-          <AnimatedCopy>Company record</AnimatedCopy>
-        </h2>
-        <CompanyDataSheet />
+      <section className="profile-content-section" aria-label="Who we are">
+        <ProfileProse paragraphs={profileAbout} />
       </section>
       <section aria-label="Mission, vision and objective">
         {companyPurpose.map(([title, text]) => (
@@ -55,29 +52,15 @@ export default function About() {
       </section>
       <section className="about-data-row">
         <h2>
-          <AnimatedCopy>Why Felix</AnimatedCopy>
+          <AnimatedCopy>Reasons to Choose Felix</AnimatedCopy>
         </h2>
         <div className="prose about-team-statement">
-          <h3>
-            <AnimatedCopy>Committed experts, not “consultants”.</AnimatedCopy>
-          </h3>
-          <p>
-            <AnimatedCopy>
-              We work alongside our customers to put engineering into practice.
-            </AnimatedCopy>
-          </p>
-          <p>
-            <AnimatedCopy>
-              Our team is multi-skilled across HVAC control, building
-              automation, SCADA, fire detection and suppression, security, home
-              automation and lighting, and parking.
-            </AnimatedCopy>
-          </p>
-          <p>
-            <AnimatedCopy>
-              Every staff member is involved in customer support.
-            </AnimatedCopy>
-          </p>
+          {profileReasons.map((reason) => (
+            <div key={reason.title}>
+              <h3><AnimatedCopy>{reason.title}</AnimatedCopy></h3>
+              <ProfileProse paragraphs={[reason.text]} />
+            </div>
+          ))}
         </div>
       </section>
       <section className="about-data-row profile-statement">

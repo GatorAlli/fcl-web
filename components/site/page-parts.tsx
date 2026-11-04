@@ -54,36 +54,48 @@ export function Photo({
   alt,
   className = "",
   priority = false,
+  href,
 }: {
   name: string;
   alt: string;
   className?: string;
   priority?: boolean;
+  href?: string;
 }) {
   const original = imageManifest.find((entry) => entry.file === name + ".webp");
   const official = projectPhotography[name];
   const contextual = asset(name).includes("/photography/");
   if (!contextual && !original && !official) return null;
-  return (
-    <div
-      className={
-        "fcl-photo " +
-        (contextual ? "context-photo " : "documentary-photo ") +
-        className
-      }
-      style={contextual || official ? undefined : { maxWidth: original?.width }}
-      data-source-page={official ? undefined : original?.pdfPage}
-    >
-      <Image
-        src={asset(name)}
-        alt={alt === "" ? "" : (photoAlt(name) ?? alt)}
-        width={official?.width ?? (contextual ? 1800 : original!.width)}
-        height={official?.height ?? (contextual ? 1200 : original!.height)}
-        unoptimized
-        preload={priority}
-      />
-    </div>
+  const props = {
+    className: "fcl-photo " + (contextual ? "context-photo " : "documentary-photo ") + className,
+    style: contextual || official ? undefined : { maxWidth: original?.width },
+    "data-source-page": official ? undefined : original?.pdfPage,
+  };
+  const image = (
+    <Image
+      src={asset(name)}
+      alt={alt === "" ? "" : (photoAlt(name) ?? alt)}
+      width={official?.width ?? (contextual ? 1800 : original!.width)}
+      height={official?.height ?? (contextual ? 1200 : original!.height)}
+      unoptimized
+      preload={priority}
+    />
   );
+  if (href) {
+    const external = href.startsWith("https://");
+    return (
+      <Link
+        {...props}
+        href={href}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        aria-label={alt || undefined}
+      >
+        {image}
+      </Link>
+    );
+  }
+  return <div {...props}>{image}</div>;
 }
 
 export function Breadcrumbs({
@@ -121,13 +133,15 @@ export function PageIntro({
   text,
   image,
   tone = "paper",
+  imageHref = "/solutions",
   navigation,
 }: {
   label: string;
   title: string;
-  text: string;
+  text?: string;
   image?: string;
   tone?: "paper" | "charcoal";
+  imageHref?: string;
   navigation?: ReactNode;
 }) {
   return (
@@ -140,13 +154,16 @@ export function PageIntro({
           <h1>
             <DisplayText text={title.replace(/\.+$/, "")} />
           </h1>
-          <p className="fcl-intro-lead">
-            <AnimatedCopy>{text}</AnimatedCopy>
-          </p>
+          {text && (
+            <p className="fcl-intro-lead">
+              <AnimatedCopy>{text}</AnimatedCopy>
+            </p>
+          )}
         </div>
         {image && (
           <Photo
             name={image}
+            href={imageHref}
             alt={photoAlt(image) ?? "Engineering systems"}
             priority
           />

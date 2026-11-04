@@ -2,6 +2,7 @@ import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { profileSectorIntro } from "@/lib/profile-content";
 import { sectors } from "@/lib/company-profile";
 import { Breadcrumbs, PageIntro, Photo } from "@/components/site/page-parts";
 export const metadata: Metadata = { title: "Sectors | Felix Controls Limited" };
@@ -11,9 +12,10 @@ export default function Sectors() {
       <Breadcrumbs items={[{ label: "Sectors" }]} />
       <PageIntro
         label="UNDERSTANDING YOUR BUSINESS"
-        title="Sectors we work in."
+        title="Understanding Your Business Needs"
         image="sector-commercial"
-        text="New construction, renovation or a system upgrade: every environment has its own requirements. We build our approach around yours."
+        imageHref="/sectors/commercial"
+        text={profileSectorIntro}
       />
       <div className="sector-index fcl-container fcl-section">
         {sectors.map((s) => (
@@ -29,9 +31,6 @@ export default function Sectors() {
             <h2>
               <AnimatedCopy>{s.title}</AnimatedCopy>
             </h2>
-            <p>
-              <AnimatedCopy>{s.text}</AnimatedCopy>
-            </p>
           </Link>
         ))}
       </div>

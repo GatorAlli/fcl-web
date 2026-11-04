@@ -1,3 +1,4 @@
+import { serviceStages } from "@/lib/company-profile";
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { Hero } from "@/components/site/hero";
 import { Company } from "@/components/site/company";
@@ -9,20 +10,6 @@ import { ClientStrip, PartnerStrip } from "@/components/site/partner-strip";
 import Link from "next/link";
 import { DisplayText } from "@/components/site/display-text";
 
-const process = [
-  {
-    title: "Plan & design",
-    text: "Define the requirements, coordinate the systems and specify the equipment.",
-  },
-  {
-    title: "Install & commission",
-    text: "Bring the design into operation through installation, integration and testing.",
-  },
-  {
-    title: "Maintain & support",
-    text: "Keep the system working with technical support and ongoing maintenance.",
-  },
-];
 
 export default function Home() {
   return (
@@ -88,18 +75,18 @@ export default function Home() {
           >
             <Photo
               name="engineering-design"
+              href="/services"
               alt="Engineering drawings and project plans"
               className="delivery-image"
             />
             <div className="delivery-content">
               <p>
                 <AnimatedCopy>
-                  Design, installation, commissioning and long-term technical
-                  support.
+                  Design & implement a high-performance solution
                 </AnimatedCopy>
               </p>
               <ol className="delivery-steps">
-                {process.map((step) => (
+                {serviceStages.map((step) => (
                   <li key={step.title}>
                     <AnimatedCopy>
                       <h3>{step.title}</h3>

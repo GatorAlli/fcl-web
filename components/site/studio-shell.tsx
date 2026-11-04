@@ -89,7 +89,7 @@ const searchItems = [
     title: s.title,
     href: `/solutions/${s.slug}`,
     type: "Solution",
-    text: `${s.partner} ${s.description} ${s.capabilities.join(" ")}`,
+    text: `${s.partner} ${s.description}`,
   })),
   ...sectors.map((s) => ({
     title: s.title,

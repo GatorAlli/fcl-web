@@ -15,7 +15,6 @@ export default function Solutions() {
         label="OUR EXPERTISE"
         title="Solutions & systems."
         image="control-room"
-        text="Building management, industrial automation, connected spaces and field products. Explore our eleven specialist systems."
       />
       <div className="fcl-container solution-index">
         {[

@@ -613,7 +613,7 @@ textarea {
   @apply max-w-[65ch];
 }
 .fcl-photo {
-  @apply relative w-[100%];
+  @apply block relative w-[100%];
 }
 .fcl-photo img {
   @apply max-w-[100%] w-[100%] h-[auto] object-contain;
@@ -842,7 +842,7 @@ textarea {
 .partner-logo-well .company-logo {
   @apply max-w-[220px] w-[100%] h-[auto] mx-[auto];
 }
-.partner-directory article > a {
+.partner-directory article > a:not(.partner-logo-well) {
   grid-column: 2;
 }
 .partner-directory h2 {
@@ -1142,7 +1142,7 @@ button.fcl-link {
   .profile-resource-list li {
     @apply grid-cols-[minmax(0,_1fr)] gap-[24px];
   }
-  .partner-directory article > a {
+  .partner-directory article > a:not(.partner-logo-well) {
     grid-column: auto;
   }
   .partner-logo-well {
@@ -2902,5 +2902,114 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
   .contact-form-surface .form-heading {
     @apply mb-[24px];
+  }
+}
+
+/* Shared reading rhythm for original profile copy and linked product articles. */
+.profile-content-section {
+  @apply py-[32px];
+}
+.profile-copy {
+  @apply max-w-[72ch];
+  font-size: 18px;
+  line-height: 1.75;
+}
+.profile-copy p {
+  margin: 0 0 24px;
+  font-size: inherit;
+  line-height: inherit;
+}
+.profile-copy p:last-child {
+  margin-bottom: 0;
+}
+.profile-copy ul {
+  margin: 24px 0 0;
+  padding-left: 24px;
+  list-style: disc;
+}
+.profile-copy li + li {
+  margin-top: 8px;
+}
+.manufacturer-links,
+.manufacturer-names {
+  @apply flex flex-wrap items-center gap-[16px];
+}
+.manufacturer-links {
+  @apply mt-[24px];
+}
+.manufacturer-links .section-action {
+  font-size: 16px;
+}
+.product-reference-grid {
+  @apply grid grid-cols-[repeat(2,_minmax(0,_1fr))] gap-[32px];
+}
+.product-reference-card {
+  @apply min-w-[0];
+}
+.product-reference-link {
+  @apply block;
+}
+.product-reference-card .product-image-well,
+.product-reference-card > .fcl-photo {
+  @apply flex items-center justify-center h-[280px] min-h-[0] w-[100%];
+  padding: 24px;
+  background: var(--surface);
+}
+.product-reference-card .product-image-well img,
+.product-reference-card > .fcl-photo img {
+  @apply h-[100%] w-[100%] object-contain;
+}
+.product-reference-caption {
+  @apply flex flex-wrap items-baseline justify-between gap-[16px] pt-[16px];
+  font-size: 16px;
+  line-height: 1.5;
+}
+.fcl-photo:focus-visible,
+.product-reference-link:focus-visible {
+  outline: 2px solid var(--link-ink);
+  outline-offset: 4px;
+}
+@media (max-width: 650px) {
+  .profile-content-section {
+    @apply py-[24px];
+  }
+  .profile-copy {
+    font-size: 16px;
+  }
+  .product-reference-grid {
+    @apply grid-cols-[minmax(0,_1fr)] gap-[24px];
+  }
+}
+.profile-article h1 {
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.1;
+}
+.profile-article h2 {
+  font-size: clamp(26px, 2.5vw, 34px);
+  line-height: 1.25;
+}
+.profile-article h3 {
+  font-size: 24px;
+  line-height: 1.35;
+}
+.profile-article .fcl-intro-lead,
+.profile-article .service-process p,
+.profile-article .partner-directory p {
+  font-size: 18px;
+  line-height: 1.75;
+}
+.profile-article .service-process > section {
+  @apply grid-cols-[repeat(2,_minmax(0,_1fr))] gap-[32px] py-[32px];
+}
+@media (max-width: 1024px) {
+  .profile-article .service-process > section {
+    @apply grid-cols-[minmax(0,_1fr)] gap-[24px];
+  }
+}
+@media (max-width: 650px) {
+  .profile-article .fcl-intro-lead,
+  .profile-article .service-process p,
+  .profile-article .partner-directory p {
+    font-size: 16px;
   }
 }

@@ -12,14 +12,8 @@ export function HomeExpertise() {
       className="expertise-section"
       action={{ href: "/solutions", label: "Learn more" }}
     >
-      <p>
-        <AnimatedCopy>
-          Building management, automation, life safety and environmental
-          control, designed as integrated systems.
-        </AnimatedCopy>
-      </p>
       <figure className="expertise-image">
-        <Photo name="home-automation" alt="Contemporary residential interior" />
+        <Photo href="https://www.control4.com/" name="home-automation" alt="Contemporary residential interior" />
       </figure>
       <div className="expertise-index">
         {solutionGroups.map(([key, label]) => (

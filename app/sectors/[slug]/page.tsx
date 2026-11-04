@@ -2,6 +2,8 @@ import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ProfileProse } from "@/components/site/profile-prose";
+import { profileSectorFocus } from "@/lib/profile-content";
 import { sectors, solutions } from "@/lib/company-profile";
 import {
   Breadcrumbs,
@@ -28,12 +30,13 @@ export default async function SectorPage({
   const s = sectors.find((s) => s.slug === slug);
   if (!s) notFound();
   return (
-    <PageCanvas id="main" className="sector-article">
+    <PageCanvas id="main" className="sector-article profile-article">
       <PageIntro
         label="Sectors"
         title={s.title}
         text={s.text}
         image={s.image}
+        imageHref={`/solutions/${s.solutions[0]}`}
 
         navigation={
           <Breadcrumbs
@@ -41,6 +44,12 @@ export default async function SectorPage({
           />
         }
       />
+      <section className="fcl-container profile-content-section" aria-label="Our approach">
+        <ProfileProse
+          paragraphs={["Whether it concerns a system upgrade, renovation or new construction, we always focus on:"]}
+          bullets={profileSectorFocus}
+        />
+      </section>
       <section className="fcl-container fcl-section">
         <div className="fcl-section-top">
           <h2>

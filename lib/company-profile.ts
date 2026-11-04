@@ -1,3 +1,5 @@
+import { profileSolutions, profileServiceStages, profileSectorIntro } from "./profile-content";
+import { manufacturers } from "./official-sites";
 import { projectPhotography } from "./project-photography";
 export const brochure = "/downloads/felix-company-profile.pdf";
 export const solutionGroups = [
@@ -145,8 +147,6 @@ export type Solution = {
   image: string;
   intro: string;
   description: string;
-  capabilities: string[];
-  applications: string[];
 };
 
 export const solutions: Solution[] = [
@@ -158,23 +158,6 @@ export const solutions: Solution[] = [
     partner: "Honeywell, Trend, Trane",
     page: 8,
     image: "building-management",
-    intro:
-      "Monitor HVAC, lighting, utilities and energy from one building management platform.",
-    description:
-      "Bring HVAC, lighting, utilities and energy monitoring into a coordinated building management system. Felix works with Trend and WEBs-N4 platforms to help facilities teams understand building performance and control everyday operations.",
-    capabilities: [
-      "Central monitoring of building services",
-      "HVAC and utility controls",
-      "Energy monitoring and performance reporting",
-      "Integration with lighting, fire, security and access systems",
-      "Operator dashboards and building controllers",
-    ],
-    applications: [
-      "Commercial buildings",
-      "Healthcare",
-      "Life sciences",
-      "Data centers",
-    ],
   },
   {
     slug: "scada",
@@ -184,23 +167,6 @@ export const solutions: Solution[] = [
     partner: "Siemens",
     page: 9,
     image: "scada",
-    intro:
-      "Monitor industrial processes, collect production data and coordinate supervisory control.",
-    description:
-      "Felix offers Siemens SIMATIC SCADA for monitoring and controlling industrial processes. An open, scalable system brings together production data, long-term archives and supervisory control, with integration from the plant floor toward MES, ERP and cloud systems.",
-    capabilities: [
-      "Process visualization and supervisory control",
-      "Production data acquisition",
-      "Long-term data archiving",
-      "Scalable system architecture",
-      "Integration with MES and ERP environments",
-    ],
-    applications: [
-      "Industry",
-      "Life sciences",
-      "District cooling",
-      "Utilities",
-    ],
   },
   {
     slug: "home-automation",
@@ -210,18 +176,6 @@ export const solutions: Solution[] = [
     partner: "Control4",
     page: 10,
     image: "home-automation",
-    intro:
-      "Control lighting, entertainment, climate and security with connected home systems.",
-    description:
-      "Connect the systems you use every day through Control4. Felix integrates lighting, music, video, climate and security into a coordinated home experience, with controls on dedicated touchscreens, keypads, smartphones and tablets.",
-    capabilities: [
-      "Entertainment and multi-room audio",
-      "Smart lighting and personalized scenes",
-      "Comfort and climate control",
-      "Connected safety and security",
-      "Touchscreen, keypad and mobile control",
-    ],
-    applications: ["Residential", "Lodging", "Private entertainment spaces"],
   },
   {
     slug: "lighting-control",
@@ -231,18 +185,6 @@ export const solutions: Solution[] = [
     partner: "Lutron",
     page: 11,
     image: "lighting-control",
-    intro:
-      "Coordinate lighting scenes, dimming and shades in homes and commercial spaces.",
-    description:
-      "Lutron lighting, shade and temperature controls help adapt a room to how it is used. Felix brings these systems together for homes and commercial environments, balancing comfort, energy use and the requirements of each space.",
-    capabilities: [
-      "Residential and commercial lighting controls",
-      "Dimming and lighting scenes",
-      "Integrated shade control",
-      "Temperature control coordination",
-      "Keypad and mobile operation",
-    ],
-    applications: ["Residential", "Commercial buildings", "Retail", "Lodging"],
   },
   {
     slug: "fire-detection",
@@ -252,23 +194,6 @@ export const solutions: Solution[] = [
     partner: "Fike",
     page: 12,
     image: "fire-detection",
-    intro:
-      "Detection, alarm and suppression systems selected around the use and risks of each site.",
-    description:
-      "Felix designs fire detection and protection systems around a building's use and risks. The company profile presents Fike detection, alarm and suppression technologies for facilities where early warning and a coordinated response are essential.",
-    capabilities: [
-      "Addressable and conventional fire detection",
-      "Fire alarm and suppression control",
-      "Linear heat and early-warning detection",
-      "Emergency power-off system integration",
-      "Fire protection design and coordination",
-    ],
-    applications: [
-      "Data centers",
-      "Industry",
-      "Healthcare",
-      "Commercial buildings",
-    ],
   },
   {
     slug: "security",
@@ -278,23 +203,6 @@ export const solutions: Solution[] = [
     partner: "RBH Access",
     page: 13,
     image: "security",
-    intro:
-      "Connect access control, video surveillance and alarm monitoring across one or multiple sites.",
-    description:
-      "Coordinate access control, alarm monitoring and video surveillance across single or multiple sites. Felix provides integrated security management for multi-tenant and multi-site buildings, tailored to the people who use and operate them.",
-    capabilities: [
-      "Integrated access control",
-      "IP video and alarm monitoring",
-      "Intrusion system integration",
-      "Turnstiles and telephone entry",
-      "IP intercoms and multi-site management",
-    ],
-    applications: [
-      "Commercial buildings",
-      "Industry",
-      "Residential",
-      "Healthcare",
-    ],
   },
   {
     slug: "variable-frequency-drives",
@@ -304,23 +212,6 @@ export const solutions: Solution[] = [
     partner: "Danfoss",
     page: 14,
     image: "variable-frequency-drives",
-    intro:
-      "Variable speed motor control for HVAC, pumps and industrial equipment.",
-    description:
-      "Felix represents Danfoss variable speed drives and power converters. VLT and VACON drive families support motor control across HVAC, water treatment, energy and industrial applications, with selection based on the motor, system and operating requirements.",
-    capabilities: [
-      "Variable speed motor control",
-      "VLT and VACON drive families",
-      "HVAC and pump applications",
-      "Industrial drive selection",
-      "Application support and lifecycle services",
-    ],
-    applications: [
-      "District cooling",
-      "Industry",
-      "Water treatment",
-      "Commercial buildings",
-    ],
   },
   {
     slug: "hvac-controls",
@@ -330,23 +221,6 @@ export const solutions: Solution[] = [
     partner: "Belimo",
     page: 15,
     image: "hvac-controls",
-    intro:
-      "Valves, actuators and control devices for building air and water systems.",
-    description:
-      "Felix supplies HVAC controls with local application support, including Belimo valves, actuators and room control products. Components are selected around the demands of each building's air and water systems.",
-    capabilities: [
-      "Field-configurable standalone controllers",
-      "Pressure-independent control and balancing valves",
-      "Two-way and three-way valves and actuators",
-      "Damper actuators and manual balancing valves",
-      "Sensors, transmitters, thermostat controllers and energy meters",
-    ],
-    applications: [
-      "Commercial buildings",
-      "Healthcare",
-      "District cooling",
-      "Life sciences",
-    ],
   },
   {
     slug: "sensors",
@@ -356,23 +230,6 @@ export const solutions: Solution[] = [
     partner: "S+S Regeltechnik",
     page: 16,
     image: "sensors",
-    intro:
-      "Field devices for environmental measurement, building controls and operator interfaces.",
-    description:
-      "S+S Regeltechnik sensor and field technology supports environmental measurement, controls and networking. Felix's profile presents devices for building automation, HVAC and environmental monitoring, including room operating interfaces.",
-    capabilities: [
-      "Environmental sensing and measurement",
-      "Temperature and humidity monitoring",
-      "Pressure measurement",
-      "Room controllers and operating interfaces",
-      "Building automation field devices",
-    ],
-    applications: [
-      "Life sciences",
-      "Healthcare",
-      "Commercial buildings",
-      "Industry",
-    ],
   },
   {
     slug: "manual-valves",
@@ -382,23 +239,6 @@ export const solutions: Solution[] = [
     partner: "Tecofi",
     page: 17,
     image: "valve-installation",
-    intro:
-      "Manual valves and accessories for fluid transfer and air-conditioning systems.",
-    description:
-      "Felix supplies Tecofi manual valves and accessories for fluid transfer, pharmaceutical, chemical and air-conditioning systems. Local sales and technical teams help match product selection to each project's requirements.",
-    capabilities: [
-      "Isolation and butterfly valves",
-      "Balancing and ball valves",
-      "Strainers and non-return valves",
-      "Flexible connections and accessories",
-      "Application-led product selection",
-    ],
-    applications: [
-      "Industry",
-      "Life sciences",
-      "District cooling",
-      "Air-conditioning systems",
-    ],
   },
   {
     slug: "parking",
@@ -408,24 +248,17 @@ export const solutions: Solution[] = [
     partner: "ParkHelp",
     page: 18,
     image: "parking",
-    intro: "Guide drivers to available spaces and monitor parking activity.",
-    description:
-      "Felix offers ParkHelp parking guidance for commercial and mixed-use properties. Expandable systems combine space monitoring, directional information and management tools to help drivers find available parking and operators understand their facilities.",
-    capabilities: [
-      "Parking-space monitoring",
-      "Directional and availability displays",
-      "Central parking management",
-      "Expandable system configurations",
-      "Operational visibility for property teams",
-    ],
-    applications: [
-      "Commercial buildings",
-      "Retail",
-      "Mixed-use properties",
-      "Lodging",
-    ],
   },
-];
+].map((solution) => {
+  const copy = profileSolutions[solution.slug];
+  return {
+    ...solution,
+    title: copy.title,
+    partner: copy.brands.map((id) => manufacturers[id].name).join(", "),
+    intro: copy.paragraphs[0],
+    description: copy.paragraphs.join("\n\n"),
+  };
+});
 
 export const sectors = [
   {
@@ -433,7 +266,7 @@ export const sectors = [
     title: "Commercial buildings",
     image: "sector-commercial",
     intro: "Building systems that work as one.",
-    text: "Bring comfort, security, lighting and energy information together for building owners, tenants and facility teams.",
+    text: profileSectorIntro,
     solutions: [
       "building-management",
       "lighting-control",
@@ -447,7 +280,7 @@ export const sectors = [
     title: "District cooling",
     image: "sector-district-cooling",
     intro: "Control at the scale of your network.",
-    text: "Coordinate cooling, motor control, field measurement and valves around the operating needs of a shared cooling system.",
+    text: profileSectorIntro,
     solutions: [
       "building-management",
       "scada",
@@ -461,7 +294,7 @@ export const sectors = [
     title: "Retail",
     image: "sector-retail",
     intro: "Comfort from arrival to departure.",
-    text: "Consider the full visitor journey, from parking and entry to comfortable, well-lit retail environments.",
+    text: profileSectorIntro,
     solutions: [
       "parking",
       "lighting-control",
@@ -474,7 +307,7 @@ export const sectors = [
     title: "Healthcare",
     image: "sector-healthcare",
     intro: "Support the spaces people depend on.",
-    text: "Coordinate environmental monitoring, HVAC, security and building services around the operational demands of healthcare facilities.",
+    text: profileSectorIntro,
     solutions: [
       "building-management",
       "hvac-controls",
@@ -488,7 +321,7 @@ export const sectors = [
     title: "Life sciences & biotechnology",
     image: "sector-life-sciences",
     intro: "Control for demanding environments.",
-    text: "Bring building management, environmental sensing and HVAC controls together for pharmaceutical and biotechnology facilities.",
+    text: profileSectorIntro,
     solutions: [
       "building-management",
       "scada",
@@ -502,7 +335,7 @@ export const sectors = [
     title: "Industry",
     image: "sector-industry",
     intro: "See the process. Control the performance.",
-    text: "Connect process supervision, motor control, sensing and protection to support the way your industrial facility operates.",
+    text: profileSectorIntro,
     solutions: [
       "scada",
       "variable-frequency-drives",
@@ -515,7 +348,7 @@ export const sectors = [
     title: "Data centers",
     image: "sector-data-centers",
     intro: "Visibility for critical infrastructure.",
-    text: "Monitor building conditions and coordinate cooling, access and fire protection around the needs of data infrastructure.",
+    text: profileSectorIntro,
     solutions: [
       "building-management",
       "hvac-controls",
@@ -529,7 +362,7 @@ export const sectors = [
     title: "Lodging",
     image: "sector-lodging",
     intro: "Make every stay more considered.",
-    text: "Bring room comfort, lighting and connected controls into a coordinated guest experience, supported by building-wide systems.",
+    text: profileSectorIntro,
     solutions: [
       "home-automation",
       "lighting-control",
@@ -542,7 +375,7 @@ export const sectors = [
     title: "Residential",
     image: "sector-residential",
     intro: "Technology that fits the way you live.",
-    text: "Connect entertainment, lighting, climate and security with intuitive home controls tailored to everyday routines.",
+    text: profileSectorIntro,
     solutions: ["home-automation", "lighting-control", "security"],
   },
 ];
@@ -767,20 +600,7 @@ export const clients = [
   "Charuta",
 ];
 
-export const serviceStages = [
-  {
-    title: "Understand & design",
-    text: "We begin with your building, its users and its operating requirements. Our engineers develop the system design and select the appropriate controls and technologies.",
-  },
-  {
-    title: "Supply & implement",
-    text: "We coordinate the supply, installation and commissioning of HVAC, fire safety, security and building control systems so the design becomes a working installation.",
-  },
-  {
-    title: "Operate & maintain",
-    text: "Our support continues through the system lifecycle, with diagnostics, maintenance and technical assistance to help your building perform as intended.",
-  },
-];
+export const serviceStages = profileServiceStages;
 
 export const solutionGalleries: Record<
   string,
