@@ -41,9 +41,9 @@ export default function Services() {
               }
               alt={
                 [
-                  "Engineering design shown in the company profile",
-                  "Control room shown in the company profile",
-                  "Valve installation shown in the company profile",
+                  "Engineering design shown in the Company Profile",
+                  "Control room shown in the Company Profile",
+                  "Valve installation shown in the Company Profile",
                 ][i]
               }
             />
@@ -58,7 +58,7 @@ export default function Services() {
             </h2>
             <p>
               <AnimatedCopy>
-                Our company profile identifies the resources behind our delivery
+                Our Company Profile identifies the resources behind our delivery
                 and service approach.
               </AnimatedCopy>
             </p>

@@ -877,9 +877,6 @@ textarea {
 .client-logo-board img {
   @apply max-w-[100%] h-[auto];
 }
-.profile-download-row {
-  @apply py-[32px_48px];
-}
 .profile-resource-list {
   list-style: none;
   padding: 0;
@@ -1371,6 +1368,12 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 .resource-facts li:last-child {
   border-bottom: 0;
+}
+.about-data-row.profile-download-row {
+  @apply items-center py-[32px];
+}
+.about-data-page:has(> .profile-download-row) {
+  @apply pb-[32px];
 }
 .profile-statement figure {
   margin: 0;

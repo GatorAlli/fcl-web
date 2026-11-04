@@ -11,12 +11,12 @@ export default function Resources() {
     <PageCanvas id="main">
       <PageIntro
         label="Resources"
-        title="Company profile 2025"
+        title="Company Profile 2025"
         text="The original twenty-page profile, including company information, technical illustrations, client references and actual project photographs."
       />
       <section className="fcl-container fcl-section">
         <a className="fcl-button" href={brochure} download>
-          Download company profile 2025 (PDF)
+          Download Company Profile 2025 (PDF)
         </a>
         <ol className="profile-resource-list">
           {profilePages.map((page, index) => (

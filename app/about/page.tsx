@@ -87,15 +87,9 @@ export default function About() {
         <figure>
           <blockquote>
             <AnimatedCopy>
-              “one of the leading system integrators in Bangladesh”
+              “One of the leading system integrators in Bangladesh”
             </AnimatedCopy>
           </blockquote>
-          <figcaption>
-            <AnimatedCopy>
-              Company profile, 2025.{" "}
-              <strong className="confirmation-note">TODO-CONFIRM</strong>
-            </AnimatedCopy>
-          </figcaption>
         </figure>
       </section>
       <section className="about-data-row profile-download-row">
@@ -104,7 +98,7 @@ export default function About() {
         </h2>
         <div>
           <a href={brochure} download className="fcl-button">
-            Company profile 2025 (PDF)
+            Company Profile 2025 (PDF)
           </a>
         </div>
       </section>

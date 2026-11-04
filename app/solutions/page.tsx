@@ -39,7 +39,7 @@ export default function Solutions() {
                   >
                     <Photo
                       name={s.image}
-                      alt={`${s.partner} systems pictured in the Felix company profile`}
+                      alt={`${s.partner} systems pictured in the Felix Company Profile`}
                     />
                     <span className="fcl-label">{s.partner}</span>
                     <h3>

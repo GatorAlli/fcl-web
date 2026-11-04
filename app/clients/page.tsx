@@ -39,7 +39,7 @@ export default function Clients() {
       <div className="clients-reference-band">
         <section
           className="fcl-container client-logo-board"
-          aria-label="Complete client reference board from the company profile"
+          aria-label="Complete client reference board from the Company Profile"
         >
           {Array.from({ length: 64 }, (_, i) => (
             <div key={i}>
@@ -47,7 +47,7 @@ export default function Clients() {
                 src={asset(`client-${String(i + 1).padStart(2, "0")}`)}
                 width={90}
                 height={45}
-                alt={clients[i] ?? "Client reference from company profile"}
+                alt={clients[i] ?? "Client reference from Company Profile"}
                 unoptimized
               />
             </div>
@@ -57,7 +57,7 @@ export default function Clients() {
       <section className="fcl-container profile-download-row">
         <p>
           <AnimatedCopy>
-            Client references from the Felix Controls company profile.
+            Client references from the Felix Controls Company Profile.
           </AnimatedCopy>
         </p>
         <a

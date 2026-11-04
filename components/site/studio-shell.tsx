@@ -108,7 +108,7 @@ const searchItems = [
     ["Engineering services", "/services"],
     ["Technology partners", "/partners"],
     ["Our clients", "/clients"],
-    ["Company profile & resources", "/resources"],
+    ["Company Profile & resources", "/resources"],
     ["Contact our team", "/contact"],
     ["Careers", "/careers"],
   ].map(([title, href]) => ({ title, href, type: "Company", text: title })),
@@ -417,7 +417,7 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
                     </Link>
                   ))}
                   <a href={brochure} download onClick={close}>
-                    Company profile <span>PDF </span>
+                    Company Profile <span>PDF </span>
                   </a>
                 </div>
               )}
@@ -504,9 +504,9 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
             <Link href="/sectors">Sectors</Link>
             <Link href="/services">Services</Link>
             <Link href="/projects">Reference projects</Link>
-            <Link href="/resources">Browse company profile</Link>
+            <Link href="/resources">Browse Company Profile</Link>
             <a href={brochure} download>
-              Download company profile
+              Download Company Profile
             </a>
           </div>
           <div>

@@ -15,7 +15,7 @@ export default function Partners() {
       <PageIntro
         label="TECHNOLOGY"
         title="Our partners."
-        text="The technology partners featured in our company profile support our work across buildings, industry and connected spaces."
+        text="The technology partners featured in our Company Profile support our work across buildings, industry and connected spaces."
         image="control-room"
         tone="charcoal"
       />

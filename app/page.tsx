@@ -5,7 +5,7 @@ import { HomeExpertise } from "@/components/site/home-expertise";
 import { HomeSectors } from "@/components/site/home-sectors";
 import { Photo, EditorialSection } from "@/components/site/page-parts";
 import { HomeProjectShowcase } from "@/components/site/project-showcase";
-import { PartnerStrip } from "@/components/site/partner-strip";
+import { ClientStrip, PartnerStrip } from "@/components/site/partner-strip";
 import Link from "next/link";
 import { DisplayText } from "@/components/site/display-text";
 
@@ -63,6 +63,21 @@ export default function Home() {
           </p>
           <HomeProjectShowcase />
         </EditorialSection>
+
+        <section
+          className="fcl-container fcl-section home-partners home-clients"
+          aria-labelledby="home-clients-heading"
+        >
+          <div className="module-heading">
+            <h2 id="home-clients-heading" className="module-title">
+              <DisplayText text="Our clients" />
+            </h2>
+            <Link href="/clients" className="section-action">
+              Meet our clients
+            </Link>
+          </div>
+          <ClientStrip />
+        </section>
 
         <div className="delivery-band">
           <EditorialSection

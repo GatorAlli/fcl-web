@@ -29,7 +29,7 @@ export function ProductGallery({ slug }: { slug: string }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          View company profile
+          View Company Profile
         </a>
       </header>
       <div className="product-gallery-layout">
@@ -76,7 +76,7 @@ export function ProductGallery({ slug }: { slug: string }) {
       </div>
       <p className="product-gallery-note">
         <AnimatedCopy>
-          Product artwork is from the Felix company profile. Supporting images
+          Product artwork is from the Felix Company Profile. Supporting images
           are illustrative.
         </AnimatedCopy>
       </p>

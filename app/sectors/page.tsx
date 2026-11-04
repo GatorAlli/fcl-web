@@ -24,7 +24,7 @@ export default function Sectors() {
           >
             <Photo
               name={s.image}
-              alt={`${s.title} illustration from the company profile`}
+              alt={`${s.title} illustration from the Company Profile`}
             />
             <h2>
               <AnimatedCopy>{s.title}</AnimatedCopy>

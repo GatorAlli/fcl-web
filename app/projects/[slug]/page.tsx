@@ -97,7 +97,7 @@ export default async function Project({
                     .
                   </>
                 ) : (
-                  "Original project image from the Felix company profile."
+                  "Original project image from the Felix Company Profile."
                 )}
               </AnimatedCopy>
             </figcaption>
