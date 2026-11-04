@@ -27,7 +27,7 @@ export function Company() {
             <AnimatedCopy>
               <span className="block whitespace-nowrap">We advise, we design,</span>{" "}
               <span className="block whitespace-nowrap">
-                we assess and we <span className="text-brand">deliver.</span>
+                we assess and we <span className="text-accent">deliver.</span>
               </span>
             </AnimatedCopy>
           </blockquote>
