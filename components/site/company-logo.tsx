@@ -22,7 +22,7 @@ export function CompanyLogo({
 }) {
   const logo = (logoAssets as Record<string, LogoAsset>)[name];
   const [left, top, visibleWidth, visibleHeight] = logo.bounds;
-  const scale = Math.min(width * 0.94 / visibleWidth, height * 0.88 / visibleHeight);
+  const scale = Math.min((width * 0.94) / visibleWidth, (height * 0.88) / visibleHeight);
 
   return (
     <span

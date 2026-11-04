@@ -875,7 +875,7 @@ textarea {
   border: 1px solid var(--rule);
 }
 .client-logo-board .company-logo {
-  @apply max-w-[100%] h-[auto];
+  @apply w-[100%] max-w-[150px] min-w-[0] h-[auto];
 }
 .profile-resource-list {
   list-style: none;
