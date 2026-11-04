@@ -1304,7 +1304,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .studio-page .about-opening h1 {
   @apply max-w-[none];
   margin: 0;
-  font: 700 clamp(36px, 4.8vw, 72px) / 1.12 var(--font-display);
+  font: 700 clamp(30px, 3.2vw, 48px) / 1.12 var(--font-display);
   letter-spacing: -0.04em;
   @apply text-ink;
 }
@@ -2207,7 +2207,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 @media (max-width: 650px) {
   .studio-page .about-opening h1 {
-    font-size: clamp(30px, 8.6vw, 36px);
+    font-size: clamp(26px, 7.4vw, 30px);
   }
   .studio-home :is(.module-title, .home-company h2) {
     font-size: 40px;
