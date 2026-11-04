@@ -468,9 +468,10 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
                   </p>
                 </div>
                 <Link href="/contact" className="contact-feature-action">
-                  Discuss
-                  <br />
-                  your project
+                  <span className="min-[1025px]:whitespace-nowrap">
+                    Discuss
+                    <br className="min-[1025px]:hidden" /> your project
+                  </span>
                   <DirectionIcon />
                 </Link>
               </div>
