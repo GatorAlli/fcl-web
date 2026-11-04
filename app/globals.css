@@ -1024,18 +1024,20 @@ button.fcl-link {
   @apply py-[56px];
 }
 .contact-feature-heading {
-  @apply flex justify-between [align-items:start] gap-[48px];
+  @apply flex items-center justify-between gap-[48px];
 }
 .contact-feature-heading h2 {
   @apply max-w-[18ch];
 }
 .contact-feature-heading p {
-  @apply max-w-[65ch];
+  @apply max-w-[65ch] mb-[0];
 }
 .contact-feature-action {
   @apply flex items-center gap-[24px];
   padding: 18px 24px;
-  @apply [background:var(--green)] text-surface;
+  background: transparent;
+  border: 1px solid var(--surface);
+  @apply text-surface;
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -2061,13 +2063,8 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   @apply grid-cols-[minmax(0,_1.05fr)_minmax(0,_1fr)] items-center gap-[48px];
 }
 .home-company .company-founding p {
-  font-size: clamp(22px, 2vw, 30px);
-  line-height: 1.55;
-}
-.home-company .company-founding .company-track-record {
-  font-size: 19px;
-  line-height: 1.7;
-  @apply text-muted;
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.6;
 }
 .company-data-sheet {
   padding: 0;
@@ -2177,7 +2174,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   @apply text-ink;
 }
 .home-contact-feature {
-  @apply py-[80px];
+  @apply py-[40px];
   border-top: 0;
 }
 .home-contact-feature h2 {
@@ -2193,9 +2190,11 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   .home-company .company-opening {
     @apply grid-cols-[minmax(0,_1fr)] gap-[32px];
   }
-  .studio-home .fcl-section,
-  .home-contact-feature {
+  .studio-home .fcl-section {
     @apply py-[48px];
+  }
+  .home-contact-feature {
+    @apply py-[32px];
   }
   .studio-home .module-heading {
     @apply [align-items:start];
@@ -2340,10 +2339,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 .home-partners .partner-strip {
   @apply py-[8px_24px];
-}
-.home-company .company-founding .company-track-record {
-  @apply text-link;
-  font: 700 clamp(20px, 2vw, 28px)/1.5 var(--font-display);
 }
 .solution-hero-media {
   @apply block;
@@ -2516,6 +2511,12 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
 }
 /* Compact chapter spacing and aligned shared controls. */
+.studio-home .home-company.fcl-section {
+  @apply pt-[28px];
+}
+.home-company h2 {
+  @apply mb-[24px];
+}
 .studio-home .home-markets {
   @apply py-[40px];
 }
