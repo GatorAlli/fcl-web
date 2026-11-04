@@ -39,8 +39,8 @@ export function Company() {
             Read more about Felix
           </Link>
         </div>
-        <div className="flex min-w-0 items-center bg-white p-6 sm:p-10 lg:p-12">
-          <blockquote className="m-0 text-[clamp(36px,4vw,64px)] font-bold leading-[1.15] tracking-tight text-[#0c0c0c]">
+        <div className="flex min-w-0 items-center p-6 sm:p-10 lg:p-12">
+          <blockquote className="m-0 text-[clamp(36px,4vw,64px)] font-bold leading-[1.15] tracking-tight text-white">
             <AnimatedCopy>
               <span className="block">We advise,</span>{" "}
               <span className="block">we design,</span>{" "}
