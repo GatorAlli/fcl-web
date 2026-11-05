@@ -14,7 +14,7 @@ export default function Solutions() {
       <PageIntro
         label="OUR EXPERTISE"
         title="Solutions & systems."
-        image="control-room"
+        image="technology-bms"
       />
       <div className="fcl-container solution-index">
         {[

@@ -8,11 +8,10 @@ colors:
   surface: "#FFFFFF"
   foreground: "#F6F6F3"
   muted: "#DEDFDA"
-  primary: "#186636"
-  link: "#96D3AD"
-  contact: "#FF0000"
+  primary: "#155430"
+  link: "#239B54"
+  contact: "#155430"
   rule: "#444B46"
-  action-ink: "#080808"
 typography:
   display:
     fontFamily: "Archivo Black, Arial, sans-serif"
@@ -39,7 +38,7 @@ components:
     textColor: "{colors.surface}"
   contact-action:
     backgroundColor: "{colors.contact}"
-    textColor: "{colors.action-ink}"
+    textColor: "{colors.surface}"
   company-record:
     backgroundColor: "{colors.panel}"
     textColor: "{colors.foreground}"
@@ -136,3 +135,7 @@ Use actual PDF/company data, preserve the user's founding statement, and trim re
 - Don't bring back stacking-card scroll effects or heavy category animation.
 - Don't invent company credentials, people, outcomes or project specifications.
 - Don't treat reference-site text or media as Felix company evidence.
+
+## Logo-green refinement, 5 November 2026
+
+The latest homepage sizing, animated company statistics, Tailwind migration, manufacturer links and original-profile copy are retained. Runtime palette ownership is `app/globals.css`. Solid brand actions use the exact logo green #155430 with #0F4025 for hover/pressed states. Contact uses white text on green in both navigation layouts. The recent #239B54 foreground accent remains readable on black. The Solutions index introduction uses the high-resolution Honeywell control-room photograph to fill its complete right-hand image column; its latest text content and layout remain authoritative.
