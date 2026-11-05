@@ -12,7 +12,9 @@ export function ManufacturerLinks({ brands }: { brands: string[] }) {
             target="_blank"
             rel="noopener noreferrer"
             className="section-action"
-            aria-label={`Learn more about ${brand.name}`}
+            aria-label={
+              brands.length > 1 ? undefined : `Learn more about ${brand.name}`
+            }
           >
             Learn more{brands.length > 1 ? ` — ${brand.name}` : ""}
           </a>

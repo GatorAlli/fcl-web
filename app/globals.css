@@ -2949,16 +2949,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .product-reference-link {
   @apply block;
 }
-.product-reference-card .product-image-well,
-.product-reference-card > .fcl-photo {
-  @apply flex items-center justify-center h-[280px] min-h-[0] w-[100%];
-  padding: 24px;
-  background: var(--surface);
-}
-.product-reference-card .product-image-well img,
-.product-reference-card > .fcl-photo img {
-  @apply h-[100%] w-[100%] object-contain;
-}
 .product-reference-caption {
   @apply flex flex-wrap items-baseline justify-between gap-[16px] pt-[16px];
   font-size: 16px;
@@ -3011,5 +3001,55 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   .profile-article .service-process p,
   .profile-article .partner-directory p {
     font-size: 16px;
+  }
+}
+
+/* Complete photographs, without padded product wells or decorative image panels. */
+.solution-overview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 4vw, 72px);
+  align-items: start;
+}
+.solution-overview-copy {
+  min-width: 0;
+}
+.solution-overview-photo,
+.solution-full-photo {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+.solution-overview-photo img,
+.solution-full-photo img {
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.solution-full-photo {
+  width: 100%;
+  margin-inline: auto;
+}
+.solution-full-photo .product-reference-caption {
+  padding-top: 16px;
+  margin-top: 0;
+}
+.solution-overview-photo:focus-visible {
+  outline-offset: 4px;
+}
+@media (max-width: 1024px) {
+  .solution-overview-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 }

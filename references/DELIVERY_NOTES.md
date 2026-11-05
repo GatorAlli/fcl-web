@@ -152,3 +152,11 @@ Implemented the approved contact-page architecture on 3 November 2026:
 - Original company product illustrations remain unchanged. Source URLs, publishers, native dimensions and processing are retained in `public/assets/photography/sources.json`. Rejected candidates remain private; no watermark removal or AI generation was used.
 - RBH product photography uses contain framing so the complete reader remains visible. Other photographs keep the established aligned context-image frames.
 - Verification: production build, TypeScript and ESLint passed; strict UI audit and design lint had zero findings. Crawler checked 46 pages, 159 public assets and 185 internal destinations with zero errors; PDF 200. Browser checks found eleven unique context sources, no same-page hero reuse, no horizontal overflow and matching desktop image anchors on every solution. The complete RBH reader and stacked layout were checked at 360px.
+
+
+## Full-image solution presentation, 6 November 2026
+
+- Applied the owner's approved text-left/photo-right overview layout to all eleven solution details, stacking at 1024px. Existing profile copy, homepage changes and manufacturer destinations are preserved, including the Trane destination.
+- Removed active padded white product wells and low-resolution brochure collages. Eleven newly sourced installation/interior photographs render with their complete composition, no added background/border/padding and no enlargement. The originals and downloadable company profile remain intact.
+- All new sources, source dimensions, delivered dimensions and hashes are in `public/assets/photography/solution-media.json` and `sources.json`. Security uses an illustrative office entry rather than a white product cutout; it makes no claim that the pictured site is a Felix project.
+- Browser checks: all eleven desktop overviews share their top axis, transparent framing and correct image proportions; all eleven pages stack without horizontal overflow at 360px. The production build and TypeScript passed, strict UI audit had zero findings, and design lint had zero errors/warnings. Crawler checked 46 pages, 150 public assets and 176 internal destinations with no errors; PDF 200. The BMS accessibility score was 100/100; an unscored visible-label mismatch in the shared manufacturer links was also corrected.

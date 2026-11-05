@@ -1,4 +1,8 @@
-import { profileSolutions, profileServiceStages, profileSectorIntro } from "./profile-content";
+import {
+  profileSolutions,
+  profileServiceStages,
+  profileSectorIntro,
+} from "./profile-content";
 import { manufacturers } from "./official-sites";
 import { projectPhotography } from "./project-photography";
 export const brochure = "/downloads/felix-company-profile.pdf";
@@ -11,6 +15,14 @@ export const solutionGroups = [
 // Context photography is illustrative. Documentary products, logos and named
 // project references resolve to verified photographs of the named sites.
 const photography: Record<string, { file: string; alt: string }> = {
+  "solution-bms": {
+    file: "solution-bms",
+    alt: "Honeywell building controllers in an installed HVAC control cabinet",
+  },
+  "solution-entry": {
+    file: "solution-entry",
+    alt: "An access-controlled office entrance",
+  },
   "technology-bms": {
     file: "technology-bms",
     alt: "Building-management operators monitoring control-room displays",
