@@ -19,7 +19,7 @@ export function ProductGallery({ slug }: { slug: string }) {
         style={{
           maxWidth: Math.min(
             dimensions.deliveredWidth,
-            dimensions.deliveredWidth < dimensions.deliveredHeight ? 640 : 1100,
+            dimensions.deliveredWidth < dimensions.deliveredHeight ? 560 : 960,
           ),
         }}
       >

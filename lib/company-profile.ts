@@ -393,7 +393,7 @@ export const sectors = [
 ];
 
 export const projectCategories = [
-  ["all", "All projects"],
+  ["all", "All Projects"],
   ["pharmaceuticals", "Pharmaceuticals"],
   ["healthcare", "Healthcare"],
   ["commercial", "Commercial"],

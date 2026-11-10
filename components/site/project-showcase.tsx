@@ -10,7 +10,7 @@ import {
   projectCategories,
   referenceProjects,
 } from "@/lib/company-profile";
-const options = projectCategories.slice(1);
+const options = projectCategories;
 export function ProjectShowcase({
   category,
   onCategoryChange,
@@ -31,10 +31,11 @@ export function ProjectShowcase({
   const [outgoing, setOutgoing] = useState<typeof referenceProjects | null>(
     null,
   );
-  const selected = options.findIndex(([value]) => value === category);
-  const centerIndex = selected < 0 ? Math.floor(options.length / 2) : selected;
-  const valid = selected < 0 ? "all" : options[selected][0];
-  const label = selected < 0 ? "All projects" : options[selected][1];
+  const centerIndex = Math.max(
+    0,
+    options.findIndex(([value]) => value === category),
+  );
+  const [valid, label] = options[centerIndex];
   const matches = referenceProjects.filter(
     (project) => valid === "all" || project.category === valid,
   );
@@ -47,20 +48,20 @@ export function ProjectShowcase({
   const Heading = headingLevel === 2 ? "h2" : "h3";
   useEffect(() => () => clearTimeout(fadeTimer.current), []);
   useEffect(() => {
-    if (keyboardFocus.current && selected >= 0) {
-      buttons.current[selected]?.focus({ preventScroll: true });
+    if (keyboardFocus.current) {
+      buttons.current[centerIndex]?.focus({ preventScroll: true });
       keyboardFocus.current = false;
     }
-  }, [selected]);
+  }, [centerIndex]);
   function select(index: number, keyboard = false) {
     const next = (index + options.length) % options.length;
-    if (next === selected) return;
+    if (next === centerIndex) return;
     clearTimeout(fadeTimer.current);
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setOutgoing(visible);
       fadeTimer.current = setTimeout(() => setOutgoing(null), 220);
     }
-    keyboardFocus.current = keyboard && next !== selected;
+    keyboardFocus.current = keyboard;
     onCategoryChange(options[next][0]);
   }
   function cards(items: typeof referenceProjects) {
@@ -99,7 +100,7 @@ export function ProjectShowcase({
         <button
           type="button"
           className="project-sector-arrow"
-          aria-label="Previous project sector"
+          aria-label="Previous project filter"
           aria-controls={id}
           onClick={() => select(centerIndex - 1)}
         >
@@ -110,7 +111,7 @@ export function ProjectShowcase({
         <div
           className="project-sector-window"
           role="group"
-          aria-label="Project sectors"
+          aria-label="Project filters"
           onKeyDown={(event) => {
             let next: number;
             if (event.key === "ArrowRight") next = centerIndex + 1;
@@ -128,6 +129,7 @@ export function ProjectShowcase({
               ((index - centerIndex + options.length + half) % options.length) -
               half;
             const distance = Math.abs(offset);
+            const depth = Math.min(distance, 2);
             return (
               <button
                 type="button"
@@ -141,14 +143,14 @@ export function ProjectShowcase({
                 style={
                   {
                     "--sector-offset": offset,
-                    "--sector-scale": [1, 0.8, 0.6][distance],
+                    "--sector-scale": [1, 0.8, 0.6][depth],
                     "--sector-y": `${distance * 6}px`,
                     "--sector-angle": `${offset === 0 ? 0 : offset > 0 ? -16 : 16}deg`,
-                    "--sector-opacity": [1, 0.65, 0.4][distance],
+                    "--sector-opacity": [1, 0.65, 0.4][depth],
                     zIndex: 10 - distance,
                   } as CSSProperties
                 }
-                aria-pressed={selected === index}
+                aria-pressed={index === centerIndex}
                 aria-controls={id}
                 onClick={() => select(index)}
               >
@@ -160,7 +162,7 @@ export function ProjectShowcase({
         <button
           type="button"
           className="project-sector-arrow"
-          aria-label="Next project sector"
+          aria-label="Next project filter"
           aria-controls={id}
           onClick={() => select(centerIndex + 1)}
         >

@@ -779,9 +779,6 @@ textarea {
 .project-sector-name:hover {
   @apply text-accent;
 }
-.project-all-label {
-  @apply hidden;
-}
 .project-photo-grid {
   list-style: none;
   @apply block;
@@ -2277,7 +2274,8 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   transition:
     transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 300ms,
-    color 180ms;
+    color 180ms,
+    visibility 0s 240ms;
 }
 .project-sector-name:is(:hover, :focus-visible) {
   @apply opacity-[1];
@@ -2285,6 +2283,10 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 .project-sector-name[aria-pressed="true"] {
   background: transparent;
   @apply text-link;
+}
+.project-sector-name[data-distance="3"] {
+  visibility: hidden;
+  transition: none;
 }
 .project-photo-card {
   @apply max-w-[none];
@@ -2605,6 +2607,7 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
   .project-sector-name[data-distance="2"] {
     visibility: hidden;
+    transition: none;
   }
   .project-index-intro .project-index-description p {
     font-size: 18px;
@@ -3004,15 +3007,29 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
 }
 
-/* Complete photographs, without padded product wells or decorative image panels. */
+/* Compact solution articles with unpadded overview and technology photography. */
+.solution-article > .fcl-container {
+  max-width: 1480px;
+}
+.solution-hero-media .fcl-photo {
+  background: transparent;
+}
 .solution-overview-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(32px, 4vw, 72px);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 4vw, 64px);
   align-items: start;
 }
 .solution-overview-copy {
   min-width: 0;
+}
+.solution-overview-copy .profile-copy {
+  font-size: clamp(18px, 1.6vw, 20px);
+  line-height: 1.65;
+}
+.solution-overview-photo {
+  width: 100%;
+  max-width: 680px;
 }
 .solution-overview-photo,
 .solution-full-photo {
