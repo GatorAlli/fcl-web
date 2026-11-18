@@ -15,17 +15,21 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <PageCanvas id="main" className="fcl-container about-data-page profile-article">
-      <header className="about-opening">
-        <p className="section-label">
-          <AnimatedCopy>About Felix</AnimatedCopy>
-        </p>
-        <h1>
-          <DisplayText text="Who we are ?" />
-        </h1>
-      </header>
-      <section className="profile-content-section" aria-label="Who we are">
-        <ProfileProse paragraphs={profileAbout} />
-      </section>
+      <header className="about-opening !mb-0 !pb-0 !min-h-0">
+  <p className="section-label">
+    <AnimatedCopy>About Felix</AnimatedCopy>
+  </p>
+  <h1 className="!mb-0 !pb-0">
+    <DisplayText text="Who we are ?" />
+  </h1>
+</header>
+<section
+  className="profile-content-section !mt-4 !pt-0"
+  aria-label="Who we are"
+>
+  <ProfileProse paragraphs={profileAbout} />
+</section>
+
       <section aria-label="Mission, vision and objective">
         {companyPurpose.map(([title, text]) => (
           <div className="about-data-row" key={title}>
