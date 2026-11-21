@@ -2277,9 +2277,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
 }
 
-.copy-word {
-  @apply pb-[0.16em] mb-[-0.16em];
-}
 .studio-home
   :is(
     .home-company h2,
@@ -2526,20 +2523,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   }
   .studio-home .home-markets .module-title {
     font-size: 46px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .display-copy .copy-word > span {
-    clip-path: none !important;
-    animation: none !important;
-    transform: none !important;
-  }
-}
-@media print {
-  .display-copy .copy-word > span {
-    clip-path: none !important;
-    animation: none !important;
-    transform: none !important;
   }
 }
 .project-photo-frame img[src*="mrt-line-6"],
