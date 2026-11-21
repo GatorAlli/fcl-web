@@ -1919,33 +1919,6 @@ textarea,
 main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   animation: none;
 }
-.copy-word {
-  @apply inline-block overflow-visible;
-  vertical-align: top;
-  white-space: nowrap;
-  @apply pr-[0.24em];
-}
-.copy-word > span {
-  @apply inline-block;
-}
-.display-copy.has-entered .copy-word > span {
-  @apply inline-block;
-  animation: word-enter 650ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
-  animation-delay: var(--word-delay, 0ms);
-}
-.display-copy.is-waiting .copy-word > span {
-  clip-path: inset(0 0 100%);
-}
-@keyframes word-enter {
-  from {
-    clip-path: inset(0 0 100%);
-    transform: translateY(0.25em);
-  }
-  to {
-    clip-path: inset(-0.2em -0.08em -0.25em);
-    transform: translateY(0);
-  }
-}
 @media (max-width: 1024px) {
   .solution-editorial-grid,
   .sector-index,
@@ -1998,16 +1971,8 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
   .project-sector-carousel {
     align-items: flex-start;
   }
-  .about-opening .copy-word {
-    @apply pr-[0.18em];
-  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .copy-word > span {
-    animation: none;
-    transform: none;
-    @apply opacity-[1];
-  }
   .studio-primary .direction-icon {
     transition: none;
   }
@@ -2047,15 +2012,6 @@ main :is(h1, h2, .fcl-intro-lead, .opening-statement):not(.sr-only) {
 }
 .hero-copy .fcl-button {
   @apply mt-[8px];
-}
-.hero-copy .copy-word {
-  @apply pr-[0.13em];
-}
-.hero-copy .copy-word:last-child {
-  @apply pr-[0];
-}
-.display-copy .copy-word {
-  @apply pr-[0];
 }
 .hero-desktop-break {
   display: initial;

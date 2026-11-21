@@ -14,7 +14,6 @@ import {
   projectCategories,
 } from "@/lib/company-profile";
 import { DirectionIcon } from "./direction-icon";
-import { TextEntrances } from "./text-entrances";
 
 export function ActionChevron() {
   return (
@@ -195,7 +194,6 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
   );
   return (
     <>
-      <TextEntrances />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
