@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "skills": {
+    "conventional-commit": {
+      "source": "github/awesome-copilot",
+      "commit": "f10fdb8b2660ce85c98f220b2f1ca24653768a5c",
+      "sourceType": "github",
+      "skillPath": "skills/conventional-commit/SKILL.md",
+      "computedHash": "03c0c972e8d881f8d369f3bd4205761109feba7b770523c50bcba6f3c83e685f"
+    },
+    "create-readme": {
+      "source": "github/awesome-copilot",
+      "commit": "f10fdb8b2660ce85c98f220b2f1ca24653768a5c",
+      "sourceType": "github",
+      "skillPath": "skills/create-readme/SKILL.md",
+      "computedHash": "59e7a20cc6e183f31c0161a619b66f96d05656378c1cef886522b6845d33c953"
+    },
+    "frontend-design": {
+      "source": "vercel-labs/agent-eval",
+      "commit": "9ff2ea3e9f14c14e5123b215c3f695d3b4f9955d",
+      "sourceType": "github",
+      "skillPath": "packages/playground/.agents/skills/frontend-design/SKILL.md",
+      "computedHash": "a7c81a25c7ea1972f7049cd0282545c72ae92237c1b45ba7b1370fab498f5f9b"
+    },
+    "postgres-drizzle": {
+      "source": "ccheney/robust-skills",
+      "commit": "0eea7b060d12e3520556a73b15fbfa79480987d1",
+      "sourceType": "github",
+      "skillPath": "skills/postgres-drizzle/SKILL.md",
+      "computedHash": "8be51fda7b10d594110f7ec6ec0dcd91c2ed19898ae50388df0f4dc8f5536929"
+    },
+    "tailwind-4-docs": {
+      "source": "Lombiq/Tailwind-Agent-Skills",
+      "commit": "634ec184c36e495fae1d8cf7975df7e6969e3a89",
+      "sourceType": "github",
+      "skillPath": "skills/tailwind-4-docs/SKILL.md",
+      "computedHash": "263961b82698e3defdb26dd6a1b7328044517e67a3bbe91c1b33bb2a4273f4ee"
+    },
+    "tailwind-v4": {
+      "source": "mastra-ai/mastra",
+      "commit": "48cabe643780d268248f127c8e5e7ed3720fe21e",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/tailwind-v4/SKILL.md",
+      "computedHash": "61f740e118caa455132e8c7f6ab992a28217650e5f21e80a79e30b75f1fe1f0e"
+    }
+  }
+}
