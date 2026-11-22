@@ -161,6 +161,7 @@ fcl-web/
 │       ├── hero.tsx                     # page hero section
 │       ├── home-expertise.tsx          # home page "expertise/solutions" section
 │       ├── home-sectors.tsx            # home page sectors section
+│       ├── leadership-profile.tsx      # About page leadership row: circular photo (left/right), bio, optional inline "Read More"
 │       ├── manufacturer-links.tsx      # manufacturer/partner link list
 │       ├── page-canvas.tsx             # shared black-canvas page layout wrapper
 │       ├── page-parts.tsx              # shared page section building blocks
@@ -177,6 +178,7 @@ fcl-web/
 │   ├── company-data.ts                 # structured company data (offices, contacts, etc.)
 │   ├── company-logos.json              # client/partner logo metadata
 │   ├── company-profile.ts              # company profile content model
+│   ├── leadership.ts                   # Managing Director + Director profile data and the Director's message
 │   ├── media-policy.ts                 # rules for selecting/using media assets
 │   ├── official-sites.ts               # official manufacturer/partner site links
 │   ├── profile-content.ts              # long-form profile content
@@ -189,6 +191,7 @@ fcl-web/
 │   ├── downloads/
 │   │   └── felix-company-profile.pdf   # downloadable company profile PDF
 │   └── assets/
+│       ├── director-mostafa-kamal-ahmed.webp # director portrait (About page)
 │       ├── *.ttf / *.txt               # self-hosted fonts (Archivo Black, Manrope, Poppins, Anybody) + OFL/license text
 │       ├── hero/                       # 3 hero background images
 │       ├── logos/                      # 40 files — client logos (`client-NN.{svg,png,jpg,webp}`) + partner logos (`partner-<name>.{svg,png,webp}`)

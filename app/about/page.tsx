@@ -4,10 +4,9 @@ import { PageCanvas } from "@/components/site/page-canvas";
 import { ProfileProse } from "@/components/site/profile-prose";
 import { profileAbout, profileReasons } from "@/lib/profile-content";
 import { DisplayText } from "@/components/site/display-text";
-import {
-  companyPurpose,
-  companyResources,
-} from "@/lib/company-data";
+import { LeadershipProfile } from "@/components/site/leadership-profile";
+import { director, managingDirector } from "@/lib/leadership";
+import { companyPurpose, companyResources } from "@/lib/company-data";
 import { brochure } from "@/lib/company-profile";
 
 export const metadata: Metadata = {
@@ -16,92 +15,30 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <PageCanvas id="main" className="fcl-container about-data-page profile-article">
-      
-      {/* GRID WRAPPER: items-stretch ensures both columns align perfectly */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
-        
-        {/* LEFT COLUMN: 100% UNTOUCHED ORIGINAL CONTENT */}
-        <div className="lg:col-span-8 flex flex-col">
-          <header className="about-opening !mb-0 !pb-0 !min-h-0">
-            <p className="section-label">
-              <AnimatedCopy>About Felix</AnimatedCopy>
-            </p>
-            <h1 className="!mb-0 !pb-0">
-              <DisplayText text="Who we are ?" />
-            </h1>
-          </header>
-          
-          {/* Added [&_p:last-child]:!mb-0 to trim invisible bottom margins so the grid snaps exactly to the text baseline */}
-          <section
-            className="profile-content-section !mt-4 !pt-0 flex-1 [&_p:last-child]:!mb-0"
-            aria-label="Who we are"
-          >
-            <ProfileProse paragraphs={profileAbout} />
-          </section>
+    <PageCanvas
+      id="main"
+      className="fcl-container about-data-page profile-article"
+    >
+      {/* Leadership: photo left (Managing Director), photo right (Director) */}
+      <section aria-label="Leadership">
+        <LeadershipProfile member={managingDirector} photoSide="left" />
+        <LeadershipProfile member={director} photoSide="right" />
+      </section>
+
+      {/* Who we are: centred heading, full-width copy */}
+      <section className="pt-10 pb-6" aria-labelledby="who-we-are">
+        <header className="about-opening !mb-0 !min-h-0 !pb-0 text-center">
+          <p className="section-label">
+            <AnimatedCopy>About Felix</AnimatedCopy>
+          </p>
+          <h1 id="who-we-are" className="!mb-0 !pb-0">
+            <DisplayText text="Who we are ?" />
+          </h1>
+        </header>
+        <div className="profile-content-section mx-auto !mt-4 max-w-5xl !pt-0 [&_.profile-copy]:!max-w-none [&_p]:!max-w-none">
+          <ProfileProse paragraphs={profileAbout} />
         </div>
-
-        {/* RIGHT COLUMN: Circular Picture Holders & Centered Text (Inherits global website fonts natively) */}
-        <div className="lg:col-span-4 flex flex-col justify-between">
-          
-          {/* Top Group: Profile 1 */}
-          <div className="flex flex-col items-center w-full">
-            {/* INVISIBLE HEADER: Forces the first profile to start at the exact same pixel height as the left text */}
-            <header className="about-opening !mb-0 !pb-0 !min-h-0 invisible pointer-events-none select-none hidden lg:block w-full">
-              <p className="section-label">Spacer</p>
-              <h1 className="!mb-0 !pb-0">Spacer</h1>
-            </header>
-
-            <div className="flex flex-col items-center w-full lg:mt-4">
-              {/* Circular Picture Holder */}
-              <div className="w-40 h-40 lg:w-48 lg:h-48 rounded-full bg-white flex items-center justify-center mb-6 overflow-hidden shadow-sm">
-                <img 
-                  src="/ceo_logo.jpg" 
-                  alt="ABCDE ABCDE" 
-                  className="w-3/4 h-3/4 object-contain" 
-                />
-              </div>
-              {/* Biodata Underneath */}
-              <div className="text-center px-2">
-                <h3 className="text-2xl font-bold mb-1">ABCDE ABCDE</h3>
-                <p className="text-[#22c55e] text-[11px] font-bold tracking-widest uppercase mt-2 mb-4">
-                  Managing Director
-                </p>
-                <p className="text-sm md:text-[15px] leading-relaxed opacity-80">
-                  Visionary leader with a decade of industry experience in building management systems.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Spacer for mobile view */}
-          <div className="h-16 lg:hidden"></div>
-
-          {/* Bottom Group: Profile 2 (Pinned flush to the exact bottom of the left column's text) */}
-          <div className="flex flex-col items-center w-full">
-            {/* Circular Picture Holder */}
-            <div className="w-40 h-40 lg:w-48 lg:h-48 rounded-full bg-white flex items-center justify-center mb-6 overflow-hidden shadow-sm">
-              <img 
-                src="/ceo_logo.jpg" 
-                alt="CDEFG CDEFG" 
-                className="w-3/4 h-3/4 object-contain" 
-              />
-            </div>
-            {/* Biodata Underneath */}
-            <div className="text-center px-2">
-              <h3 className="text-2xl font-bold mb-1">CDEFG CDEFG</h3>
-              <p className="text-[#22c55e] text-[11px] font-bold tracking-widest uppercase mt-2 mb-4">
-                Managing Director
-              </p>
-              <p className="text-sm md:text-[15px] leading-relaxed opacity-80 !mb-0">
-                Expert in fire detection and security integrations, dedicated to delivering pragmatic engineering solutions.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
+      </section>
 
       {/* --- REMAINDER OF ORIGINAL PAGE CONTENT (100% UNTOUCHED) --- */}
       <section aria-label="Mission, vision and objective">
@@ -135,7 +72,9 @@ export default function About() {
         <div className="prose about-team-statement">
           {profileReasons.map((reason) => (
             <div key={reason.title}>
-              <h3><AnimatedCopy>{reason.title}</AnimatedCopy></h3>
+              <h3>
+                <AnimatedCopy>{reason.title}</AnimatedCopy>
+              </h3>
               <ProfileProse paragraphs={[reason.text]} />
             </div>
           ))}
