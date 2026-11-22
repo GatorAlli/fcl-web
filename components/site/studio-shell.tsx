@@ -119,21 +119,58 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
   const [menu, setMenu] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
+  const [hoverCapable, setHoverCapable] = useState(() =>
+    typeof window === "undefined"
+      ? false
+      : window.matchMedia("(hover: hover) and (pointer: fine)").matches,
+  );
   const dialog = useRef<HTMLDialogElement>(null);
   const searchButton = useRef<HTMLButtonElement>(null);
   const header = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
   const referenceContent = useRef<HTMLDivElement>(null);
   const [referenceHeight, setReferenceHeight] = useState(0);
+  const hoverCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const close = () => setMenu(null);
-  function openProjects() {
-    if (pathname.replace(/\/$/, "") === "/projects") {
-      window.history.replaceState(null, "", window.location.pathname);
+  function navigateTo(href: string) {
+    if (pathname.replace(/\/$/, "") === href) {
+      window.history.replaceState(null, "", href);
     } else {
-      router.push("/projects");
+      router.push(href);
     }
+  }
+  function openProjects() {
+    navigateTo("/projects");
     setMenu(menu === "projects" ? null : "projects");
   }
+  function cancelMenuClose() {
+    if (hoverCloseTimer.current) {
+      clearTimeout(hoverCloseTimer.current);
+      hoverCloseTimer.current = null;
+    }
+  }
+  function openMenuOnHover(key: string) {
+    if (!hoverCapable) return;
+    cancelMenuClose();
+    setMenu(key);
+  }
+  function scheduleMenuClose() {
+    if (!hoverCapable) return;
+    cancelMenuClose();
+    hoverCloseTimer.current = setTimeout(() => {
+      setMenu(null);
+      hoverCloseTimer.current = null;
+    }, 200);
+  }
+  useEffect(() => {
+    const media = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const onChange = () => setHoverCapable(media.matches);
+    media.addEventListener("change", onChange);
+    return () => {
+      media.removeEventListener("change", onChange);
+      cancelMenuClose();
+    };
+  }, []);
   useEffect(() => {
     const element = referenceContent.current;
     if (!element) return;
@@ -235,8 +272,17 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
                   aria-controls={
                     key === "projects" ? "reference-menu" : "studio-menu"
                   }
+                  onMouseEnter={() => openMenuOnHover(key)}
+                  onMouseLeave={scheduleMenuClose}
                   onClick={(e) => {
                     menuButton.current = e.currentTarget;
+                    if (hoverCapable) {
+                      close();
+                      navigateTo(
+                        key === "projects" ? "/projects" : "/solutions",
+                      );
+                      return;
+                    }
                     if (key === "projects") openProjects();
                     else setMenu(menu === key ? null : key);
                   }}
@@ -318,6 +364,8 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
           id="studio-menu"
           className="studio-menu"
           hidden={!menu || menu === "projects"}
+          onMouseEnter={cancelMenuClose}
+          onMouseLeave={scheduleMenuClose}
         >
           <div className="studio-menu-inner">
             <div className="studio-menu-content">
@@ -427,6 +475,8 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
           className={`reference-menu ${menu === "projects" ? "is-open" : ""}`}
           aria-hidden={menu !== "projects"}
           inert={menu !== "projects"}
+          onMouseEnter={cancelMenuClose}
+          onMouseLeave={scheduleMenuClose}
         >
           <div className="reference-menu-clip">
             <div className="reference-menu-content" ref={referenceContent}>
@@ -460,8 +510,8 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
                   </h2>
                   <p>
                     <AnimatedCopy>
-                      Planning a new building, upgrading a system or looking
-                      for technical support? Tell us what you need.
+                      Planning a new building, upgrading a system or looking for
+                      technical support? Tell us what you need.
                     </AnimatedCopy>
                   </p>
                 </div>
