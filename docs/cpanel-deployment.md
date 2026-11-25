@@ -6,7 +6,7 @@
 
 1. Push or merge the changes to `main` on GitHub.
 2. In cPanel, open **Git Version Control → Felix Website → Manage → Pull or Deploy**.
-3. Click **Update from Remote**. Check that the latest commit appears under **HEAD Commit**.
+3. Click **Update from Remote**. Check that the latest commit appears under **HEAD Commit**. If the deploy button stays disabled after the first pull of `.cpanel.yml`, refresh the page.
 4. Click **Deploy HEAD Commit**. Wait for **Last Deployment Information** to show the new commit, then open [felixbd.com](https://felixbd.com) to check the update.
 
 cPanel separates the pull from the deployment. **Update from Remote** changes the checkout. **Deploy HEAD Commit** runs the checked-in `.cpanel.yml` task and publishes the build. The cPanel checkout needs a clean working tree. [cPanel pull deployment documentation](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-deployment/#set-up-pull-deployment)
@@ -22,6 +22,8 @@ cPanel separates the pull from the deployment. **Update from Remote** changes th
 ## What cPanel runs
 
 `.cpanel.yml` calls `scripts/deploy-cpanel.sh`. The script uses the host’s Node.js 24 runtime and runs `npm ci` and a production Next.js static export. After checking the exported files, it synchronizes `out/` to `public_html`. It preserves the hosting files used for SSL and Google ownership verification. On the first deployment, the script verifies the legacy ZIP and saves the files it replaces or removes in `~/felix-website-backups/cutover-files/`. [Next.js static export documentation](https://nextjs.org/docs/app/guides/static-exports)
+
+The host uses glibc 2.28, so this version of Next.js falls back to its WebAssembly compiler. The first build hit the hosting memory limit. The script now limits the Node.js heap for the build. If a build fails, cPanel logs the failure under `~/.cpanel/logs/` before the script reaches `public_html`. [Node.js memory flags](https://nodejs.org/download/release/v24.22.1/docs/api/cli.html#--max-old-space-sizesize-in-mib) · [cPanel deployment troubleshooting](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-advanced-configuration-and-troubleshooting/#deployment)
 
 ## Roll back a release
 
