@@ -17,7 +17,9 @@ export FCL_PUBLIC_URL=https://felixbd.com
 export NEXT_TELEMETRY_DISABLED=1
 
 npm ci --include=dev --no-audit --no-fund
-NODE_OPTIONS="--max-old-space-size=768 --max-semi-space-size=16" npm run build
+RAYON_NUM_THREADS=1 \
+  NODE_OPTIONS="--max-old-space-size=768 --max-semi-space-size=16" \
+  npm run build
 
 test -s out/index.html
 test -s out/404.html
