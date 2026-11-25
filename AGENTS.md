@@ -128,7 +128,8 @@ fcl-web/
 │   ├── page.tsx                       # home page
 │   ├── globals.css                    # Tailwind v4 entry + brand theme tokens + base styles
 │   ├── not-found.tsx                  # 404 page
-│   ├── favicon.ico                    # square browser-tab icon
+│   ├── favicon.ico                    # browser-tab icon: company logo on white (16/32/48px)
+│   ├── apple-icon.png                 # 180px home-screen / touch icon: company logo on white
 │   ├── robots.ts                      # robots.txt route handler
 │   ├── sitemap.ts                     # sitemap.xml route handler
 │   ├── about/page.tsx                 # About page
