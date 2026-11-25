@@ -98,6 +98,9 @@ fcl-web/
 ├── docs/
 │   └── cpanel-deployment.md          # initial cutover, routine deployment, and rollback
 │
+├── .github/
+│   └── workflows/cpanel-build.yml    # build and release each main revision for cPanel
+│
 ├── .claude/                         # Claude Code-specific config (see CLAUDE.md)
 │   ├── settings.json                # project settings: PostToolUse format-on-save hook
 │   ├── hooks/
@@ -243,7 +246,7 @@ fcl-web/
 │
 └── scripts/
     ├── apply-light-rebuild.py           # script: apply light-theme rebuild changes
-    ├── deploy-cpanel.sh                 # build the static export and publish it to public_html
+    ├── deploy-cpanel.sh                 # publish the static release for HEAD to public_html
     ├── download_photography.py         # script: download photography assets
     ├── enhance-projects.py              # script: enhance/process project images
     └── verify-frontend.mjs              # script: verify frontend build/output

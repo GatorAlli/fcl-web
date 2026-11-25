@@ -1,0 +1,67 @@
+name: Build website for cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cpanel-build-${{ github.sha }}
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Build static website
+        run: npm run build
+        env:
+          FCL_CPANEL_EXPORT: "1"
+          FCL_PUBLIC_URL: https://felixbd.com
+          NEXT_TELEMETRY_DISABLED: "1"
+      - name: Package the website and its commit
+        run: |
+          printf '%s\n' "$GITHUB_SHA" > "$RUNNER_TEMP/revision"
+          tar -czf "$RUNNER_TEMP/felix-website.tar.gz" -C "$GITHUB_WORKSPACE" out -C "$RUNNER_TEMP" revision
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: felix-website
+          path: ${{ runner.temp }}/felix-website.tar.gz
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: felix-website
+          path: ${{ runner.temp }}
+      - name: Publish the cPanel build for this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="cpanel-$GITHUB_SHA"
+          asset="$RUNNER_TEMP/felix-website.tar.gz"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json isDraft,assets \
+            --jq '(.isDraft | not) and any(.assets[]; .name == "felix-website.tar.gz")' | grep -qx true; then
+            exit 0
+          fi
+          gh release create "$tag" "$asset" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "cPanel build ${GITHUB_SHA:0:12}" --notes "Static website build for $GITHUB_SHA." \
+            --prerelease --latest=false

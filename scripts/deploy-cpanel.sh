@@ -11,21 +11,29 @@ test ! -L "$web_root"
 exec 9>"$HOME/felix-website-deploy.lock"
 flock -n 9
 
-export PATH="/opt/alt/alt-nodejs24/root/usr/bin:$PATH"
-export FCL_CPANEL_EXPORT=1
-export FCL_PUBLIC_URL=https://felixbd.com
-export NEXT_TELEMETRY_DISABLED=1
+revision="$(git rev-parse HEAD)"
+release_dir="$(mktemp -d "$HOME/tmp/felix-website-release.XXXXXXXX")"
+trap 'rm -rf -- "$release_dir"' EXIT
 
-npm ci --include=dev --no-audit --no-fund
-RAYON_NUM_THREADS=1 \
-  NODE_OPTIONS="--max-old-space-size=768 --max-semi-space-size=16" \
-  npm run build
+release_url="https://github.com/GatorAlli/fcl-web/releases/download/cpanel-$revision/felix-website.tar.gz"
+if ! curl --fail --silent --show-error --location --retry 2 --max-time 120 \
+  --proto '=https' --proto-redir '=https' \
+  --output "$release_dir/felix-website.tar.gz" "$release_url"; then
+  printf 'Could not download the build for %s. Check GitHub Actions and retry.\n' "$revision" >&2
+  exit 1
+fi
+tar -xzf "$release_dir/felix-website.tar.gz" -C "$release_dir" --no-same-owner --no-same-permissions
+if [[ "$(cat "$release_dir/revision")" != "$revision" ]]; then
+  printf 'The downloaded build does not match commit %s.\n' "$revision" >&2
+  exit 1
+fi
 
-test -s out/index.html
-test -s out/404.html
-test -s out/sitemap.xml
-test -s out/robots.txt
-test -d out/_next/static
+site_dir="$release_dir/out"
+test -s "$site_dir/index.html"
+test -s "$site_dir/404.html"
+test -s "$site_dir/sitemap.xml"
+test -s "$site_dir/robots.txt"
+test -d "$site_dir/_next/static"
 
 backup_options=()
 if [[ -f "$web_root/wp-config.php" ]]; then
@@ -33,7 +41,7 @@ if [[ -f "$web_root/wp-config.php" ]]; then
   backup_options=(--backup --backup-dir="$HOME/felix-website-backups/cutover-files")
 fi
 
-cat >out/.htaccess <<'APACHE'
+cat >"$site_dir/.htaccess" <<'APACHE'
 Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
@@ -44,6 +52,6 @@ rsync -rt --omit-dir-times --delay-updates --delete-delay \
   --exclude='/.well-known/' --exclude='/.ssl-manager/' \
   --exclude='/.hcflag' --exclude='/.litespeed_flag' \
   --exclude='/google*.html' \
-  out/ "$web_root/"
+  "$site_dir/" "$web_root/"
 
 printf 'Published %s to %s\n' "$(git rev-parse --short HEAD)" "$web_root"
