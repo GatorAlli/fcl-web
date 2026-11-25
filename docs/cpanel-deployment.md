@@ -4,6 +4,14 @@
 
 ## Publish an update
 
+The first production release was published from cPanel Terminal on November 26, 2026. The cPanel Git checkout can pull `main`, but the Git deployment process hit the shared host’s build limits. For now, pull in cPanel and run the checked-in deployment script in **cPanel → Terminal**.
+
+```bash
+/bin/bash "$HOME/repositories/fcl-web/scripts/deploy-cpanel.sh"
+```
+
+## cPanel Git controls
+
 1. Push or merge the changes to `main` on GitHub.
 2. In cPanel, open **Git Version Control → Felix Website → Manage → Pull or Deploy**.
 3. Click **Update from Remote**. Check that the latest commit appears under **HEAD Commit**. If the deploy button stays disabled after the first pull of `.cpanel.yml`, refresh the page.
@@ -16,8 +24,8 @@ cPanel separates the pull from the deployment. **Update from Remote** changes th
 1. In **cPanel → Domains**, confirm that `felixbd.com` points to `/public_html`.
 2. Archive the legacy `public_html` directory, including dotfiles, and download a copy. The local backup is `~/Downloads/felixbd-public_html-2026-11-26.zip`. Keep the server copy at `~/felix-website-backups/legacy-public_html.zip`, outside the document root. The ZIP is a file backup. The WordPress database stays in MySQL.
 3. In **Git Version Control → Create**, clone `https://github.com/GatorAlli/fcl-web.git` into `repositories/fcl-web`, name it **Felix Website**, and confirm that `main` is checked out.
-4. Put the deployment configuration on GitHub `main`, then use **Update from Remote** and **Deploy HEAD Commit** on **Felix Website**.
-5. Open the homepage, a detail page, the contact page, and the company profile PDF. Verify that `/robots.txt` and `/sitemap.xml` load and that an unknown URL returns a 404.
+4. Commit the deployment configuration on GitHub `main` and pull it into **Felix Website**. The Git deployment build failed in cPanel, so the initial cutover ran the same script from the terminal and published `f1f4f78`.
+5. Verify the production site. All 46 sitemap URLs returned HTTP 200. Safari rendered the homepage and contact page. The robots file, sitemap, and company profile PDF returned HTTP 200, and an unknown URL returned HTTP 404.
 
 ## What cPanel runs
 
