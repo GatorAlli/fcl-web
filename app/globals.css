@@ -1129,7 +1129,6 @@ button.fcl-link {
   .detail-explanation,
   .contact-layout,
   .careers-layout,
-  .footer-directory,
   .enquiry-grid,
   .form-grid,
   .product-gallery figure,
@@ -1169,6 +1168,14 @@ button.fcl-link {
   }
   .project-photo-card {
     @apply grid-cols-[minmax(0,_1fr)];
+  }
+  .footer-directory {
+    @apply grid-cols-[repeat(2,_minmax(0,_1fr))] gap-[32px_24px];
+  }
+}
+@media (max-width: 480px) {
+  .footer-directory {
+    @apply grid-cols-[minmax(0,_1fr)] gap-[24px];
   }
 }
 @media (max-width: 600px) {

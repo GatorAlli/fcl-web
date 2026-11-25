@@ -45,6 +45,15 @@ cat >"$site_dir/.htaccess" <<'APACHE'
 Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
+
+# Send www to the apex domain, keeping the path and query string.
+# /.well-known/ stays in place for certificate validation.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.felixbd\.com(:[0-9]+)?$ [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule ^ https://felixbd.com%{REQUEST_URI} [R=301,L]
+</IfModule>
 APACHE
 
 rsync -rt --omit-dir-times --delay-updates --delete-delay \

@@ -27,6 +27,18 @@ Namecheap’s Git deployment process hit memory and thread limits building Next.
 
 If the release is still building or the download fails, cPanel stops before writing to `public_html`. Check the GitHub Actions run for the checked-out commit, then retry **Deploy HEAD Commit** after that run succeeds. cPanel deployment logs are under `~/.cpanel/logs/`. [cPanel deployment troubleshooting](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-advanced-configuration-and-troubleshooting/#deployment)
 
+## Redirects
+
+The deploy script writes `public_html/.htaccess` on every deployment, so add redirect rules to `scripts/deploy-cpanel.sh`. Changes made to that file in cPanel, including through its **Redirects** screen, are overwritten.
+
+The script sends `www.felixbd.com` to `https://felixbd.com` with a 301 that keeps the path and query string. The rule takes effect once the `www` DNS record points to the web server and the SSL certificate covers `www`. After deploying, check it:
+
+```bash
+curl -sSL -o /dev/null -w '%{url_effective} %{http_code} %{num_redirects}\n' 'http://www.felixbd.com/contact/?solution=building-management'
+```
+
+The result should be the same path on `https://felixbd.com` with status 200.
+
 ## Roll back a release
 
 For a regular update, revert the offending commit on GitHub `main`, wait for the revert’s build, then publish it from cPanel. For the original WordPress cutover, extract `~/felix-website-backups/legacy-public_html.zip` into a private directory and restore its `public_html/` contents, including `.htaccess`, to the document root. The existing WordPress database is required for that restore.
