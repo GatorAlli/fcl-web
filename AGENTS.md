@@ -179,6 +179,8 @@ fcl-web/
 │       ├── page-canvas.tsx             # shared black-canvas page layout wrapper
 │       ├── page-parts.tsx              # shared page section building blocks
 │       ├── partner-strip.tsx           # partner logo strip
+│       ├── policy-page.tsx             # Privacy/Terms layout: page tabs, contents, text, summary card
+│       ├── policy-page.module.css      # styles for the policy page layout
 │       ├── product-gallery.tsx         # product image gallery
 │       ├── profile-prose.tsx           # long-form company profile prose renderer
 │       ├── project-gallery.tsx         # project image gallery

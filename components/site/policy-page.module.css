@@ -1,0 +1,155 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  margin-block-end: 20px;
+}
+
+.tabs a {
+  display: inline-flex;
+  min-block-size: 44px;
+  align-items: center;
+  color: var(--muted);
+  border-block-end: 2px solid transparent;
+}
+
+.tabs a:hover {
+  color: var(--ink);
+}
+
+.tabs a[aria-current="page"] {
+  color: var(--ink);
+  border-block-end-color: var(--link-ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 40px;
+  padding-block-end: 64px;
+}
+
+.contents {
+  display: none;
+}
+
+.contents p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contents ul {
+  margin: 0;
+  padding: 0;
+  border-inline-start: 1px solid var(--rule);
+  list-style: none;
+}
+
+.contents a {
+  display: block;
+  padding: 7px 0 7px 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contents a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* .profile-copy caps the measure; the grid column owns the width here. */
+.layout .article {
+  max-inline-size: none;
+}
+
+.article section + section {
+  margin-block-start: 32px;
+  padding-block-start: 32px;
+  border-block-start: 1px solid var(--rule);
+}
+
+.article h2,
+.summary h2 {
+  margin: 0 0 14px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.article h2 {
+  font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.summary {
+  padding: 24px;
+  border: 1px solid var(--rule);
+  border-block-start: 3px solid var(--link-ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.summary h2 {
+  font-size: 20px;
+}
+
+.summary ul {
+  margin: 0 0 16px;
+  padding-inline-start: 18px;
+  list-style: disc;
+}
+
+.summary li + li {
+  margin-block-start: 8px;
+}
+
+.summary li::marker {
+  color: var(--link-ink);
+}
+
+.note {
+  margin: 0;
+  padding-block-end: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  border-block-end: 1px solid var(--rule);
+}
+
+.contact {
+  margin: 16px 0 0;
+}
+
+.contact a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 11rem minmax(0, 1fr) clamp(15rem, 25vw, 24rem);
+    gap: clamp(32px, 4vw, 72px);
+  }
+
+  .contents {
+    display: block;
+  }
+
+  .contents,
+  .summary {
+    position: sticky;
+    inset-block-start: 96px;
+    max-block-size: calc(100dvh - 112px);
+    overflow-y: auto;
+  }
+}
+
+@media print {
+  .tabs,
+  .contents {
+    display: none;
+  }
+}
