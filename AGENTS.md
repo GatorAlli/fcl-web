@@ -83,6 +83,7 @@ fcl-web/
 ├── PROJECT_SCOPE.md                 # current scope/ownership notes from the project owner
 ├── FOUNDATION_PROMPT.md             # original brief used to scaffold the site
 ├── .gitignore                       # git ignore rules
+├── .cpanel.yml                       # cPanel Git deployment task for the public website
 ├── .prettierrc                      # Prettier config (prettier-plugin-tailwindcss, cn/cva sorting)
 ├── .prettierignore                  # paths excluded from Prettier
 ├── components.json                  # shadcn/ui CLI config
@@ -93,6 +94,9 @@ fcl-web/
 ├── postcss.config.mjs               # PostCSS config (@tailwindcss/postcss)
 ├── skills-lock.json                 # lockfile for `npx skills add`-installed agent skills
 ├── tsconfig.json                    # TypeScript config (`@/*` path alias to repo root)
+│
+├── docs/
+│   └── cpanel-deployment.md          # initial cutover, routine deployment, and rollback
 │
 ├── .claude/                         # Claude Code-specific config (see CLAUDE.md)
 │   ├── settings.json                # project settings: PostToolUse format-on-save hook
@@ -239,6 +243,7 @@ fcl-web/
 │
 └── scripts/
     ├── apply-light-rebuild.py           # script: apply light-theme rebuild changes
+    ├── deploy-cpanel.sh                 # build the static export and publish it to public_html
     ├── download_photography.py         # script: download photography assets
     ├── enhance-projects.py              # script: enhance/process project images
     └── verify-frontend.mjs              # script: verify frontend build/output

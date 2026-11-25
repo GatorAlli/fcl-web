@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/bash "$HOME/repositories/fcl-web/scripts/deploy-cpanel.sh"
