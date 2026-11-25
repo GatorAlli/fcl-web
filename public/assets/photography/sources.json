@@ -8,7 +8,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "industry",
@@ -19,7 +19,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "living",
@@ -30,7 +30,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "laboratory",
@@ -52,7 +52,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "data-center",
@@ -63,7 +63,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "retail",
@@ -74,7 +74,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "parking",
@@ -85,7 +85,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "healthcare",
@@ -107,7 +107,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "design",
@@ -118,7 +118,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "pipework",
@@ -129,7 +129,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "security-camera",
@@ -141,7 +141,7 @@
     "license": "Unsplash License",
     "licenseUrl": "https://unsplash.com/license",
     "deliveredWidth": 1800,
-    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail."
+    "processing": "Resized from retained original for faster loading; WebP quality 85; no generated detail. Recompressed with Sharp at WebP quality 80 without resizing."
   },
   {
     "name": "control4-touchscreen",
@@ -217,21 +217,21 @@
     "height": 2560,
     "deliveredWidth": 1350,
     "deliveredHeight": 1800,
-    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately.",
-    "sha256": "32ef77a4cef137d696ac5240d473ade9049c474548ca5a8382d0ef0e12483b9f"
+    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "4caa816cb40a303dc8c2fb439b5b5ad8bd6cfcc54705440a1e26d6043a84b0f2"
   },
   {
     "name": "technology-hvac",
     "page": "https://www.nwwp.tirol/netzwerk-waermepumpe-tirol/erfolgsgeschichten/tourismusschule-zell-am-ziller/",
     "source": "https://www.nwwp.tirol/uploads/tx_bh/428/nwwpt_referenz_zell_am_ziller_tourismusschule_2_.jpg",
-    "author": "Netzwerk W\u00e4rmepumpe Tirol",
+    "author": "Netzwerk Wärmepumpe Tirol",
     "subject": "Belimo actuators installed on building-services pipework",
     "width": 1920,
     "height": 1440,
     "deliveredWidth": 1800,
     "deliveredHeight": 1350,
-    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately.",
-    "sha256": "7424fca53f2c62d5873fceed0e9e1e27f1e23e8e1450ed3d8f6ac0343bd18e76"
+    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "bfa872fcfa57b78e40a23fef8f62cfa0efb50a3f2b12ed9d4fdded9b45e9bd8f"
   },
   {
     "name": "technology-sensors",
@@ -243,21 +243,21 @@
     "height": 900,
     "deliveredWidth": 1600,
     "deliveredHeight": 900,
-    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately.",
-    "sha256": "7972e732e4d5ce5d9e2224148df0fe5d8f8e5a9743728f862b0f7c48f4e85bbe"
+    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "6505004b12fcefc39ea10db784e1006cff1903d59d21fb76ede7a6d3dc0bf14c"
   },
   {
     "name": "technology-valves",
     "page": "https://jeromebtp.fr/activites/reseaux-industriels/",
     "source": "https://jeromebtp.fr/app/uploads/2017/12/Reseaux-industriels-Avoine-Eaux-tiedes-8.jpg",
-    "author": "J\u00e9r\u00f4me BTP",
+    "author": "Jérôme BTP",
     "subject": "Installation of valves in an industrial piping network",
     "width": 1000,
     "height": 1333,
     "deliveredWidth": 1000,
     "deliveredHeight": 1333,
-    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately.",
-    "sha256": "d65b49dfd1f1a09d5832fefc9701b98d3a65911b9f92fe279591da12b0642ae7"
+    "processing": "Published source image resized without enlargement and converted to WebP. No AI-generated detail or watermark removal. Original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "f59775597bc1ef807837be2d9039d2cad1799190b1d75b1c9a217b226724ee4b"
   },
   {
     "name": "technology-parking",
@@ -282,8 +282,8 @@
     "deliveredWidth": 1200,
     "deliveredHeight": 1600,
     "name": "solution-bms",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "6cb0565c463ebd0a1e288db4403c11d62dc17933477ca4dc93d917055829ca99"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "0f6a65abc53883a3ebb91d8952a8df7dd25712af2a0f72943bc8954f7e9323a8"
   },
   {
     "source": "https://www.sollas.com/runtime/images/309/1920x1280/Siemens_simatic_scherm_XE.jpg",
@@ -295,8 +295,8 @@
     "deliveredWidth": 1800,
     "deliveredHeight": 1200,
     "name": "solution-scada",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "ddf2811e611ce168fd68932a514fd2df566c94e9a48e447dc9d29cd56b37ba6a"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "98706d0250588b5d24b0db69f7b402c7a7c2460b1b0b12d0c89bb5d825c3dffc"
   },
   {
     "source": "https://cyberhomes.co.uk/images/projects/lutterworth-smart-home/lutterworth-smart-home-13.jpg",
@@ -308,8 +308,8 @@
     "deliveredWidth": 1800,
     "deliveredHeight": 1201,
     "name": "solution-home",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "8f320bc9cf83fda6f8c55a2f685987390598a515bfa2763e37f81dd86d1f9688"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "209d29e0529f81d68f3488859f35d63eb83a87034ec4c905663ec24c20850102"
   },
   {
     "source": "https://www-prod-ue1.lutron.com/us/sites/hub_americas/files/styles/cards_short_desktop_medium_2x/public/2024-11/bedroom-with-wallpaper-ritz-tower-palladiom-keypad-with-hand-29.jpg?h=6372fb0d&itok=m9SRFurf",
@@ -334,8 +334,8 @@
     "deliveredWidth": 1600,
     "deliveredHeight": 1037,
     "name": "solution-fire",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "60d8c4e2367a9c4be66ca526def7254e6e3bfe835e00ef39d344260e0812caa9"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "0fb5a22e6205cbac70ec9feea7aa89b763a7848f727299c990e1ad7b19d52a5d"
   },
   {
     "source": "https://www.sys-et-com.fr/wp-content/uploads/2021/03/IMG_2512.jpg",
@@ -347,8 +347,8 @@
     "deliveredWidth": 1200,
     "deliveredHeight": 1600,
     "name": "solution-drives",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "12317d1b365008637308a946750ce4a8f0e47836144b4290170bcacd6cd40577"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "5c53dc640656f6cbd0d4678e378f0466b3ccdce86bcd3c0c9b49b15a7cb0eccf"
   },
   {
     "source": "https://www.belimo.com/.imaging/mte/belimo/text-image-left-high/contentservDam/mam/americas/marketing_communication/case_studies/images/alabama-office-building.jpg/alabama-office-building.jpg",
@@ -412,7 +412,7 @@
     "deliveredWidth": 1800,
     "deliveredHeight": 1359,
     "name": "solution-valves",
-    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping.",
-    "sha256": "3c2e11ad56edbb12962d28b7040e561c54a2ba04fff66dd2d45fd587adfddb44"
+    "processing": "Complete original composition, resized without enlargement, WebP quality 90; no generated detail, background removal, padding or cropping. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "e804edb6070861946d8e11d39f7956cdc3f2efa883dc6d128d515ff601910e21"
   }
 ]

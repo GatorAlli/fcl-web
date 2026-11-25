@@ -37,8 +37,8 @@
     "subject": "Exterior terrace of Bay’s Edgewater",
     "sourceWidth": 1000,
     "sourceHeight": 686,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "77ec330fd955449cc4b49daa39393c9fc839497c491df58161c673946fb54f38"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "2ddb99e671a721b7f261f746127cdf735d0390cc3d037a03945e111dcd1f1697"
   },
   {
     "assetKey": "project-beacon",
@@ -52,8 +52,8 @@
     "subject": "Beacon Pharmaceuticals manufacturing facility",
     "sourceWidth": 1600,
     "sourceHeight": 1201,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "d643fc3e27b2846df7cce346e893a7fae592880d8ebe9e6075ca139e4e33f008"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "9b93dd04b1a15fce6fb22fd9d8d317f7b9a8c7acc5193c7624c7068ab159295a"
   },
   {
     "assetKey": "project-beximco",
@@ -82,8 +82,8 @@
     "subject": "DBL Pharmaceuticals manufacturing plant",
     "sourceWidth": 2362,
     "sourceHeight": 1814,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "9d09133874112a077332557e4c9ded26d2d4d9208ba2b381492c0a8721f60ed5"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "19b5882a5053adf4245c8b4bdaf2959dd27833fed007816c8be5960b3c3f6212"
   },
   {
     "assetKey": "project-eastern-bank",
@@ -127,8 +127,8 @@
     "subject": "Essential Drugs Company Limited site exterior",
     "sourceWidth": 4928,
     "sourceHeight": 3264,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "d2f6e87e681f2809f740d983dfb6d5cc6cb1deb4f8fc65cf567300febbc39815"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "8f36a03e98ef66c48cf5628c1108710316640a574423603156206f207c533df9"
   },
   {
     "assetKey": "project-liberation-war-museum",
@@ -142,8 +142,8 @@
     "subject": "Liberation War Museum exterior in Agargaon",
     "sourceWidth": 6000,
     "sourceHeight": 4000,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "d0ad2b63c1748c93c09214d615860cf3ff362aa0db1cf1c29ff4472556d885bc",
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "8c80608a629f9860061ea0d5781f611c29b35b2c6d612bcb837e9d3b8cdc3b6d",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
@@ -156,8 +156,8 @@
     "source": "https://upload.wikimedia.org/wikipedia/commons/6/66/Dhaka_Metro_Rail_at_Diabari_depot_01_%28cropped%29.jpg",
     "page": "https://commons.wikimedia.org/wiki/File:Dhaka_Metro_Rail_at_Diabari_depot_01_(cropped).jpg",
     "credit": "Press Information Department, Bangladesh (public domain)",
-    "processing": "Actual Dhaka Metro train at Diabari depot. Original 4061 x 2037 photograph resized to WebP, no generated detail; original retained privately.",
-    "sha256": "aba5177b654851219aa60c833db1f7bd96538ce33a28ae64b7e4a3b845880620"
+    "processing": "Actual Dhaka Metro train at Diabari depot. Original 4061 x 2037 photograph resized to WebP, no generated detail; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "f327cab5c519f771e124fad5f1840648fddb2988141f01c3d735881bb9052967"
   },
   {
     "assetKey": "project-shahjalal-bank",
@@ -171,8 +171,8 @@
     "subject": "Shahjalal Islami Bank corporate headquarters exterior",
     "sourceWidth": 1920,
     "sourceHeight": 1080,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "519e7488c77540d48ef13e7ba6ebd27adca385b64b561a915aa43a6fb0217455"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "f7658a52d8e4ee122dedd200829c5234950913262057f744001dbc30a430706a"
   },
   {
     "assetKey": "project-shanta-forum",
@@ -186,8 +186,8 @@
     "subject": "Shanta Forum completed building",
     "sourceWidth": 1920,
     "sourceHeight": 1080,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "d11202fbf3b6eb12eb25f8a0580c658ff5e8d335ad57b82871893227466abbf8"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "f0ccde90146ef6ea4f460f0752bd388a82ce5003f4529685a7e4bba99bde236d"
   },
   {
     "assetKey": "project-shanta-pinnacle",
@@ -201,8 +201,8 @@
     "subject": "Shanta Pinnacle completed building",
     "sourceWidth": 2560,
     "sourceHeight": 1440,
-    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately.",
-    "sha256": "2d3d27e634c8f8417e3df688075b39ea34c32b09413946a0c8c1377a525959b8"
+    "processing": "Authentic site photograph resized without enlargement and converted to WebP. No AI-generated detail or watermark removal; original retained privately. Recompressed with Sharp at WebP quality 80 without resizing.",
+    "sha256": "4e402c71d90fff77ecc459a410902fde00cc380758c5da4b7e7a0113d6bbee0b"
   },
   {
     "assetKey": "project-square",
