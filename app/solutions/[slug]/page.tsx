@@ -10,6 +10,7 @@ import { ProductGallery } from "@/components/site/product-gallery";
 import { ProfileProse } from "@/components/site/profile-prose";
 import { ManufacturerLinks } from "@/components/site/manufacturer-links";
 import { technologyContext } from "@/lib/technology-context";
+import { sitePageMetadata, summarize } from "@/lib/site-metadata";
 
 export function generateStaticParams() {
   return solutions.map((solution) => ({ slug: solution.slug }));
@@ -19,10 +20,12 @@ export async function generateMetadata({
 }: PageProps<"/solutions/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const copy = profileSolutions[slug];
-  return {
-    title: `${copy?.title ?? "Solution"} | Felix Controls Limited`,
-    description: copy?.paragraphs[0],
-  };
+  if (!copy) notFound();
+  return sitePageMetadata(
+    `/solutions/${slug}`,
+    copy.title,
+    summarize(copy.paragraphs[0]),
+  );
 }
 export default async function SolutionPage({
   params,

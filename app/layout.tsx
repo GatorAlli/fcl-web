@@ -1,7 +1,15 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { AnalyticsConsentProvider } from "@/components/site/analytics-consent";
 import { StudioShell } from "@/components/site/studio-shell";
+import {
+  homeDescription,
+  homeTitle,
+  siteName,
+  siteOrigin,
+  siteShareMetadata,
+} from "@/lib/site-metadata";
 
 const manrope = localFont({
   src: [
@@ -40,17 +48,14 @@ const publicSans = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: process.env.FCL_PUBLIC_URL
-    ? new URL(process.env.FCL_PUBLIC_URL)
-    : undefined,
+  metadataBase: new URL(process.env.FCL_PUBLIC_URL ?? siteOrigin),
   robots:
     process.env.FCL_STATIC_EXPORT === "1"
       ? { index: false, follow: true }
       : undefined,
-  title: "Felix Controls Limited | Engineering Better Buildings",
-  description:
-    "Felix Controls Limited. Building management, automation, fire safety and integrated engineering solutions in Bangladesh since 2010.",
-  icons: { icon: "/assets/felix-logo-web.png" },
+  title: { default: homeTitle, template: `%s | ${siteName}` },
+  description: homeDescription,
+  ...siteShareMetadata,
 };
 
 export const viewport: Viewport = { themeColor: "#186636" };
@@ -62,7 +67,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${manrope.variable} ${poppins.variable} ${archivo.variable} ${plexMono.variable} ${publicSans.variable}`}
     >
       <body>
-        <StudioShell>{children}</StudioShell>
+        <AnalyticsConsentProvider>
+          <StudioShell>{children}</StudioShell>
+        </AnalyticsConsentProvider>
       </body>
     </html>
   );

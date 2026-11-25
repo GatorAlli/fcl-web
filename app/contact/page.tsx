@@ -1,10 +1,14 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
 import { Suspense } from "react";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import { DisplayText } from "@/components/site/display-text";
 import { EnquiryForm } from "@/components/site/enquiry-form";
-export const metadata: Metadata = { title: "Contact | Felix Controls Limited" };
+export const metadata = sitePageMetadata(
+  "/contact",
+  "Contact",
+  "Contact Felix Controls Limited in Dhaka to discuss your building systems or engineering project by email, phone or the website’s enquiry draft.",
+);
 export default function Contact() {
   return (
     <PageCanvas id="main" className="contact-page">
@@ -30,10 +34,18 @@ export default function Contact() {
             <p className="contact-channel-label">
               <AnimatedCopy>Start a conversation</AnimatedCopy>
             </p>
-            <a className="contact-email" href="mailto:info@felixbd.com">
+            <a
+              className="contact-email"
+              href="mailto:info@felixbd.com"
+              data-analytics-event="contact_email_click"
+            >
               <AnimatedCopy>info@felixbd.com</AnimatedCopy>
             </a>
-            <a className="contact-phone" href="tel:+8801713080002">
+            <a
+              className="contact-phone"
+              href="tel:+8801713080002"
+              data-analytics-event="contact_phone_click"
+            >
               <AnimatedCopy>+880 1713080002</AnimatedCopy>
             </a>
             <dl className="contact-office-data">
@@ -64,13 +76,22 @@ export default function Contact() {
                   <AnimatedCopy>Office numbers</AnimatedCopy>
                 </dt>
                 <dd className="contact-office-phones">
-                  <a href="tel:+8802222240072">
+                  <a
+                    href="tel:+8802222240072"
+                    data-analytics-event="contact_phone_click"
+                  >
                     <AnimatedCopy>+880 2 222240072</AnimatedCopy>
                   </a>
-                  <a href="tel:+8809678777874">
+                  <a
+                    href="tel:+8809678777874"
+                    data-analytics-event="contact_phone_click"
+                  >
                     <AnimatedCopy>+880 9678777874</AnimatedCopy>
                   </a>
-                  <a href="tel:+8802222240073">
+                  <a
+                    href="tel:+8802222240073"
+                    data-analytics-event="contact_phone_click"
+                  >
                     <AnimatedCopy>+880 2 222240073</AnimatedCopy>
                   </a>
                 </dd>

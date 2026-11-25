@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { siteOrigin } from "@/lib/site-metadata";
 
 // Opt into one static response without a route segment config.
 export function generateStaticParams() {
@@ -8,6 +9,6 @@ export function generateStaticParams() {
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://felixbd.com/sitemap.xml",
+    sitemap: `${siteOrigin}/sitemap.xml`,
   };
 }

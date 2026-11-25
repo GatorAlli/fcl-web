@@ -1,14 +1,16 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import { CompanyLogo } from "@/components/site/company-logo";
 import { brochure, clients } from "@/lib/company-profile";
 import { DisplayText } from "@/components/site/display-text";
 import { Photo } from "@/components/site/page-parts";
-export const metadata: Metadata = {
-  title: "Client References | Felix Controls Limited",
-};
+export const metadata = sitePageMetadata(
+  "/clients",
+  "Client References",
+  "Explore client references from the Felix Controls Limited company profile and see the organisations behind its engineering projects.",
+);
 export default function Clients() {
   return (
     <PageCanvas id="main" className="clients-page">

@@ -1,12 +1,14 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { Suspense } from "react";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import { ProjectGallery } from "@/components/site/project-gallery";
 import Link from "next/link";
 import { DisplayText } from "@/components/site/display-text";
-export const metadata: Metadata = {
-  title: "Reference Projects | Felix Controls Limited",
-};
+export const metadata = sitePageMetadata(
+  "/projects",
+  "Reference Projects",
+  "See Felix Controls Limited engineering projects in transport, pharmaceuticals, healthcare, commercial developments and institutions.",
+);
 export default function Projects() {
   return (
     <main id="main" className="project-index-page">

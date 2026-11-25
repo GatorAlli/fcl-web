@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { referenceProjects, brochure } from "@/lib/company-profile";
 import { Breadcrumbs, Photo } from "@/components/site/page-parts";
 import { projectPhotography } from "@/lib/project-photography";
+import { sitePageMetadata } from "@/lib/site-metadata";
 export function generateStaticParams() {
   return referenceProjects.map((p) => ({ slug: p.slug }));
 }
@@ -14,7 +15,12 @@ export async function generateMetadata({
 }: PageProps<"/projects/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const p = referenceProjects.find((p) => p.slug === slug);
-  return { title: `${p?.title ?? "Project"} | Felix Controls Limited` };
+  if (!p) notFound();
+  return sitePageMetadata(
+    `/projects/${slug}`,
+    p.title,
+    `${p.title} (${p.description}): a reference project from Felix Controls Limited.`,
+  );
 }
 export default async function Project({
   params,

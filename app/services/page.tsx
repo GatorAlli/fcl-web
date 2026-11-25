@@ -1,13 +1,15 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import { profileResources } from "@/lib/profile-content";
 import { serviceStages } from "@/lib/company-profile";
 import { Breadcrumbs, PageIntro, Photo } from "@/components/site/page-parts";
-export const metadata: Metadata = {
-  title: "Engineering Services & Support | Felix Controls Limited",
-};
+export const metadata = sitePageMetadata(
+  "/services",
+  "Engineering Services & Support",
+  "Explore how Felix Controls Limited designs, implements, commissions and supports integrated engineering systems for buildings and industrial facilities.",
+);
 export default function Services() {
   return (
     <PageCanvas id="main" className="profile-article">

@@ -29,6 +29,8 @@ jobs:
         env:
           FCL_CPANEL_EXPORT: "1"
           FCL_PUBLIC_URL: https://felixbd.com
+          NEXT_PUBLIC_GA4_MEASUREMENT_ID: ${{ vars.GA4_MEASUREMENT_ID }}
+          NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN: ${{ vars.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
           NEXT_TELEMETRY_DISABLED: "1"
       - name: Package the website and its commit
         run: |

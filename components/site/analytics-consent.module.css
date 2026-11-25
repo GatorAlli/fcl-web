@@ -1,0 +1,140 @@
+.notice {
+  position: fixed;
+  z-index: 20;
+  inset-inline: var(--fcl-gutter);
+  inset-block-end: max(16px, env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  max-inline-size: 72rem;
+  max-block-size: calc(100dvh - 32px);
+  margin-inline: auto;
+  overflow-y: auto;
+  padding: clamp(16px, 2.5vw, 28px);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-block-start: 3px solid var(--link-ink);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 22%);
+}
+
+.notice[hidden] {
+  display: none;
+}
+
+.notice h2 {
+  margin: 0 0 6px;
+  font:
+    700 20px/1.3 var(--font-display),
+    Arial,
+    sans-serif;
+  letter-spacing: normal;
+}
+
+.notice p {
+  margin: 0;
+  color: var(--muted);
+  font:
+    400 14px/1.6 var(--font-reading),
+    Arial,
+    sans-serif;
+}
+
+.notice a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.actions button {
+  min-block-size: 44px;
+  padding: 10px 14px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  cursor: pointer;
+  font:
+    700 14px/1.4 var(--font-display),
+    Arial,
+    sans-serif;
+}
+
+.actions button:is(:hover, :focus-visible) {
+  background: var(--green-deep);
+  border-color: var(--link-ink);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  padding-block: 4px;
+  border-block-start: 1px solid var(--rule);
+  background: var(--paper);
+  font:
+    400 14px/1.6 var(--font-reading),
+    Arial,
+    sans-serif;
+}
+
+.policies {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerLinks .policies a,
+.settings {
+  display: inline-flex;
+  min-block-size: 44px;
+  align-items: center;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.separator {
+  inline-size: 1px;
+  block-size: 1em;
+  background: var(--rule);
+}
+
+.settings {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.footerLinks .policies a:hover,
+.settings:hover {
+  color: var(--surface);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .settingsSeparator {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .notice {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .actions button {
+    padding-inline: 8px;
+  }
+}

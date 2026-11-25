@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ProfileProse } from "@/components/site/profile-prose";
 import { profileSectorFocus } from "@/lib/profile-content";
 import { sectors, solutions } from "@/lib/company-profile";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import {
   Breadcrumbs,
   PageIntro,
@@ -18,10 +19,12 @@ export async function generateMetadata({
 }: PageProps<"/sectors/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const s = sectors.find((s) => s.slug === slug);
-  return {
-    title: `${s?.title ?? "Sector"} | Felix Controls Limited`,
-    description: s?.text,
-  };
+  if (!s) notFound();
+  return sitePageMetadata(
+    `/sectors/${slug}`,
+    s.title,
+    `${s.title}: ${s.intro} See the building systems Felix Controls Limited offers for this sector.`,
+  );
 }
 export default async function SectorPage({
   params,
@@ -44,9 +47,14 @@ export default async function SectorPage({
           />
         }
       />
-      <section className="fcl-container profile-content-section" aria-label="Our approach">
+      <section
+        className="fcl-container profile-content-section"
+        aria-label="Our approach"
+      >
         <ProfileProse
-          paragraphs={["Whether it concerns a system upgrade, renovation or new construction, we always focus on:"]}
+          paragraphs={[
+            "Whether it concerns a system upgrade, renovation or new construction, we always focus on:",
+          ]}
           bullets={profileSectorFocus}
         />
       </section>

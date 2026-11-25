@@ -13,6 +13,8 @@ export function BrandSelect({
   onValueChange,
   tone = "light",
   popupClassName = "",
+  invalid,
+  describedBy,
 }: {
   id: string;
   label: string;
@@ -22,6 +24,8 @@ export function BrandSelect({
   onValueChange: (value: string) => void;
   tone?: "light" | "dark";
   popupClassName?: string;
+  invalid?: boolean;
+  describedBy?: string;
 }) {
   const selected = items.find((item) => item.value === value);
   return (
@@ -41,6 +45,8 @@ export function BrandSelect({
         <Select.Trigger
           id={id}
           aria-labelledby={`${id}-label ${id}-value`}
+          aria-invalid={invalid || undefined}
+          aria-describedby={describedBy}
           className={`brand-select-trigger is-${tone}`}
         >
           <Select.Value id={`${id}-value`}>{selected?.label}</Select.Value>

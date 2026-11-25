@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { solutions, sectors, referenceProjects } from "@/lib/company-profile";
+import { canonicalSiteUrl } from "@/lib/site-metadata";
 
 // Opt into one static response without a route segment config.
 export function generateStaticParams() {
@@ -8,7 +9,7 @@ export function generateStaticParams() {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    "",
+    "/",
     "/about",
     "/services",
     "/solutions",
@@ -19,10 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/careers",
     "/resources",
+    "/privacy",
+    "/terms",
     ...solutions.map((s) => `/solutions/${s.slug}`),
     ...sectors.map((s) => `/sectors/${s.slug}`),
     ...referenceProjects.map((p) => `/projects/${p.slug}`),
   ].map((path) => ({
-    url: `https://felixbd.com${path}${process.env.FCL_CPANEL_EXPORT === "1" ? "/" : ""}`,
+    url: canonicalSiteUrl(path),
   }));
 }

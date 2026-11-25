@@ -1,7 +1,7 @@
 "use client";
 import { AnimatedCopy } from "@/components/site/animated-copy";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { solutions } from "@/lib/company-profile";
 import { BrandSelect } from "./brand-select";
@@ -13,6 +13,9 @@ const enquiryOptions = [
     label: solution.title,
   })),
 ];
+const minimumMessageLength = 20;
+const maximumDraftUrlLength = 2000;
+
 type Values = {
   name: string;
   email: string;
@@ -24,6 +27,8 @@ type Values = {
 export function EnquiryForm() {
   const params = useSearchParams();
   const form = useRef<HTMLFormElement>(null);
+  const reviewHeading = useRef<HTMLHeadingElement>(null);
+  const wasReview = useRef(false);
   const [values, setValues] = useState<Values>({
     name: "",
     email: "",
@@ -40,6 +45,16 @@ export function EnquiryForm() {
   const [review, setReview] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+
+  useEffect(() => {
+    if (review) {
+      reviewHeading.current?.focus();
+    } else if (wasReview.current) {
+      form.current?.querySelector<HTMLElement>("#enquiry-name")?.focus();
+    }
+    wasReview.current = review;
+  }, [review]);
+
   function change(key: keyof Values, value: string) {
     setValues((v) => ({ ...v, [key]: value }));
     setErrors((e) => ({ ...e, [key]: undefined }));
@@ -47,32 +62,48 @@ export function EnquiryForm() {
   }
   function validate(e: React.FormEvent) {
     e.preventDefault();
+    const cleaned = {
+      ...values,
+      name: values.name.trim(),
+      email: values.email.trim(),
+      company: values.company.trim(),
+      phone: values.phone.trim(),
+      message: values.message.trim(),
+    };
     const next: Partial<Record<keyof Values, string>> = {};
-    if (!values.name.trim()) next.name = "Please enter your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim()))
+    if (!cleaned.name) next.name = "Please enter your name.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleaned.email))
       next.email = "Enter a valid email address.";
-    if (values.message.trim().length < 20)
+    if (!enquiryOptions.some((option) => option.value === cleaned.solution))
+      next.solution = "Choose an option from the list.";
+    if (cleaned.message.length < minimumMessageLength)
       next.message =
         "Please describe your requirements in at least 20 characters.";
     setErrors(next);
     const first = Object.keys(next)[0];
     if (first) {
-      form.current?.querySelector<HTMLElement>(`[name="${first}"]`)?.focus();
+      form.current?.querySelector<HTMLElement>(`#enquiry-${first}`)?.focus();
       return;
     }
+    setValues(cleaned);
+    setCopied(false);
+    setCopyError(false);
     setReview(true);
   }
   const solution =
     solutions.find((s) => s.slug === values.solution)?.title ??
     "General enquiry";
   const body = `Name: ${values.name}\nEmail: ${values.email}\nCompany: ${values.company || "Not provided"}\nPhone: ${values.phone || "Not provided"}\nInterest: ${solution}\n\n${values.message}`;
-  const email = `mailto:info@felixbd.com?subject=${encodeURIComponent(`Project enquiry: ${solution}`)}&body=${encodeURIComponent(body)}`;
+  const draft = `mailto:info@felixbd.com?subject=${encodeURIComponent(`Project enquiry: ${solution}`)}`;
+  const draftWithBody = `${draft}&body=${encodeURIComponent(body)}`;
+  const copyIntoDraft = draftWithBody.length > maximumDraftUrlLength;
   async function copy() {
     try {
       await navigator.clipboard.writeText(body);
       setCopied(true);
       setCopyError(false);
     } catch {
+      setCopied(false);
       setCopyError(true);
     }
   }
@@ -80,18 +111,14 @@ export function EnquiryForm() {
     return (
       <section className="enquiry-review" aria-labelledby="review-title">
         <span className="fcl-label">YOUR ENQUIRY</span>
-        <h2
-          id="review-title"
-          tabIndex={-1}
-          ref={(el) => {
-            el?.focus();
-          }}
-        >
+        <h2 id="review-title" tabIndex={-1} ref={reviewHeading}>
           <AnimatedCopy>Ready to review</AnimatedCopy>
         </h2>
         <p>
           <AnimatedCopy>
-            Check your details below, then open the draft in your email app.
+            {copyIntoDraft
+              ? "Copy your enquiry, then open the draft in your email app and paste it in."
+              : "Check your details below, then open the draft in your email app."}{" "}
             Your enquiry has not been sent.
           </AnimatedCopy>
         </p>
@@ -145,7 +172,11 @@ export function EnquiryForm() {
           <AnimatedCopy>{values.message}</AnimatedCopy>
         </p>
         <div className="review-actions">
-          <a className="fcl-button" href={email}>
+          <a
+            className="fcl-button"
+            href={copyIntoDraft ? draft : draftWithBody}
+            data-analytics-event="enquiry_draft_click"
+          >
             Open email draft
           </a>
           <button className="fcl-link" onClick={() => setReview(false)}>
@@ -224,7 +255,14 @@ export function EnquiryForm() {
           value={values.solution}
           onValueChange={(value) => change("solution", value)}
           popupClassName="enquiry-select-popup"
+          invalid={Boolean(errors.solution)}
+          describedBy={errors.solution ? "solution-error" : undefined}
         />
+        {errors.solution && (
+          <span id="solution-error" className="field-error">
+            {errors.solution}
+          </span>
+        )}
       </div>
       <div className="form-field">
         <label htmlFor="enquiry-message">
@@ -234,7 +272,7 @@ export function EnquiryForm() {
           id="enquiry-message"
           name="message"
           required
-          minLength={20}
+          minLength={minimumMessageLength}
           rows={4}
           value={values.message}
           onChange={(e) => change("message", e.target.value)}

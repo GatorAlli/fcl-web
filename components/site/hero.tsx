@@ -4,9 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { DisplayText } from "./display-text";
 const slides = [
-  { name: "architecture", label: "Building management and automation" },
-  { name: "industry", label: "Industrial automation and process control" },
-  { name: "living", label: "Home automation and lighting control" },
+  {
+    name: "architecture",
+    label: "Glass office towers around a courtyard",
+  },
+  {
+    name: "industry",
+    label: "Automated production line with machinery and yellow safety rails",
+  },
+  {
+    name: "living",
+    label: "Living room with a sectional sofa and a glass-railed staircase",
+  },
 ];
 export function Hero() {
   const [current, setCurrent] = useState(0);

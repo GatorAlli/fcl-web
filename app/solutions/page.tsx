@@ -1,12 +1,14 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import { solutions } from "@/lib/company-profile";
 import { Breadcrumbs, PageIntro, Photo } from "@/components/site/page-parts";
-export const metadata: Metadata = {
-  title: "Solutions & Systems | Felix Controls Limited",
-};
+export const metadata = sitePageMetadata(
+  "/solutions",
+  "Solutions & Systems",
+  "Explore building management, industrial automation, lighting, fire protection, security, parking, home automation and HVAC solutions from Felix Controls Limited.",
+);
 export default function Solutions() {
   return (
     <PageCanvas id="main">

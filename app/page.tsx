@@ -9,7 +9,13 @@ import { HomeProjectShowcase } from "@/components/site/project-showcase";
 import { ClientStrip, PartnerStrip } from "@/components/site/partner-strip";
 import Link from "next/link";
 import { DisplayText } from "@/components/site/display-text";
+import {
+  homeDescription,
+  sitePageMetadata,
+  siteTagline,
+} from "@/lib/site-metadata";
 
+export const metadata = sitePageMetadata("/", siteTagline, homeDescription);
 
 export default function Home() {
   return (

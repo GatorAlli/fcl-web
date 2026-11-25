@@ -13,6 +13,7 @@ import {
   solutionGroups,
   projectCategories,
 } from "@/lib/company-profile";
+import { FooterPrivacyLinks } from "./analytics-consent";
 import { DirectionIcon } from "./direction-icon";
 
 export function ActionChevron() {
@@ -462,7 +463,12 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
                       {label}
                     </Link>
                   ))}
-                  <a href={brochure} download onClick={close}>
+                  <a
+                    href={brochure}
+                    download
+                    onClick={close}
+                    data-analytics-event="brochure_download_click"
+                  >
                     Company Profile <span>PDF </span>
                   </a>
                 </div>
@@ -541,7 +547,11 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
             <Link href="/services">Services</Link>
             <Link href="/projects">Reference projects</Link>
             <Link href="/resources">Browse Company Profile</Link>
-            <a href={brochure} download>
+            <a
+              href={brochure}
+              download
+              data-analytics-event="brochure_download_click"
+            >
               Download Company Profile
             </a>
           </div>
@@ -567,9 +577,18 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
           <div className="footer-business-details">
             <h2 className="footer-heading">Contact</h2>
             <span className="footer-data-label">Email</span>
-            <a href="mailto:info@felixbd.com">info@felixbd.com</a>
+            <a
+              href="mailto:info@felixbd.com"
+              data-analytics-event="contact_email_click"
+            >
+              info@felixbd.com
+            </a>
             <span className="footer-data-label">Contact number</span>
-            <a className="footer-primary-phone" href="tel:+8801713080002">
+            <a
+              className="footer-primary-phone"
+              href="tel:+8801713080002"
+              data-analytics-event="contact_phone_click"
+            >
               +880 1713080002
             </a>
             <span className="footer-data-label">Address</span>
@@ -582,6 +601,7 @@ export function StudioShell({ children }: { children: React.ReactNode }) {
             </address>
           </div>
         </div>
+        <FooterPrivacyLinks />
       </footer>
       <dialog
         className="studio-search"

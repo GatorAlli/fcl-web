@@ -1,9 +1,13 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
 import { PageCanvas } from "@/components/site/page-canvas";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import Link from "next/link";
 import { Breadcrumbs, PageIntro, Photo } from "@/components/site/page-parts";
-export const metadata: Metadata = { title: "Careers | Felix Controls Limited" };
+export const metadata = sitePageMetadata(
+  "/careers",
+  "Careers",
+  "Learn about engineering work at Felix Controls Limited across building systems and industrial automation, and find out how to make a career enquiry.",
+);
 export default function Careers() {
   return (
     <PageCanvas id="main">

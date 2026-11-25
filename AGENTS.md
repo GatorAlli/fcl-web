@@ -8,8 +8,8 @@ never duplicates content from it.
 
 **Felix Controls Limited** — the marketing/brochure website for an engineering firm (building
 management systems, HVAC controls, fire & security, lighting, parking, home automation, etc.).
-It is a content-driven, image-led site: 46 routes (home, About/Services/Partners/Clients/
-Contact/Careers/Resources, a solutions index + solution detail pages, a sectors index + sector
+It is a content-driven, image-led site: 48 routes (home, About/Services/Partners/Clients/
+Contact/Careers/Resources, Privacy/Terms, a solutions index + solution detail pages, a sectors index + sector
 detail pages, a projects index + project detail pages). There is currently **no backend, API, or
 database** — all content is authored in `lib/*.ts` data modules and rendered statically/server-side
 by Next.js.
@@ -96,7 +96,8 @@ fcl-web/
 ├── tsconfig.json                    # TypeScript config (`@/*` path alias to repo root)
 │
 ├── docs/
-│   └── cpanel-deployment.md          # initial cutover, routine deployment, and rollback
+│   ├── cpanel-deployment.md          # initial cutover, routine deployment, and rollback
+│   └── website-readiness-plan.md     # privacy, analytics, SEO, performance, and form plan
 │
 ├── .github/
 │   └── workflows/cpanel-build.yml    # build and release each main revision for cPanel
@@ -127,6 +128,7 @@ fcl-web/
 │   ├── page.tsx                       # home page
 │   ├── globals.css                    # Tailwind v4 entry + brand theme tokens + base styles
 │   ├── not-found.tsx                  # 404 page
+│   ├── favicon.ico                    # square browser-tab icon
 │   ├── robots.ts                      # robots.txt route handler
 │   ├── sitemap.ts                     # sitemap.xml route handler
 │   ├── about/page.tsx                 # About page
@@ -134,6 +136,8 @@ fcl-web/
 │   ├── clients/page.tsx               # Clients page
 │   ├── contact/page.tsx               # Contact page
 │   ├── partners/page.tsx              # Partners page
+│   ├── privacy/page.tsx               # Privacy Policy page
+│   ├── terms/page.tsx                 # Terms of Service page
 │   ├── services/page.tsx              # Services page
 │   ├── resources/page.tsx             # Resources page
 │   ├── projects/
@@ -156,6 +160,8 @@ fcl-web/
 │   ├── ui/
 │   │   └── button.tsx                  # shadcn/ui Button primitive
 │   └── site/                           # site-specific composed components
+│       ├── analytics-consent.tsx       # analytics consent notice, saved choice, footer policy links
+│       ├── analytics-consent.module.css # styles for the consent notice and footer links
 │       ├── animated-copy.tsx           # animated text/copy reveal
 │       ├── brand-select.tsx            # brand/manufacturer selector UI
 │       ├── company-data-sheet.tsx      # company data-sheet display block
@@ -178,6 +184,7 @@ fcl-web/
 │       ├── project-gallery.tsx         # project image gallery
 │       ├── project-showcase.tsx        # featured project showcase block
 │       ├── route-loading.tsx           # route-transition loading indicator
+│       ├── site-analytics.tsx          # consented GA4 + Cloudflare loading and click events
 │       ├── studio-shell.tsx            # app shell (header/footer/nav wrapper)
 │       └── text-entrances.tsx          # text entrance animation wrapper
 │
@@ -190,6 +197,7 @@ fcl-web/
 │   ├── official-sites.ts               # official manufacturer/partner site links
 │   ├── profile-content.ts              # long-form profile content
 │   ├── project-photography.ts          # project image metadata/mapping
+│   ├── site-metadata.ts                # site origin, canonical URLs, page + share metadata
 │   ├── solution-photography.ts         # solution image metadata/mapping
 │   ├── technology-context.ts           # technology/solution descriptive content
 │   └── utils.ts                        # shared utilities (re-exports `cn` from the `cn` package)
@@ -199,6 +207,7 @@ fcl-web/
 │   │   └── felix-company-profile.pdf   # downloadable company profile PDF
 │   └── assets/
 │       ├── director-mostafa-kamal-ahmed.webp # director portrait (About page)
+│       ├── felix-social-preview.jpg    # 1200×630 Open Graph / Twitter share image
 │       ├── *.ttf / *.txt               # self-hosted fonts (Archivo Black, Manrope, Poppins, Anybody) + OFL/license text
 │       ├── hero/                       # 3 hero background images
 │       ├── logos/                      # 40 files — client logos (`client-NN.{svg,png,jpg,webp}`) + partner logos (`partner-<name>.{svg,png,webp}`)

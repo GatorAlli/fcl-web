@@ -1,5 +1,5 @@
 import { AnimatedCopy } from "@/components/site/animated-copy";
-import type { Metadata } from "next";
+import { sitePageMetadata } from "@/lib/site-metadata";
 import { PageCanvas } from "@/components/site/page-canvas";
 import { ProfileProse } from "@/components/site/profile-prose";
 import { profileAbout, profileReasons } from "@/lib/profile-content";
@@ -9,9 +9,11 @@ import { director, managingDirector } from "@/lib/leadership";
 import { companyPurpose, companyResources } from "@/lib/company-data";
 import { brochure } from "@/lib/company-profile";
 
-export const metadata: Metadata = {
-  title: "About Felix | Felix Controls Limited",
-};
+export const metadata = sitePageMetadata(
+  "/about",
+  "About Felix",
+  "Meet the leaders and engineering team at Felix Controls Limited and learn how the company develops and delivers integrated building systems in Bangladesh.",
+);
 
 export default function About() {
   return (
@@ -97,7 +99,12 @@ export default function About() {
           <AnimatedCopy>Download</AnimatedCopy>
         </h2>
         <div>
-          <a href={brochure} download className="fcl-button">
+          <a
+            href={brochure}
+            download
+            className="fcl-button"
+            data-analytics-event="brochure_download_click"
+          >
             Company Profile 2025 (PDF)
           </a>
         </div>
